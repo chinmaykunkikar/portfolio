@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background-color: #0f0f0f;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-size: 84px;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(to right, #00f260 0%, #0575e6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  font-size: 18px;
+  font-family: "Fira Sans", sans-serif;
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
