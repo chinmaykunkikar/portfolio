@@ -1,7 +1,8 @@
 body {
-  margin: 0;
+  margin: 0px;
   background-color: #0f0f0f;
 }
+
 .heading {
   display: flex;
   justify-content: center;
@@ -14,6 +15,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .info {
   display: flex;
   justify-content: center;
@@ -25,4 +27,44 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 64px;
+  }
+
+  .info {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heading {
+    font-size: 42px;
+  }
+
+  .info {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .info {
+    font-size: 10px;
+  }
 }
