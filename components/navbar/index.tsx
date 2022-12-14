@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 export default function Navbar() {
+    const navButtons = ["Home", "Works", "About", "Resume", "Contact"]
   return (
     <>
       <Head>
@@ -14,11 +15,9 @@ export default function Navbar() {
           <h3 className="font-mono font-bold">[chinmay@web 68adce8]$ _</h3>
         </Link>
         <div className="flex h-fit items-center gap-2 lg:gap-8">
-          <button>Home</button>
-          <button>Works</button>
-          <button>About</button>
-          <button>Resume</button>
-          <button>Contact</button>
+          {navButtons.map((btn) => (
+            <button key={`navbtn-${btn}`} className="text-gray-500">{btn}</button>
+          ))}
         </div>
       </div>
     </>
