@@ -2,7 +2,7 @@ import Card from "../components/card";
 
 export default function Home() {
   return (
-    <div className="grid-rows-auto grid grid-cols-1 gap-4 px-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-4 px-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <Card className="col-span-2">Hi, I&apos;m Chinmay</Card>
       <Card>GitHub</Card>
       <Card>Resume</Card>
