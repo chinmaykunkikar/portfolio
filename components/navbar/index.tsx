@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Button from "../button";
 
 export default function Navbar() {
   const navButtons = ["Home", "Works", "About", "Resume", "Contact"];
@@ -11,7 +12,7 @@ export default function Navbar() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex w-screen flex-col items-center justify-between gap-4 px-16 py-6 lg:flex-row lg:gap-0">
-        <span className="text-gray-600">
+        <span className="text-xl text-gray-600">
           <h3 className="font-mono">
             [chinmay@web{" "}
             <a
@@ -28,9 +29,7 @@ export default function Navbar() {
         </span>
         <div className="flex h-fit items-center gap-8">
           {navButtons.map((btn) => (
-            <button key={`navbtn-${btn}`} className="">
-              {btn}
-            </button>
+            <Button key={`navbtn-${btn}`}>{btn}</Button>
           ))}
         </div>
       </div>
