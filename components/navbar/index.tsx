@@ -22,10 +22,11 @@ export default function Navbar() {
             >
               {shortSha}
             </a>
-            ]$ <span className="animate-[pulse_1.5s_ease-out_infinite]">_</span>
+            ]${" "}
+            <span className="animate-[pulse_1.25s_ease-out_infinite]">_</span>
           </h3>
         </span>
-        <div className="flex h-fit items-center gap-2 lg:gap-8">
+        <div className="flex h-fit items-center gap-8">
           {navButtons.map((btn) => (
             <button key={`navbtn-${btn}`} className="">
               {btn}
