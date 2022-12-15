@@ -1,7 +1,17 @@
-export default function Card() {
+import React from "react";
+
+export type CardPropsType = {
+  className?: String;
+  children?: JSX.Element | String;
+  colSpan?: number;
+};
+
+export default function Card({ children, className }: CardPropsType) {
   return (
-    <div className="group space-y-3 rounded-lg bg-white p-6 hover:drop-shadow-xl">
-      Hello
+    <div
+      className={`rounded-xl bg-white p-6 hover:drop-shadow-xl ${className}`}
+    >
+      {children}
     </div>
   );
 }
