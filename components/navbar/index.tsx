@@ -1,8 +1,8 @@
 import Head from "next/head";
+import Link from "next/link";
 import Button from "../button";
 
 export default function Navbar() {
-  const navButtons = ["Home", "Works", "About", "Resume", "Contact"];
   const shortSha = "a782b09";
   return (
     <>
@@ -27,9 +27,21 @@ export default function Navbar() {
           </h3>
         </span>
         <div className="flex h-fit items-center gap-8">
-          {navButtons.map((btn) => (
-            <Button key={`navbtn-${btn}`}>{btn}</Button>
-          ))}
+          <Link href="/">
+            <Button>Home</Button>
+          </Link>
+          <Link href="/works">
+            <Button>Works</Button>
+          </Link>
+          <Link href="/about">
+            <Button>About</Button>
+          </Link>
+          <Link href="/resume">
+            <Button>Resume</Button>
+          </Link>
+          <Link href="/contact">
+            <Button>Contact</Button>
+          </Link>
         </div>
       </div>
     </>
