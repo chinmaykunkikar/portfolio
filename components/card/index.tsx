@@ -9,7 +9,7 @@ export type CardPropsType = {
 export default function Card({ children, className }: CardPropsType) {
   return (
     <div
-      className={`rounded-xl bg-white p-6 hover:drop-shadow-xl ${className}`}
+      className={`rounded-xl bg-white p-6 transition-all duration-300 ease-in hover:drop-shadow-xl ${className}`}
     >
       {children}
     </div>
