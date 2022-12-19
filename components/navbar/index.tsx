@@ -3,7 +3,7 @@ import Link from "next/link";
 import Button from "../button";
 
 export default function Navbar() {
-  const shortSha = "a782b09";
+  const shortSha = "b7d2e0f";
   return (
     <>
       <Head>
@@ -13,7 +13,7 @@ export default function Navbar() {
       </Head>
       <div className="flex w-screen flex-col items-center justify-between gap-4 px-16 py-6 text-neutral-600 lg:flex-row lg:gap-0">
         <span className="text-xl">
-          <h3 className="font-mono">
+          <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
             <a
               className="font-bold"
