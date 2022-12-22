@@ -1,13 +1,14 @@
 import Card from "../components/card";
 import GitHubWidget from "../components/widgets/github";
 import HelloWidget from "../components/widgets/hello";
+import LinkedInWidget from "../components/widgets/linkedin";
 
 export default function Home() {
   return (
     <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-16 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <HelloWidget />
       <GitHubWidget />
-      <Card>LinkedIn</Card>
+      <LinkedInWidget />
       <Card>Twitter</Card>
       <Card>Projects</Card>
       <Card className="col-span-2">Skills</Card>
