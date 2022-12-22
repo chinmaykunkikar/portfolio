@@ -3,7 +3,7 @@ import Link from "next/link";
 import Button from "../button";
 
 export default function Navbar() {
-  const shortSha = "b7d2e0f";
+  const shortSha = "f5f2349";
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ export default function Navbar() {
             [chinmay@web{" "}
             <a
               className="font-bold"
-              href="https://github.com/chinmaykunkikar/chinmaykunkikar.github.io"
+              href="https://github.com/chinmaykunkikar/portfolio"
               target="_blank"
               rel="noreferrer"
             >

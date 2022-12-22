@@ -1,9 +1,10 @@
 import Card from "../components/card";
+import HelloWidget from "../components/widgets/hello";
 
 export default function Home() {
   return (
     <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-16 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      <Card className="col-span-2">Hi, I&apos;m Chinmay</Card>
+      <HelloWidget />
       <Card>GitHub</Card>
       <Card>LinkedIn</Card>
       <Card>Twitter</Card>
