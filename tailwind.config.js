@@ -1,10 +1,23 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+      mono: ["'Noto Mono'", ...defaultTheme.fontFamily.mono],
+    },
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      // medium: 500,
+      // semibold: 500,
+      bold: 600,
+    },
     extend: {
       keyframes: {
         pulse: {
