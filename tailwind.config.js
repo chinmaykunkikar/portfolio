@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Poppins", ...defaultTheme.fontFamily.sans],
-      mono: ["'Noto Mono'", ...defaultTheme.fontFamily.mono],
+      sans: ["'Noto Sans'", ...defaultTheme.fontFamily.sans],
+      mono: ["'Noto Sans Mono'", ...defaultTheme.fontFamily.mono],
     },
     fontWeight: {
       light: 300,
