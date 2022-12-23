@@ -36,7 +36,7 @@ export default function SpotifyWidget() {
         {nowPlaying?.songUrl ? (
           <div className="flex flex-col">
             <a
-              className="max-w-max truncate font-bold text-neutral-700 hover:text-neutral-500"
+              className="max-w-max truncate text-xl font-bold text-neutral-700 hover:text-neutral-500"
               href={nowPlaying.songUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +53,7 @@ export default function SpotifyWidget() {
         ) : (
           <div className="flex flex-col">
             <a
-              className="max-w-max truncate font-bold text-neutral-700 hover:text-neutral-500"
+              className="max-w-max truncate text-xl font-bold text-neutral-700 hover:text-neutral-500"
               href={recentlyPlayed?.songUrl}
               target="_blank"
               rel="noopener noreferrer"
