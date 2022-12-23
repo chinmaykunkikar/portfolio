@@ -35,7 +35,7 @@ export default function Navbar() {
             >
               {shortSha}
             </a>
-            ]$ <span className="animate-pulse">&#9644;</span>
+            ]$&#8202;<span className="animate-pulse">&#9601;</span>
           </h3>
         </span>
         <div className="flex h-fit items-center gap-8">
