@@ -2,6 +2,7 @@ import Card from "../components/card";
 import GitHubWidget from "../components/widgets/github";
 import HelloWidget from "../components/widgets/hello";
 import LinkedInWidget from "../components/widgets/linkedin";
+import SpotifyWidget from "../components/widgets/spotify";
 import TwitterWidget from "../components/widgets/twitter";
 
 export default function Home() {
@@ -11,9 +12,9 @@ export default function Home() {
       <GitHubWidget />
       <LinkedInWidget />
       <TwitterWidget />
-      <Card>Projects</Card>
+      <SpotifyWidget />
       <Card className="col-span-2">Skills</Card>
-      <Card>Spotify</Card>
+      <Card>Projects</Card>
       <Card className="col-span-2">Let&apos;s get in touch</Card>
       <Card>Mumbai, IN and Time</Card>
     </div>
