@@ -25,7 +25,7 @@ export default function HelloWidget() {
           {showHello ? "Hello!" : "नमस्कार!"}
         </div>
       </div>
-      <span className="pt-6">
+      <span className="pt-6 text-xl">
         <Balancer>
           I&apos;m <span className="font-bold">Chinmay</span>, a frontend
           developer from India, thriving on the joy of creating delightful web
