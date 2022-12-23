@@ -21,8 +21,8 @@ export default function SpotifyWidget() {
     <Card className="flex flex-col justify-between p-8">
       <Image
         src="/spotify.svg"
-        width={96}
-        height={96}
+        width={72}
+        height={72}
         alt={"Spotify Logo"}
         className="flex-1"
       />
