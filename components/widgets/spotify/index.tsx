@@ -19,7 +19,13 @@ export default function SpotifyWidget() {
 
   return (
     <Card className="flex flex-col justify-between p-8">
-      <Image src="/spotify.svg" width={80} height={80} alt={"Spotify Logo"} />
+      <Image
+        src="/spotify.svg"
+        width={96}
+        height={96}
+        alt={"Spotify Logo"}
+        className="flex-1"
+      />
       <div>
         {nowPlaying?.isPlaying ? (
           <div className="flex items-center">
