@@ -22,8 +22,8 @@ export default function SocialWidget({
       <div className="flex h-full w-full items-center justify-center">
         <Image
           src={imgSrc}
-          width={imgWidth ?? 128}
-          height={imgHeight ?? 128}
+          width={imgWidth ?? 96}
+          height={imgHeight ?? 96}
           alt={imgAlt}
         />
         <div className="absolute right-4 bottom-4 flex -rotate-45 items-center justify-center group-hover:text-neutral-500">

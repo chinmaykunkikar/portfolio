@@ -17,11 +17,11 @@ export default function HelloWidget() {
       <div className="flex items-center">
         <Player
           src={showHello ? Hello : Namaskar}
-          autoplay={showHello}
-          loop={showHello}
+          autoplay={true}
+          loop={false}
           style={{ width: "4em", height: "4em" }}
         />
-        <div className="ml-4 pt-4 text-4xl font-bold">
+        <div className="ml-2 pt-4 text-4xl font-bold">
           {showHello ? "Hello!" : "नमस्कार!"}
         </div>
       </div>
