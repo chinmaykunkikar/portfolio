@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
+import Balancer from "react-wrap-balancer";
 import Namaskar from "../../../public/namaskar.json";
 import Hello from "../../../public/hello.json";
 import Card from "../../card";
@@ -25,9 +26,11 @@ export default function HelloWidget() {
         </div>
       </div>
       <span className="pt-6">
-        I&apos;m <span className="font-bold">Chinmay</span>, a frontend
-        developer from India, thriving on the joy of creating delightful web
-        experiences.
+        <Balancer>
+          I&apos;m <span className="font-bold">Chinmay</span>, a frontend
+          developer from India, thriving on the joy of creating delightful web
+          experiences.
+        </Balancer>
       </span>
     </Card>
   );
