@@ -1,9 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import useSWR from "swr";
+import fetcher from "../../lib/fetcher";
+import { CommitShaType } from "../../pages/api/commit-sha";
 import Button from "../button";
 
 export default function Navbar() {
-  const shortSha = "f5f2349";
+  const { data } = useSWR<CommitShaType>("/api/commit-sha", fetcher);
+
   return (
     <>
       <Head>
@@ -21,7 +25,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
             >
-              {shortSha}
+              {data?.shortSha}
             </a>
             ]$ <span className="animate-pulse">&#9644;</span>
           </h3>
