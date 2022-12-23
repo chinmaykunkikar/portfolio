@@ -6,6 +6,7 @@ import fetcher from "../../../lib/fetcher";
 import Card from "../../card";
 import Image from "next/image";
 import { NowPlayingSong } from "../../../pages/api/now-playing";
+import { RecentlyPlayedSong } from "../../../pages/api/recently-played";
 
 function AnimatedBars() {
   useEffect(() => {
@@ -77,13 +78,22 @@ function AnimatedBars() {
 }
 
 export default function SpotifyWidget() {
-  const { data } = useSWR<NowPlayingSong>("/api/now-playing", fetcher);
-  console.log(data);
+  const { data: nowPlayingData } = useSWR<NowPlayingSong>(
+    "/api/now-playing",
+    fetcher
+  );
+  const { data: recentlyPlayedData } = useSWR<RecentlyPlayedSong>(
+    "/api/recently-played",
+    fetcher
+  );
+
+  console.log(recentlyPlayedData);
+
   return (
     <Card className="flex flex-col justify-between p-8">
       <Image src="/spotify.svg" width={80} height={80} alt={"Spotify Logo"} />
       <div>
-        {data?.isPlaying ? (
+        {nowPlayingData?.isPlaying ? (
           <div className="flex items-center">
             <AnimatedBars />
             <span className="ml-2 select-none text-sm font-bold text-[#00DA5A]">
@@ -95,25 +105,40 @@ export default function SpotifyWidget() {
             Last played
           </span>
         )}
-        {data?.songUrl ? (
+        {nowPlayingData?.songUrl ? (
           <div className="flex flex-col">
             <a
               className="max-w-max truncate font-bold text-neutral-700 hover:text-neutral-500"
-              href={data.songUrl}
+              href={nowPlayingData.songUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {data.title}
+              {nowPlayingData.title}
             </a>
             <p
-              title={data.artist}
+              title={nowPlayingData.artist}
               className="max-w-max select-none truncate text-sm text-neutral-700"
             >
-              {data.artist}
+              {nowPlayingData.artist}
             </p>
           </div>
         ) : (
-          <></>
+          <div className="flex flex-col">
+            <a
+              className="max-w-max truncate font-bold text-neutral-700 hover:text-neutral-500"
+              href={recentlyPlayedData?.songUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {recentlyPlayedData?.title}
+            </a>
+            <p
+              title={recentlyPlayedData?.artist}
+              className="max-w-max select-none truncate text-sm text-neutral-700"
+            >
+              {recentlyPlayedData?.artist}
+            </p>
+          </div>
         )}
       </div>
     </Card>
