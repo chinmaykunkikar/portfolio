@@ -18,62 +18,41 @@ export default function SpotifyWidget() {
   );
 
   return (
-    <Card className="flex flex-col justify-between p-8">
-      <Image
-        src="/spotify.svg"
-        width={72}
-        height={72}
-        alt={"Spotify Logo"}
-        className="flex-1"
-      />
+    <Card className="group flex flex-col justify-between p-8">
+      <Image src="/spotify.svg" width={72} height={72} alt={"Spotify Logo"} />
       <div>
         {nowPlaying?.isPlaying ? (
           <div className="flex items-center">
             <AnimatedBars />
-            <span className="ml-2 select-none text-sm font-bold text-[#00DA5A]">
+            <span className="ml-2 select-none font-bold text-[#00DA5A]">
               Currently listening to
             </span>
           </div>
         ) : (
-          <span className="select-none text-sm font-bold text-[#00DA5A]">
+          <span className="select-none font-bold text-[#00DA5A]">
             Last played
           </span>
         )}
-        {nowPlaying?.songUrl ? (
-          <div className="flex flex-col">
-            <a
-              className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
-              href={nowPlaying.songUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {nowPlaying.title}
-            </a>
-            <p
-              title={nowPlaying.artist}
-              className="max-w-max select-none truncate text-sm text-neutral-700"
-            >
-              {nowPlaying.artist}
-            </p>
-          </div>
-        ) : (
-          <div className="flex flex-col">
-            <a
-              className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
-              href={recentlyPlayed?.songUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {recentlyPlayed?.title}
-            </a>
-            <p
-              title={recentlyPlayed?.artist}
-              className="max-w-max select-none truncate text-sm text-neutral-700"
-            >
-              {recentlyPlayed?.artist}
-            </p>
-          </div>
-        )}
+        <div className="flex flex-col">
+          <a
+            className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
+            href={
+              nowPlaying?.songUrl ? nowPlaying.songUrl : recentlyPlayed?.songUrl
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {nowPlaying?.title ? nowPlaying.title : recentlyPlayed?.title}
+          </a>
+          <p
+            title={
+              nowPlaying?.artist ? nowPlaying.artist : recentlyPlayed?.artist
+            }
+            className="max-w-max select-none truncate text-neutral-700"
+          >
+            {nowPlaying?.artist ? nowPlaying.artist : recentlyPlayed?.artist}
+          </p>
+        </div>
       </div>
     </Card>
   );
