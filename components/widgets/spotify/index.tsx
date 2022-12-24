@@ -2,10 +2,10 @@ import useSWR from "swr";
 
 import fetcher from "../../../lib/fetcher";
 import Card from "../../card";
-import Image from "next/image";
 import { NowPlayingSong } from "../../../pages/api/now-playing";
 import { RecentlyPlayedSong } from "../../../pages/api/recently-played";
 import AnimatedBars from "../../animated-bars";
+import SpotifyLogo from "../../drawables/spotify";
 
 export default function SpotifyWidget() {
   const { data: nowPlaying } = useSWR<NowPlayingSong>(
@@ -19,17 +19,17 @@ export default function SpotifyWidget() {
 
   return (
     <Card className="group flex flex-col justify-between p-8">
-      <Image src="/spotify.svg" width={72} height={72} alt={"Spotify Logo"} />
+      <SpotifyLogo width={72} height={72} fill="#00da5a" />
       <div>
         {nowPlaying?.isPlaying ? (
           <div className="flex items-center">
             <AnimatedBars />
-            <span className="ml-2 select-none font-bold text-[#00DA5A]">
+            <span className="ml-2 select-none font-bold text-[#00da5a]">
               Currently listening to
             </span>
           </div>
         ) : (
-          <span className="select-none font-bold text-[#00DA5A]">
+          <span className="select-none font-bold text-[#00da5a]">
             Last played
           </span>
         )}
