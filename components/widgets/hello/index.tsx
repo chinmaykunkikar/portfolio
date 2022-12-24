@@ -21,15 +21,15 @@ export default function HelloWidget() {
           loop={false}
           style={{ width: "4em", height: "4em" }}
         />
-        <div className="ml-2 pt-4 text-4xl font-bold">
+        <div className="ml-2 pt-4 text-3xl font-bold">
           {showHello ? "Hello!" : "नमस्कार!"}
         </div>
       </div>
-      <span className="pt-6 text-xl">
+      <span className="pt-6 text-lg">
         <Balancer>
-          I&apos;m <span className="font-bold">Chinmay</span>, a frontend
-          developer from India, thriving on the joy of creating delightful web
-          experiences.
+          I&apos;m <span className="text-2xl font-bold">Chinmay</span>, a
+          frontend developer from India, thriving on the joy of creating
+          delightful web experiences.
         </Balancer>
       </span>
     </Card>

@@ -48,7 +48,7 @@ export default function SpotifyWidget() {
             title={
               nowPlaying?.artist ? nowPlaying.artist : recentlyPlayed?.artist
             }
-            className="max-w-max select-none truncate text-neutral-700"
+            className="max-w-max select-none truncate text-sm text-neutral-700"
           >
             {nowPlaying?.artist ? nowPlaying.artist : recentlyPlayed?.artist}
           </p>
