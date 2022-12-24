@@ -7,16 +7,16 @@ import TwitterWidget from "../components/widgets/twitter";
 
 export default function Home() {
   return (
-    <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-16 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-32 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <HelloWidget />
-      <GitHubWidget />
-      <LinkedInWidget />
-      <TwitterWidget />
-      <SpotifyWidget />
-      <Card className="col-span-2">Skills</Card>
-      <Card>Projects</Card>
-      <Card className="col-span-2">Let&apos;s get in touch</Card>
       <Card>Mumbai, IN and Time</Card>
+      <SpotifyWidget />
+      <TwitterWidget />
+      <LinkedInWidget />
+      <GitHubWidget />
+      <Card>Projects</Card>
+      <Card className="col-span-2">Skills</Card>
+      <Card className="col-span-2">Let&apos;s get in touch</Card>
     </div>
   );
 }

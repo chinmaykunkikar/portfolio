@@ -23,7 +23,7 @@ export default function Navbar() {
         <meta name="description" content="Portfolio of Chinmay Kunkikar" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex w-screen flex-col items-center justify-between gap-4 px-16 py-6 text-neutral-600 lg:flex-row lg:gap-0">
+      <div className="flex w-screen flex-col items-center justify-between gap-4 px-32 py-8 text-neutral-600 lg:flex-row lg:gap-0">
         <span className="text-xl">
           <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
