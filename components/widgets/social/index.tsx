@@ -15,7 +15,9 @@ export default function SocialWidget({
   return (
     <Card className="group relative">
       <div className="flex h-full w-full items-center justify-center">
-        <a href={socialUrl}>{children}</a>
+        <a href={socialUrl} target="_blank" rel="noreferrer">
+          {children}
+        </a>
         <div className="absolute right-4 bottom-4 flex items-center justify-center">
           <a
             href={socialUrl}
