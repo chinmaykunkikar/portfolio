@@ -27,7 +27,8 @@ export default function HelloWidget() {
       </div>
       <span className="pt-6 text-lg">
         <Balancer>
-          I&apos;m <span className="text-2xl font-bold">Chinmay</span>, a
+          I&apos;m{" "}
+          <span className="text-2xl font-extrabold">Chinmay Kunkikar</span>, a
           frontend developer from India, thriving on the joy of creating
           delightful web experiences.
         </Balancer>
