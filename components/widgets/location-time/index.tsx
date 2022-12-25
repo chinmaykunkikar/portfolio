@@ -1,5 +1,6 @@
 import Card from "../../card";
-import Clock from "../../drawables/clock";
+import ClockIcon from "../../drawables/clock";
+import Clock from "react-live-clock";
 import LocationPin from "../../drawables/location";
 
 export default function LocationTimeWidget() {
@@ -18,8 +19,10 @@ export default function LocationTimeWidget() {
         </a>
       </div>
       <div className="flex items-center">
-        <Clock width={42} height={42} fill="#848494" />
-        <div className="ml-4 text-xl font-bold text-neutral-700">12:27 AM</div>
+        <ClockIcon width={42} height={42} fill="#848494" />
+        <div className="ml-4 text-xl font-bold text-neutral-700">
+          <Clock format={"LT"} timezone={"Asia/Kolkata"} />
+        </div>
       </div>
     </Card>
   );
