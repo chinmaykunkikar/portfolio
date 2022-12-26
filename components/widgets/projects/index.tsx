@@ -1,3 +1,14 @@
+import Link from "next/link";
+import Card from "../../card";
+import LinkArrow from "../../link-arrow";
+
 export default function ProjectsWidget() {
-  return <div></div>;
+  return (
+    <Card className="relative">
+      <div className="flex h-full w-full flex-col items-center justify-center">
+        <span className="text-2xl font-bold">Checkout my works</span>
+        <LinkArrow href="/works" as={Link} />
+      </div>
+    </Card>
+  );
 }

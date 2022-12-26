@@ -3,6 +3,7 @@ import GitHubWidget from "../components/widgets/github";
 import HelloWidget from "../components/widgets/hello";
 import LinkedInWidget from "../components/widgets/linkedin";
 import LocationTimeWidget from "../components/widgets/location-time";
+import ProjectsWidget from "../components/widgets/projects";
 import SpotifyWidget from "../components/widgets/spotify";
 import TwitterWidget from "../components/widgets/twitter";
 
@@ -15,7 +16,7 @@ export default function Home() {
       <TwitterWidget />
       <LinkedInWidget />
       <GitHubWidget />
-      <Card>Projects</Card>
+      <ProjectsWidget />
       <Card className="col-span-2">Skills</Card>
       <Card className="col-span-2">Let&apos;s get in touch</Card>
     </div>
