@@ -1,14 +1,17 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Card from "../../card";
+import LinkArrow from "../../link-arrow";
 
 export type SocialPropTypes = {
-  socialColor?: string;
+  socialBgColor?: string;
+  socialRingColor?: string;
   children?: JSX.Element | JSX.Element[] | String;
   socialUrl: string;
 };
 
 export default function SocialWidget({
-  socialColor,
+  socialBgColor,
+  socialRingColor,
   children,
   socialUrl,
 }: SocialPropTypes) {
@@ -18,24 +21,10 @@ export default function SocialWidget({
         <a href={socialUrl} target="_blank" rel="noreferrer">
           {children}
         </a>
-        <div className="absolute right-4 bottom-4 flex items-center justify-center">
-          <a
-            href={socialUrl}
-            target="_blank"
-            className={`text-bold rounded-full ${
-              socialColor ? `${socialColor}` : "bg-white hover:ring-white/[0.5]"
-            } p-1 transition-all hover:ring-8`}
-            rel="noreferrer"
-          >
-            <ArrowUpRightIcon
-              className="p-1"
-              strokeWidth={3}
-              width={24}
-              height={24}
-              color="white"
-            />
-          </a>
-        </div>
+        <LinkArrow
+          bgColorClass={socialBgColor}
+          hoverRingClass={socialRingColor}
+        />
       </div>
     </Card>
   );
