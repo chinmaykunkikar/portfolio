@@ -1,12 +1,14 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 type LinkArrowProps = {
+  href: string;
   as?: React.ElementType | string;
   bgColorClass?: string;
   hoverRingClass?: string;
 };
 
 export default function LinkArrow({
+  href,
   as: Component = "a",
   bgColorClass,
   hoverRingClass,
@@ -15,7 +17,7 @@ export default function LinkArrow({
   return (
     <div className="absolute right-4 bottom-4 flex items-center justify-center">
       <Component
-        href="/works"
+        href={href}
         className={`text-bold rounded-full ${
           bgColorClass ?? "bg-neutral-600"
         } p-1 transition-all hover:ring-8 ${

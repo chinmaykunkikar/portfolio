@@ -1,4 +1,3 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Card from "../../card";
 import LinkArrow from "../../link-arrow";
 
@@ -22,6 +21,7 @@ export default function SocialWidget({
           {children}
         </a>
         <LinkArrow
+          href={socialUrl}
           bgColorClass={socialBgColor}
           hoverRingClass={socialRingColor}
         />
