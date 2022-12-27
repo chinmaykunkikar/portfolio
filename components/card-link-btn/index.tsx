@@ -1,6 +1,6 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-type LinkArrowProps = {
+type CardLinkButtonProps = {
   href: string;
   as?: React.ElementType | string;
   bgColorClass?: string;
@@ -8,14 +8,13 @@ type LinkArrowProps = {
   variant?: React.ElementType;
 };
 
-export default function LinkArrow({
+export default function CardLinkButton({
   href,
   as: Component = "a",
   bgColorClass,
   hoverRingClass,
   variant: IconVariant = ArrowUpRightIcon,
-}: LinkArrowProps) {
-  // The parent component (<Card />) should have the "relative" class for this to work properly
+}: CardLinkButtonProps) {
   return (
     <div className="absolute right-4 bottom-4 flex items-center justify-center">
       <Component
@@ -23,7 +22,7 @@ export default function LinkArrow({
         className={`text-bold rounded-full ${
           bgColorClass ?? "bg-neutral-600"
         } p-1 transition-all hover:ring-8 ${
-          hoverRingClass ?? "hover:ring-neutral-300/[0.5]"
+          hoverRingClass ?? "hover:ring-neutral-400/[0.5]"
         }`}
       >
         <IconVariant

@@ -1,5 +1,5 @@
 import Card from "@components/card";
-import LinkArrow from "@components/link-arrow";
+import CardLinkButton from "@components/card-link-btn";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Hello from "@public/hello.json";
@@ -36,7 +36,7 @@ export default function HelloWidget() {
           delightful web experiences.
         </Balancer>
       </span>
-      <LinkArrow href="/about" as={Link} variant={ArrowRightIcon} />
+      <CardLinkButton href="/about" as={Link} variant={ArrowRightIcon} />
     </Card>
   );
 }

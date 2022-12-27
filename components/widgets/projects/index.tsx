@@ -1,5 +1,5 @@
 import Card from "@components/card";
-import LinkArrow from "@components/link-arrow";
+import CardLinkButton from "@components/card-link-btn";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ export default function ProjectsWidget() {
     <Card>
       <div className="flex h-full w-full flex-col items-center justify-center">
         <span className="text-2xl font-bold">Checkout my works</span>
-        <LinkArrow href="/works" as={Link} variant={ArrowRightIcon} />
+        <CardLinkButton href="/works" as={Link} variant={ArrowRightIcon} />
       </div>
     </Card>
   );

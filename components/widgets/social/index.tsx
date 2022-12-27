@@ -1,5 +1,5 @@
 import Card from "@components/card";
-import LinkArrow from "@components/link-arrow";
+import CardLinkButton from "@components/card-link-btn";
 
 export type SocialPropTypes = {
   socialBgColor?: string;
@@ -20,7 +20,7 @@ export default function SocialWidget({
         <a href={socialUrl} target="_blank" rel="noreferrer">
           {children}
         </a>
-        <LinkArrow
+        <CardLinkButton
           href={socialUrl}
           bgColorClass={socialBgColor}
           hoverRingClass={socialRingColor}
