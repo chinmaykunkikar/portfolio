@@ -12,7 +12,7 @@ export default function HelloWidget() {
 
   return (
     <Card
-      className="relative col-span-2 flex cursor-default select-none flex-col items-start justify-center px-10"
+      className="col-span-2 flex cursor-default select-none flex-col items-start justify-center px-10"
       onPointerEnter={() => setShowHello(true)}
       onPointerLeave={() => setShowHello(false)}
     >
