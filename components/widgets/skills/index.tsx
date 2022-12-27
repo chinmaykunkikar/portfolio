@@ -15,28 +15,31 @@ import WebpackLogo from "@components/drawables/webpack";
 export default function SkillsWidget() {
   function SkillWrapper({ icon: SkillIcon, label }: any) {
     return (
-      <div className="flex flex-col m-4 items-center">
+      <div className="flex flex-col m-4 items-center justify-start">
         <SkillIcon width={64} height={64} />
-        <span className="mt-2 select-none font-bold">{label}</span>
+        <span className="mt-2 select-none text-xs font-bold">{label}</span>
       </div>
     );
   }
 
   return (
-    <Card className="col-span-2 max-h-72 overflow-y-auto">
-      <div className="grid-rows-auto grid gap-4 grid-cols-4 p-4">
-        <SkillWrapper icon={AwsIcon} label="AWS" />
-        <SkillWrapper icon={JavaScriptLogo} label="JavaScript ES6" />
-        <SkillWrapper icon={ReactLogo} label="ReactJS" />
-        <SkillWrapper icon={NextJsLogo} label="NextJS" />
-        <SkillWrapper icon={MongoDbIcon} label="MongoDB" />
-        <SkillWrapper icon={TypeScriptLogo} label="TypeScript" />
-        <SkillWrapper icon={NodeIcon} label="NodeJS" />
-        <SkillWrapper icon={WebpackLogo} label="Webpack" />
-        <SkillWrapper icon={TailwindLogo} label="TailwindCSS" />
-        <SkillWrapper icon={DockerLogo} label="Docker" />
-        <SkillWrapper icon={TerminalLogo} label="Shell Scripting" />
-        <SkillWrapper icon={FigmaLogo} label="Figma" />
+    <Card className="flex flex-col col-span-2 max-h-80">
+      <div className="font-bold text-2xl mx-auto mb-4">Skills</div>
+      <div className="overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-neutral-500 scrollbar-track-neutral-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+        <div className="grid-rows-auto grid gap-4 grid-cols-4 p-4">
+          <SkillWrapper icon={AwsIcon} label="AWS" />
+          <SkillWrapper icon={JavaScriptLogo} label="JavaScript ES6" />
+          <SkillWrapper icon={ReactLogo} label="ReactJS" />
+          <SkillWrapper icon={NextJsLogo} label="NextJS" />
+          <SkillWrapper icon={MongoDbIcon} label="MongoDB" />
+          <SkillWrapper icon={TypeScriptLogo} label="TypeScript" />
+          <SkillWrapper icon={NodeIcon} label="NodeJS" />
+          <SkillWrapper icon={WebpackLogo} label="Webpack" />
+          <SkillWrapper icon={TailwindLogo} label="TailwindCSS" />
+          <SkillWrapper icon={DockerLogo} label="Docker" />
+          <SkillWrapper icon={TerminalLogo} label="Shell Scripting" />
+          <SkillWrapper icon={FigmaLogo} label="Figma" />
+        </div>
       </div>
     </Card>
   );

@@ -1,6 +1,12 @@
 export default function WebpackLogo({ props }: any) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 1200"
+      {...props}
+      width={60}
+      height={60}
+    >
       <path fill="#fff" d="M600 0l530.3 300v600L600 1200 69.7 900V300z" />
       <path
         fill="#8ed6fb"
