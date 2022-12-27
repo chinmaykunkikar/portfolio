@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Card from "@components/card";
 import LinkArrow from "@components/link-arrow";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function ProjectsWidget() {
   return (

@@ -1,11 +1,11 @@
 import useSWR from "swr";
 
-import fetcher from "@lib/fetcher";
+import AnimatedBars from "@components/animated-bars";
 import Card from "@components/card";
+import SpotifyLogo from "@drawables/spotify";
+import fetcher from "@lib/fetcher";
 import { NowPlayingSong } from "@pages/api/now-playing";
 import { RecentlyPlayedSong } from "@pages/api/recently-played";
-import AnimatedBars from "@components/animated-bars";
-import SpotifyLogo from "@drawables/spotify";
 
 export default function SpotifyWidget() {
   const { data: nowPlaying } = useSWR<NowPlayingSong>(

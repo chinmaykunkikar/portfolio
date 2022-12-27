@@ -1,11 +1,11 @@
 import Card from "@components/card";
-import GitHubWidget from "@widgets/social/github";
 import HelloWidget from "@widgets/hello";
-import LinkedInWidget from "@widgets/social/linkedin";
 import LocationTimeWidget from "@widgets/location-time";
 import ProjectsWidget from "@widgets/projects";
-import SpotifyWidget from "@widgets/spotify";
+import GitHubWidget from "@widgets/social/github";
+import LinkedInWidget from "@widgets/social/linkedin";
 import TwitterWidget from "@widgets/social/twitter";
+import SpotifyWidget from "@widgets/spotify";
 
 export default function Home() {
   return (

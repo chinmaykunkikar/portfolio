@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
-import Balancer from "react-wrap-balancer";
-import Namaskar from "@public/namaskar.json";
-import Hello from "@public/hello.json";
 import Card from "@components/card";
 import LinkArrow from "@components/link-arrow";
-import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Player } from "@lottiefiles/react-lottie-player";
+import Hello from "@public/hello.json";
+import Namaskar from "@public/namaskar.json";
+import Link from "next/link";
+import { useState } from "react";
+import Balancer from "react-wrap-balancer";
 
 export default function HelloWidget() {
   const [showHello, setShowHello] = useState<boolean | undefined>(false);
