@@ -1,10 +1,11 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 type LinkArrowProps = {
   href: string;
   as?: React.ElementType | string;
   bgColorClass?: string;
   hoverRingClass?: string;
+  variant?: "external" | "internal";
 };
 
 export default function LinkArrow({
@@ -12,6 +13,7 @@ export default function LinkArrow({
   as: Component = "a",
   bgColorClass,
   hoverRingClass,
+  variant = "external",
 }: LinkArrowProps) {
   // The parent component (<Card />) should have the "relative" class for this to work properly
   return (
@@ -24,13 +26,23 @@ export default function LinkArrow({
           hoverRingClass ?? "hover:ring-neutral-300/[0.5]"
         }`}
       >
-        <ArrowUpRightIcon
-          className="p-1"
-          strokeWidth={3}
-          width={24}
-          height={24}
-          color="white"
-        />
+        {variant === "external" ? (
+          <ArrowUpRightIcon
+            className="p-1"
+            strokeWidth={3}
+            width={24}
+            height={24}
+            color="white"
+          />
+        ) : (
+          <ArrowRightIcon
+            className="p-1"
+            strokeWidth={3}
+            width={24}
+            height={24}
+            color="white"
+          />
+        )}
       </Component>
     </div>
   );

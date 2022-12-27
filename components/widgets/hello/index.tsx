@@ -4,13 +4,15 @@ import Balancer from "react-wrap-balancer";
 import Namaskar from "@public/namaskar.json";
 import Hello from "@public/hello.json";
 import Card from "@components/card";
+import LinkArrow from "@components/link-arrow";
+import Link from "next/link";
 
 export default function HelloWidget() {
   const [showHello, setShowHello] = useState<boolean | undefined>(false);
 
   return (
     <Card
-      className="col-span-2 flex cursor-default select-none flex-col items-start justify-center px-10"
+      className="relative col-span-2 flex cursor-default select-none flex-col items-start justify-center px-10"
       onPointerEnter={() => setShowHello(true)}
       onPointerLeave={() => setShowHello(false)}
     >
@@ -33,6 +35,7 @@ export default function HelloWidget() {
           delightful web experiences.
         </Balancer>
       </span>
+      <LinkArrow href="/about" as={Link} variant="internal" />
     </Card>
   );
 }
