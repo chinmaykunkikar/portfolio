@@ -6,6 +6,7 @@ import Hello from "@public/hello.json";
 import Card from "@components/card";
 import LinkArrow from "@components/link-arrow";
 import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function HelloWidget() {
   const [showHello, setShowHello] = useState<boolean | undefined>(false);
@@ -35,7 +36,7 @@ export default function HelloWidget() {
           delightful web experiences.
         </Balancer>
       </span>
-      <LinkArrow href="/about" as={Link} variant="internal" />
+      <LinkArrow href="/about" as={Link} variant={ArrowRightIcon} />
     </Card>
   );
 }
