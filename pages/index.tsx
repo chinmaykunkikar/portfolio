@@ -13,12 +13,12 @@ export default function Home() {
     <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-32 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <HelloWidget />
       <LocationTimeWidget />
-      <SpotifyWidget />
-      <TwitterWidget />
-      <LinkedInWidget />
       <GitHubWidget />
       <ProjectsWidget />
+      <LinkedInWidget />
       <SkillsWidget />
+      <SpotifyWidget />
+      <TwitterWidget />
       <ContactWidget />
     </div>
   );
