@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Balancer from "react-wrap-balancer";
-import Namaskar from "../../../public/namaskar.json";
-import Hello from "../../../public/hello.json";
-import Card from "../../card";
+import Namaskar from "@public/namaskar.json";
+import Hello from "@public/hello.json";
+import Card from "@components/card";
 
 export default function HelloWidget() {
   const [showHello, setShowHello] = useState<boolean | undefined>(false);

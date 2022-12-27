@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getRecentlyPlayed } from "../../lib/spotify";
+import { getRecentlyPlayed } from "@lib/spotify";
 
 export type RecentlyPlayedSong = {
   artist: string;

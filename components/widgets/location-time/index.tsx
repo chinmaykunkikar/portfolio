@@ -1,6 +1,6 @@
-import Card from "../../card";
-import ClockIcon from "../../drawables/clock";
-import LocationPin from "../../drawables/location";
+import Card from "@components/card";
+import ClockIcon from "@drawables/clock";
+import LocationPin from "@drawables/location";
 
 export default function LocationTimeWidget() {
   return (

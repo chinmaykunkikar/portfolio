@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Card from "../../card";
-import LinkArrow from "../../link-arrow";
+import Card from "@components/card";
+import LinkArrow from "@components/link-arrow";
 
 export default function ProjectsWidget() {
   return (

@@ -1,5 +1,5 @@
 import { Player } from "@lottiefiles/react-lottie-player";
-import Fire from "../../public/fire.json";
+import Fire from "@public/fire.json";
 
 export default function Footer() {
   return (

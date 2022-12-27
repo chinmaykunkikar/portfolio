@@ -2,8 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useSWR from "swr";
-import fetcher from "../../lib/fetcher";
-import Button from "../button";
+import fetcher from "@lib/fetcher";
+import Button from "@components/button";
 
 type CommitSha = {
   sha: string;

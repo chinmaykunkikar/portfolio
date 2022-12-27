@@ -1,5 +1,5 @@
 import Map, { Marker } from "react-map-gl";
-import Card from "../../card";
+import Card from "@components/card";
 export default function MapWidget() {
   return (
     <Card className="p-0">
