@@ -1,4 +1,5 @@
 import Card from "@components/card";
+import SkillsWidget from "@components/widgets/skills";
 import HelloWidget from "@widgets/hello";
 import LocationTimeWidget from "@widgets/location-time";
 import ProjectsWidget from "@widgets/projects";
@@ -17,7 +18,7 @@ export default function Home() {
       <LinkedInWidget />
       <GitHubWidget />
       <ProjectsWidget />
-      <Card className="col-span-2">Skills</Card>
+      <SkillsWidget />
       <Card className="col-span-2">Let&apos;s get in touch</Card>
     </div>
   );
