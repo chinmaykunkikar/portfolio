@@ -1,4 +1,4 @@
-import Card from "@components/card";
+import ContactWidget from "@components/widgets/contact";
 import SkillsWidget from "@components/widgets/skills";
 import HelloWidget from "@widgets/hello";
 import LocationTimeWidget from "@widgets/location-time";
@@ -19,7 +19,7 @@ export default function Home() {
       <GitHubWidget />
       <ProjectsWidget />
       <SkillsWidget />
-      <Card className="col-span-2">Let&apos;s get in touch</Card>
+      <ContactWidget />
     </div>
   );
 }
