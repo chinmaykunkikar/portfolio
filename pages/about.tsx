@@ -1,4 +1,5 @@
 import Card from "@components/card";
+import IntroWidget from "@components/widgets/intro";
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
       </h1>
       <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-16 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <Card>Hi, I&apos;m Chinmay</Card>
-        <Card className="col-span-2">Intro</Card>
+        <IntroWidget />
         <Card className="">Photo</Card>
         <Card className="col-span-2">Experience</Card>
         <Card className="">LinkedIn</Card>
