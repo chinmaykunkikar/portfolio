@@ -2,6 +2,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 type CardLinkButtonProps = {
   href: string;
+  targetBlank?: boolean;
   as?: React.ElementType | string;
   bgColorClass?: string;
   hoverRingClass?: string;
@@ -10,6 +11,7 @@ type CardLinkButtonProps = {
 
 export default function CardLinkButton({
   href,
+  targetBlank = false,
   as: Component = "a",
   bgColorClass,
   hoverRingClass,
@@ -19,8 +21,8 @@ export default function CardLinkButton({
     <div className="absolute right-4 bottom-4 flex items-center justify-center">
       <Component
         href={href}
-        target="_blank"
-        rel="noreferrer"
+        target={targetBlank && "_blank"}
+        rel={targetBlank && "noreferrer"}
         className={`text-bold rounded-full ${
           bgColorClass ?? "bg-neutral-600"
         } p-1 transition-all hover:ring-8 ${

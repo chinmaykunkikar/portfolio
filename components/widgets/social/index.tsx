@@ -22,6 +22,7 @@ export default function SocialWidget({
         </a>
         <CardLinkButton
           href={socialUrl}
+          targetBlank
           bgColorClass={socialBgColor}
           hoverRingClass={socialRingColor}
         />
