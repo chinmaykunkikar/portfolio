@@ -11,7 +11,7 @@ export default function About() {
         <Card>Hi, I&apos;m Chinmay</Card>
         <IntroWidget />
         <Card className="">Photo</Card>
-        <Card className="col-span-2">Experience</Card>
+        <Card className="md:col-span-2">Experience</Card>
         <Card className="">LinkedIn</Card>
         <Card className="">Resume</Card>
       </div>

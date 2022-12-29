@@ -11,7 +11,7 @@ export default function ContactWidget() {
 
   return (
     <Card
-      className="col-span-2 flex flex-col justify-center"
+      className="md:col-span-2 flex flex-col justify-center"
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
     >
