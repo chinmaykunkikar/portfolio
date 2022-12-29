@@ -67,7 +67,9 @@ export default function Navbar() {
           </h3>
         </span>
         <div className="flex h-fit items-center gap-8">
-          <LinkWrapper linkHref="/">Home</LinkWrapper>
+          <LinkWrapper linkHref="/">
+            <Button>Home</Button>
+          </LinkWrapper>
           <LinkWrapper linkHref="/about">
             <Button>About</Button>
           </LinkWrapper>
