@@ -31,12 +31,10 @@ export default function Navbar() {
     otherClasses,
     ...props
   }: LinkWrapperProps) {
+    const activeLink = pathname === linkHref;
     return (
       <Link href={linkHref} className={otherClasses}>
-        <span
-          className={pathname == linkHref ? "text-neutral-500" : ""}
-          {...props}
-        >
+        <span className={activeLink ? "text-neutral-500" : ""} {...props}>
           {children}
         </span>
       </Link>
@@ -50,7 +48,7 @@ export default function Navbar() {
         <meta name="description" content="Portfolio of Chinmay Kunkikar" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex w-screen flex-col items-center justify-between gap-4 px-32 py-8 text-neutral-700 lg:flex-row lg:gap-0">
+      <div className="flex w-screen flex-col items-center justify-between gap-4 px-12 md:px-20 lg:px-32 py-8 text-neutral-700 lg:flex-row lg:gap-0">
         <span className="text-xl">
           <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
@@ -66,7 +64,7 @@ export default function Navbar() {
             <span className="animate-pulse">&#9601;</span>
           </h3>
         </span>
-        <div className="flex h-fit items-center gap-8">
+        <div className="flex h-fit items-center gap-1 md:gap-8">
           <LinkWrapper linkHref="/">
             <Button>Home</Button>
           </LinkWrapper>
