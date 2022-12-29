@@ -19,6 +19,8 @@ export default function CardLinkButton({
     <div className="absolute right-4 bottom-4 flex items-center justify-center">
       <Component
         href={href}
+        target="_blank"
+        rel="noreferrer"
         className={`text-bold rounded-full ${
           bgColorClass ?? "bg-neutral-600"
         } p-1 transition-all hover:ring-8 ${
