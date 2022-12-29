@@ -3,7 +3,7 @@ import Navbar from "@components/navbar";
 
 export default function Layout({ children }: any) {
   return (
-    <div className="container bg-neutral-100">
+    <div className="overflow-x-hidden bg-neutral-100">
       <Navbar />
       <main>{children}</main>
       <Footer />
