@@ -1,26 +1,64 @@
 import Card from "@components/card";
+import { ClockIcon } from "@heroicons/react/24/outline";
 import "mapbox-gl/dist/mapbox-gl.css";
-import Map from "react-map-gl";
+import { useEffect, useState } from "react";
+import Map, { Marker } from "react-map-gl";
 
 export default function MapWidget() {
+  const longitude = process.env.NEXT_PUBLIC_MAP_LONGITUDE;
+  const latitude = process.env.NEXT_PUBLIC_MAP_LATITUDE;
+  const zoom = 13;
+
+  const [date, setDate] = useState(new Date());
+
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+    hourCycle: "h12",
+  };
+
+  function refreshClock() {
+    setDate(new Date());
+  }
+
+  useEffect(() => {
+    const timerId = setInterval(refreshClock, 1000);
+    return function cleanup() {
+      clearInterval(timerId);
+    };
+  }, []);
+
   return (
     <Card className="p-0 overflow-clip">
+      <div className="absolute z-10 right-4 left-4 bottom-4 flex items-center justify-center">
+        <div className="flex items-center justify-between rounded-full shadow-lg bg-neutral-50 px-3 py-1 select-none">
+          <ClockIcon width={20} height={20} stroke="#ac92fa" strokeWidth={2} />
+          <div className="ml-2 font-bold">
+            {date.toLocaleTimeString("en-IN", dateOptions)}
+          </div>
+        </div>
+      </div>
       <Map
-        reuseMaps
-        initialViewState={{
-          latitude: process.env.MAP_LATITUDE,
-          longitude: process.env.MAP_LONGITUDE,
-          zoom: 13,
-        }}
-        minZoom={13}
-        maxZoom={13}
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
+        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
         mapStyle="mapbox://styles/chinmaykunkikar/clc3j5l73005k14mpx2ghpj5x"
-        mapboxAccessToken={process.env.MAPBOX_TOKEN}
-      />
+        initialViewState={{
+          longitude,
+          latitude,
+          zoom,
+        }}
+        minZoom={6}
+        maxZoom={13}
+        pitch={40}
+        dragRotate={false}
+        keyboard={false}
+        touchPitch={false}
+        refreshExpiredTiles={false}
+        reuseMaps
+      >
+        <Marker longitude={longitude} latitude={latitude} color="#ac92fa" />
+      </Map>
     </Card>
   );
 }
