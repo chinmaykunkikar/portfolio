@@ -6,6 +6,7 @@ import SpotifyLogo from "@drawables/spotify";
 import fetcher from "@lib/fetcher";
 import { NowPlayingSong } from "@pages/api/now-playing";
 import { RecentlyPlayedSong } from "@pages/api/recently-played";
+import TimeAgo from "timeago-react";
 
 export default function SpotifyWidget() {
   const { data: nowPlaying } = useSWR<NowPlayingSong>(
@@ -29,9 +30,13 @@ export default function SpotifyWidget() {
             </span>
           </div>
         ) : (
-          <span className="select-none font-bold text-[#00da5a]">
-            Last played
-          </span>
+          <div className="flex gap-x-1 flex-wrap font-bold items-center">
+            <div className="select-none  text-[#00da5a]">Last played</div>
+            <TimeAgo
+              className="text-xs text-neutral-400 before:content-['('] after:content-[')']"
+              datetime={recentlyPlayed?.playedAt!}
+            />
+          </div>
         )}
         <div className="flex flex-col">
           <a
@@ -39,6 +44,7 @@ export default function SpotifyWidget() {
             href={
               nowPlaying?.songUrl ? nowPlaying.songUrl : recentlyPlayed?.songUrl
             }
+            title={nowPlaying?.title ? nowPlaying.title : recentlyPlayed?.title}
             target="_blank"
             rel="noopener noreferrer"
           >

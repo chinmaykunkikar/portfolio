@@ -1,8 +1,10 @@
 import { getRecentlyPlayed } from "@lib/spotify";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { TDate } from "timeago-react";
 
 export type RecentlyPlayedSong = {
   artist: string;
+  playedAt: TDate;
   songUrl: string;
   title: string;
 };
@@ -19,11 +21,12 @@ export default async function handler(
     .map((_artist: { name: string }) => _artist.name)
     .join(", ");
   const songUrl = items[0].track.external_urls.spotify;
+  const playedAt = items[0].played_at;
 
   res.setHeader(
     "Cache-Control",
     "public, s-maxage=300, max-age=300, stale-while-revalidate=600"
   );
 
-  return res.status(200).json({ artist, title, songUrl });
+  return res.status(200).json({ artist, playedAt, songUrl, title });
 }
