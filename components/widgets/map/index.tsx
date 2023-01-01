@@ -31,8 +31,8 @@ export default function MapWidget() {
   }, []);
 
   return (
-    <Card className="p-0 overflow-clip">
-      <div className="absolute z-10 right-4 left-4 bottom-4 flex items-center justify-center">
+    <Card className="p-0 overflow-clip select-none [&_canvas]:outline-0">
+      <div className="absolute z-20 right-4 left-4 bottom-4 flex items-center justify-center">
         <div className="flex items-center justify-between rounded-full shadow-lg bg-neutral-50 px-3 py-1 select-none">
           <ClockIcon width={20} height={20} stroke="#ac92fa" strokeWidth={2} />
           <div className="ml-2 font-bold">
@@ -40,13 +40,25 @@ export default function MapWidget() {
           </div>
         </div>
       </div>
+      <div
+        id="static_map"
+        className="bg-static-map bg-center bg-contain absolute top-0 left-0 w-full h-full z-10"
+      ></div>
       <Map
+        id="dynamic_map"
+        style={{ visibility: "hidden" }}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
         mapStyle="mapbox://styles/chinmaykunkikar/clc3j5l73005k14mpx2ghpj5x"
         initialViewState={{
           longitude,
           latitude,
           zoom,
+        }}
+        onLoad={() => {
+          const dynamicMap = document.getElementById("dynamic_map");
+          const staticMap = document.getElementById("static_map");
+          if (dynamicMap !== null) dynamicMap.style.visibility = "visible";
+          if (staticMap !== null) staticMap.style.visibility = "hidden";
         }}
         minZoom={6}
         maxZoom={13}
