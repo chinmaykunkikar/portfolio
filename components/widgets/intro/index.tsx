@@ -1,12 +1,26 @@
 import Card from "@components/card";
+import Balancer from "react-wrap-balancer";
 
 export default function IntroWidget() {
   return (
-    <Card className="md:col-span-2">
-      <p>
-        You&apos;ll find me with a head full of thoughts getting washed down
-        with sips of coffee.
-      </p>
+    <Card className="flex flex-col h-full w-full justify-center items-center text-neutral-500 md:col-span-2">
+      <Balancer>
+        <p className="text-lg mb-2">
+          I&apos;m{" "}
+          <span className="text-xl font-extrabold">Chinmay Kunkikar</span>, a
+          frontend developer from India, who is passionate about building
+          delightful web experiences. I&apos;m interested in React, Cloud
+          computing, Linux, Design, and Music.
+        </p>
+        <p className="mb-2">
+          I started my journey in web development during 2021 while I was
+          building my academic project, Vide.
+        </p>
+        <p className="mb-2">
+          You might find me enjoying hot sips of coffee while musing over my
+          myriad thoughts.
+        </p>
+      </Balancer>
     </Card>
   );
 }
