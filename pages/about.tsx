@@ -1,5 +1,9 @@
 import Card from "@components/card";
+import HiWidget from "@components/widgets/about-hi";
+import ExperienceWidget from "@components/widgets/experience";
 import IntroWidget from "@components/widgets/intro";
+import PhotoWidget from "@components/widgets/photo";
+import LinkedInWidget from "@components/widgets/social/linkedin";
 
 export default function About() {
   return (
@@ -8,11 +12,11 @@ export default function About() {
         About Me
       </h1>
       <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-16 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <Card>Hi, I&apos;m Chinmay</Card>
+        <HiWidget />
         <IntroWidget />
-        <Card className="">Photo</Card>
-        <Card className="md:col-span-2">Experience</Card>
-        <Card className="">LinkedIn</Card>
+        <PhotoWidget />
+        <ExperienceWidget />
+        <LinkedInWidget />
         <Card className="">Resume</Card>
       </div>
     </div>
