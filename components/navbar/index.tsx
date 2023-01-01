@@ -23,7 +23,8 @@ export default function Navbar() {
     "https://api.github.com/repos/chinmaykunkikar/portfolio/commits/next",
     fetcher
   );
-  const shortSha = data?.sha.slice(0, 7);
+  // const shortSha = data?.sha.slice(0, 7);
+  const shortSha = "f77705a";
 
   function LinkWrapper({
     children,
