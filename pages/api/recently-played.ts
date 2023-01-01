@@ -1,10 +1,9 @@
 import { getRecentlyPlayed } from "@lib/spotify";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { TDate } from "timeago-react";
 
 export type RecentlyPlayedSong = {
   artist: string;
-  playedAt: TDate;
+  playedAt: string;
   songUrl: string;
   title: string;
 };
