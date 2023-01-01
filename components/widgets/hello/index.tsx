@@ -19,10 +19,10 @@ export default function HelloWidget() {
     >
       <div className="flex items-center">
         <Player
+          className="w-16 h-16"
           src={showHello ? Hello : Namaskar}
           autoplay={true}
           loop={showHello}
-          style={{ width: "4em", height: "4em" }}
         />
         <div className="ml-2 pt-4 text-3xl font-bold">
           {showHello ? "Hello!" : "नमस्कार!"}
@@ -30,10 +30,9 @@ export default function HelloWidget() {
       </div>
       <span className="pt-6 text-lg">
         <Balancer>
-          I&apos;m{" "}
-          <span className="text-2xl font-extrabold">Chinmay Kunkikar</span>, a
-          frontend developer from India, thriving on the joy of creating
-          delightful web experiences.
+          I&apos;m <span className="text-2xl font-extrabold">Chinmay</span>, a
+          passenger through space and time, frontend web developer based in
+          India, and bittersweet music enthusiast.
         </Balancer>
       </span>
       <CardLinkButton href="/about" as={Link} variant={ArrowRightIcon} />
