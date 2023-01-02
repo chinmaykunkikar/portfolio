@@ -7,6 +7,7 @@ type CardLinkButtonProps = {
   bgColorClass?: string;
   hoverRingClass?: string;
   variant?: React.ElementType;
+  [props: string]: any;
 };
 
 export default function CardLinkButton({
@@ -16,6 +17,7 @@ export default function CardLinkButton({
   bgColorClass,
   hoverRingClass,
   variant: IconVariant = ArrowUpRightIcon,
+  ...props
 }: CardLinkButtonProps) {
   return (
     <div className="absolute right-4 bottom-4 flex items-center justify-center">
@@ -28,6 +30,7 @@ export default function CardLinkButton({
         } p-1 transition-all hover:ring-8 ${
           hoverRingClass ?? "hover:ring-neutral-400/[0.5]"
         }`}
+        {...props}
       >
         <IconVariant
           className="p-1"
