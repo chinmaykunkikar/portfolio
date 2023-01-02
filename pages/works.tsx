@@ -3,8 +3,8 @@ import Card from "@components/card";
 export default function Works() {
   return (
     <div className="text-neutral-500">
-      <h1 className="font-semibold flex justify-center px-10 py-8 text-9xl text-neutral-200">
-        Works
+      <h1 className="font-bold flex justify-center px-10 py-8 text-5xl select-none md:text-6xl lg:text-8xl xl:text-9xl text-neutral-200">
+        Projects & works
       </h1>
       <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-16 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <Card>Project</Card>
