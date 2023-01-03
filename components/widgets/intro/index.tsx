@@ -3,9 +3,9 @@ import Balancer from "react-wrap-balancer";
 
 export default function IntroWidget() {
   return (
-    <Card className="flex flex-col h-full w-full justify-center items-center text-neutral-500 md:col-span-2">
+    <Card className="flex h-full w-full flex-col items-center justify-center text-neutral-500 md:col-span-2">
       <Balancer>
-        <p className="text-lg mb-2">
+        <p className="mb-2 text-lg">
           I&apos;m{" "}
           <span className="text-xl font-extrabold">Chinmay Kunkikar</span>, a
           frontend developer from India, who is passionate about building

@@ -7,11 +7,11 @@ import Link from "next/link";
 
 export default function ContactWidget() {
   return (
-    <Card className="md:col-span-2 flex flex-col justify-center select-none">
-      <div className="flex items-center mx-auto">
-        <div className="font-bold text-3xl mr-2">Let&apos;s get in touch</div>
+    <Card className="flex select-none flex-col justify-center md:col-span-2">
+      <div className="mx-auto flex items-center">
+        <div className="mr-2 text-3xl font-bold">Let&apos;s get in touch</div>
         <Player
-          className="w-16 h-16"
+          className="h-16 w-16"
           src={Turtle}
           autoplay={true}
           loop={true}

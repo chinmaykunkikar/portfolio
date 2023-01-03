@@ -30,10 +30,10 @@ export default function SpotifyWidget() {
             </span>
           </div>
         ) : (
-          <div className="flex gap-x-1 flex-wrap font-bold items-center">
+          <div className="flex flex-wrap items-center gap-x-1 font-bold">
             <div className="select-none  text-[#00da5a]">Last played</div>
             <TimeAgo
-              className="text-xs select-none text-neutral-400 before:content-['('] after:content-[')']"
+              className="select-none text-xs text-neutral-400 before:content-['('] after:content-[')']"
               date={recentlyPlayed?.playedAt!}
               title={""}
             />

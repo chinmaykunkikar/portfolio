@@ -8,7 +8,7 @@ export default function Footer() {
         <span>
           Built in <span className="text-xl">🇮🇳</span> with&nbsp;
         </span>
-        <Player src={Heart} autoplay={true} loop={true} className="w-8 h-8" />
+        <Player src={Heart} autoplay={true} loop={true} className="h-8 w-8" />
         <span>
           &nbsp;by <span className="font-bold">Chinmay Kunkikar</span>
         </span>

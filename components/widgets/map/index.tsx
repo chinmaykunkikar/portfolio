@@ -31,9 +31,9 @@ export default function MapWidget() {
   }, []);
 
   return (
-    <Card className="p-0 overflow-clip select-none [&_canvas]:outline-0">
-      <div className="absolute z-20 right-4 left-4 bottom-4 flex items-center justify-center">
-        <div className="flex items-center justify-between rounded-full shadow-lg bg-neutral-50 px-3 py-1 select-none">
+    <Card className="select-none overflow-clip p-0 [&_canvas]:outline-0">
+      <div className="absolute right-4 left-4 bottom-4 z-20 flex items-center justify-center">
+        <div className="flex select-none items-center justify-between rounded-full bg-neutral-50 px-3 py-1 shadow-lg">
           <ClockIcon width={20} height={20} stroke="#ac92fa" strokeWidth={2} />
           <div className="ml-2 font-bold">
             {date.toLocaleTimeString("en-IN", dateOptions)}
@@ -42,7 +42,7 @@ export default function MapWidget() {
       </div>
       <div
         id="static_map"
-        className="bg-static-map bg-center bg-contain absolute top-0 left-0 w-full h-full z-10"
+        className="absolute top-0 left-0 z-10 h-full w-full bg-static-map bg-contain bg-center"
       ></div>
       <Map
         id="dynamic_map"

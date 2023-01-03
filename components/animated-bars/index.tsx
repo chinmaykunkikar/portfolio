@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { animate } from "motion";
+import { useEffect } from "react";
 
 export default function AnimatedBars() {
   useEffect(() => {

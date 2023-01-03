@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function PhotoWidget() {
   return (
-    <Card className="p-0 overflow-clip">
+    <Card className="overflow-clip p-0">
       <Image
-        className="object-cover min-w-full min-h-full"
+        className="pointer-events-none min-h-full min-w-full object-cover"
         src={Me}
         alt="Chinmay Kunkikar"
         quality={50}

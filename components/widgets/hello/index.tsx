@@ -13,13 +13,13 @@ export default function HelloWidget() {
 
   return (
     <Card
-      className="md:col-span-2 flex cursor-default select-none flex-col items-start justify-center p-8 md:px-10"
+      className="flex cursor-default select-none flex-col items-start justify-center p-8 md:col-span-2 md:px-10"
       onPointerEnter={() => setShowHello(true)}
       onPointerLeave={() => setShowHello(false)}
     >
       <div className="flex items-center">
         <Player
-          className="w-16 h-16"
+          className="h-16 w-16"
           src={showHello ? Hello : Namaskar}
           autoplay={true}
           loop={showHello}
