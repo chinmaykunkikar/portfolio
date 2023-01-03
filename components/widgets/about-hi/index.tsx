@@ -1,6 +1,6 @@
 import Card from "@components/card";
 import { Player } from "@lottiefiles/react-lottie-player";
-import Hi from "@public/hi.json";
+import Hi from "@public/emoji/hi.json";
 
 export default function HiWidget() {
   return (

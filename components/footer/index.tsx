@@ -1,5 +1,5 @@
 import { Player } from "@lottiefiles/react-lottie-player";
-import Heart from "@public/heart.json";
+import Heart from "@public/emoji/heart.json";
 
 export default function Footer() {
   return (

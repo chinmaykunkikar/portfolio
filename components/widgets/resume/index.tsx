@@ -11,7 +11,7 @@ export default function ResumeWidget() {
         <div>See my resume</div>
       </div>
       <CardLinkButton
-        href="/Resume - Chinmay Kunkikar.pdf"
+        href="/me/Resume - Chinmay Kunkikar.pdf"
         targetBlank
         variant={ArrowDownTrayIcon}
       />
