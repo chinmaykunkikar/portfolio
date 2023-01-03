@@ -1,0 +1,75 @@
+{
+  "basics": {
+    "name": "Chinmay Kunkikar",
+    "label": "Frontend Web Developer",
+    "image": "https://raw.githubusercontent.com/chinmaykunkikar/portfolio/next/public/me/me.jpeg",
+    "email": "chinmay.kunkikar@gmail.com",
+    "phone": "",
+    "url": "https://chinmaykunkikar.vercel.com",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Thane",
+      "countryCode": "IN",
+      "region": "Maharashtra"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "chinmaykunkikar",
+        "url": "https://github.com/chinmaykunkikar/"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "chinmaykunkikar",
+        "url": "https://linkedin.com/in/chinmaykunkikar"
+      },
+      {
+        "network": "Twitter",
+        "username": "ChinmayKunkikar",
+        "url": "https://twitter.com/ChinmayKunkikar"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "MetaBrainz Foundation",
+      "position": "Sudent Intern",
+      "url": "https://metabrainz.org/",
+      "startDate": "2022",
+      "endDate": "2022",
+      "summary": ""
+    },
+    {
+      "company": "Steinn Labs",
+      "position": "ReactJS Intern",
+      "url": "https://www.steinnlabs.com/",
+      "startDate": "2021",
+      "endDate": "2021",
+      "summary": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "Fresh Releases",
+      "summary": "Keep a track of your upcoming music releases with a beautiful timeline of releases loaded with the ability to filter them according to categories.",
+      "topics": ["React", "TypeScript"],
+      "startDate": "2022-06-14",
+      "endDate": "2022-11-30",
+      "live_url": "https://listenbrainz.org/explore/fresh-releases/",
+      "git_repo_url": "https://github.com/metabrainz/listenbrainz-server/tree/master/frontend/js/src/fresh-releases",
+      "description": ""
+    },
+    {
+      "name": "Vide",
+      "summary": "A Video on Demand platform built using ReactJS and managed on AWS.",
+      "topics": ["React"],
+      "startDate": "2021-04-01",
+      "endDate": "2021-06-01",
+      "live_url": "",
+      "git_repo_url": "https://github.com/chinmaykunkikar/vide-amplify",
+      "description": ""
+    }
+  ]
+}
