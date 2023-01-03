@@ -6,6 +6,7 @@ type CardLinkButtonProps = {
   as?: React.ElementType | string;
   bgColorClass?: string;
   hoverRingClass?: string;
+  positionClass?: string;
   variant?: React.ElementType;
   [props: string]: any;
 };
@@ -16,11 +17,16 @@ export default function CardLinkButton({
   as: Component = "a",
   bgColorClass,
   hoverRingClass,
+  positionClass,
   variant: IconVariant = ArrowUpRightIcon,
   ...props
 }: CardLinkButtonProps) {
   return (
-    <div className="absolute right-4 bottom-4 flex items-center justify-center">
+    <div
+      className={`absolute flex items-center justify-center ${
+        positionClass ? positionClass : "right-4 bottom-4"
+      }`}
+    >
       <Component
         href={href}
         target={targetBlank ? "_blank" : undefined}
