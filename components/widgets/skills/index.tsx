@@ -27,17 +27,17 @@ export default function SkillsWidget() {
       <div className="mx-auto mb-4 select-none text-2xl font-bold">Skills</div>
       <div className="overflow-y-auto scroll-smooth scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full">
         <div className="grid-rows-auto grid grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4">
-          <SkillWrapper icon={AwsIcon} label="AWS" />
           <SkillWrapper icon={JavaScriptLogo} label="JavaScript ES6" />
           <SkillWrapper icon={ReactLogo} label="ReactJS" />
+          <SkillWrapper icon={TypeScriptLogo} label="TypeScript" />
           <SkillWrapper icon={NextJsLogo} label="NextJS" />
           <SkillWrapper icon={MongoDbIcon} label="MongoDB" />
-          <SkillWrapper icon={TypeScriptLogo} label="TypeScript" />
           <SkillWrapper icon={NodeIcon} label="NodeJS" />
-          <SkillWrapper icon={WebpackLogo} label="Webpack" />
+          <SkillWrapper icon={AwsIcon} label="AWS" />
           <SkillWrapper icon={TailwindLogo} label="TailwindCSS" />
-          <SkillWrapper icon={DockerLogo} label="Docker" />
+          <SkillWrapper icon={WebpackLogo} label="Webpack" />
           <SkillWrapper icon={TerminalLogo} label="Shell Scripting" />
+          <SkillWrapper icon={DockerLogo} label="Docker" />
           <SkillWrapper icon={FigmaLogo} label="Figma" />
         </div>
       </div>
