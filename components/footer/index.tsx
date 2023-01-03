@@ -3,7 +3,7 @@ import Heart from "@public/emoji/heart.json";
 
 export default function Footer() {
   return (
-    <div className="flex justify-center px-16 py-4">
+    <div className="flex justify-center p-4 lg:px-16 lg:py-4">
       <span className="flex items-end text-neutral-500">
         <span>
           Built in <span className="text-xl">🇮🇳</span> with&nbsp;
