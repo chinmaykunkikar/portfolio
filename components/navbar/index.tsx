@@ -3,7 +3,7 @@ import fetcher from "@lib/fetcher";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import useSWR from "swr";
+import useSWRImmutable from "swr/immutable";
 
 type CommitSha = {
   sha: string;
@@ -19,12 +19,12 @@ type LinkWrapperProps = {
 export default function Navbar() {
   const { pathname } = useRouter();
 
-  const { data } = useSWR<CommitSha>(
+  const { data } = useSWRImmutable<CommitSha>(
     "https://api.github.com/repos/chinmaykunkikar/portfolio/commits/next",
     fetcher
   );
-  // const shortSha = data?.sha.slice(0, 7);
-  const shortSha = "f77705a";
+  const shortSha = data?.sha.slice(0, 7);
+  // const shortSha = "f77705a";
 
   function LinkWrapper({
     children,
