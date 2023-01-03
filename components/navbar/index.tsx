@@ -72,8 +72,8 @@ export default function Navbar() {
           <LinkWrapper linkHref="/about">
             <Button>About</Button>
           </LinkWrapper>
-          <LinkWrapper linkHref="/works">
-            <Button>Works</Button>
+          <LinkWrapper linkHref="/projects">
+            <Button>Projects</Button>
           </LinkWrapper>
           <LinkWrapper linkHref="/contact">
             <Button>Contact</Button>

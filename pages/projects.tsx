@@ -1,11 +1,12 @@
-import Card from "@components/card";
+import FreshReleasesWidget from "@components/widgets/fresh-releases";
+import VideWidget from "@components/widgets/vide";
 
-export default function Works() {
+export default function Projects() {
   return (
     <div className="text-neutral-500">
       <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 px-16 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <Card className="max-h-80">Fresh Releases</Card>
-        <Card className="max-h-80">Vide</Card>
+        <FreshReleasesWidget />
+        <VideWidget />
       </div>
     </div>
   );
