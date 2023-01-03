@@ -4,26 +4,17 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Turtle from "@public/turtle.json";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function ContactWidget() {
-  const [hovered, setHovered] = useState<boolean | undefined>(false);
-
   return (
-    <Card
-      className="md:col-span-2 flex flex-col justify-center"
-      onPointerEnter={() => setHovered(true)}
-      onPointerLeave={() => setHovered(false)}
-    >
+    <Card className="md:col-span-2 flex flex-col justify-center select-none">
       <div className="flex items-center mx-auto">
-        <div className="font-bold text-3xl mr-2">
-          Let&apos;s start a conversation
-        </div>
+        <div className="font-bold text-3xl mr-2">Let&apos;s get in touch</div>
         <Player
+          className="w-16 h-16"
           src={Turtle}
           autoplay={true}
           loop={true}
-          style={{ width: "4em", height: "4em" }}
         />
       </div>
       <CardLinkButton href="/contact" as={Link} variant={ArrowRightIcon} />

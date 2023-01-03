@@ -24,7 +24,7 @@ export default function SkillsWidget() {
 
   return (
     <Card className="flex flex-col md:col-span-2 max-h-80">
-      <div className="font-bold text-2xl mx-auto mb-4">Skills</div>
+      <div className="font-bold text-2xl select-none mx-auto mb-4">Skills</div>
       <div className="overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-neutral-500 scrollbar-track-neutral-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
         <div className="grid-rows-auto gap-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
           <SkillWrapper icon={AwsIcon} label="AWS" />
