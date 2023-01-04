@@ -1,8 +1,7 @@
 import Card from "@components/card";
-import { MinusIcon } from "@heroicons/react/24/outline";
 import TimeWidget from "@widgets/time";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import Map, { Marker } from "react-map-gl";
 
 export default function MapWidget() {
@@ -26,16 +25,6 @@ export default function MapWidget() {
     reuseMaps: true,
   });
 
-  const updateSettings = useCallback(
-    // TODO Debug this
-    (name: any, value: any) =>
-      setSettings((s) => ({
-        ...s,
-        zoom: defaultZoom - 3,
-      })),
-    []
-  );
-
   return (
     <Card className="select-none overflow-clip p-0 [&_canvas]:outline-0">
       <TimeWidget />
@@ -58,18 +47,6 @@ export default function MapWidget() {
         }}
       >
         <Marker longitude={longitude} latitude={latitude} color={accentColor} />
-        <button
-          className="absolute left-4 bottom-4 hidden items-center justify-center rounded-full
-        bg-neutral-50 transition-all hover:ring-8 hover:ring-[#ac92fa]/[0.5]"
-        >
-          <MinusIcon
-            className="m-1 p-1"
-            strokeWidth={3}
-            width={24}
-            height={24}
-            color={accentColor}
-          />
-        </button>
       </Map>
     </Card>
   );
