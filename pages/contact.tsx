@@ -55,7 +55,10 @@ export default function Contact() {
           </div>
         </div>
         <div className="w-full p-2">
-          <button className="mx-auto flex rounded-2xl border-0 bg-yellow-500 py-2 px-8 text-lg text-white focus:outline-none hover:bg-yellow-600">
+          <button
+            disabled
+            className="mx-auto flex rounded-2xl border-0 bg-yellow-500 py-2 px-8 text-lg text-white focus:outline-none disabled:cursor-not-allowed disabled:bg-neutral-300 hover:bg-yellow-600"
+          >
             Send
           </button>
         </div>
