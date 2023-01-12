@@ -20,18 +20,18 @@ export default function SpotifyWidget() {
 
   return (
     <Card className="group flex flex-col justify-between p-8">
-      <SpotifyLogo width={72} height={72} fill="#00da5a" />
+      <SpotifyLogo width={72} height={72} className="fill-spotify" />
       <div>
         {nowPlaying?.isPlaying ? (
           <div className="flex items-center">
             <AnimatedBars />
-            <span className="ml-2 select-none font-bold text-[#00da5a]">
+            <span className="ml-2 select-none font-bold text-spotify">
               Currently listening to
             </span>
           </div>
         ) : (
           <div className="flex flex-wrap items-center gap-x-1 font-bold">
-            <div className="select-none  text-[#00da5a]">Last played</div>
+            <div className="select-none  text-spotify">Last played</div>
             <TimeAgo
               className="select-none text-xs text-neutral-400 before:content-['('] after:content-[')']"
               date={recentlyPlayed?.playedAt!}
