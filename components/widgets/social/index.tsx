@@ -2,20 +2,22 @@ import Card from "@components/card";
 import CardLinkButton from "@components/card-link-btn";
 
 export type SocialPropTypes = {
-  socialBgColor?: string;
-  socialRingColor?: string;
+  widgetBgColor?: string;
+  linkBgColor?: string;
+  linkRingColor?: string;
   children?: JSX.Element | JSX.Element[] | String;
   socialUrl: string;
 };
 
 export default function SocialWidget({
-  socialBgColor,
-  socialRingColor,
+  widgetBgColor,
+  linkBgColor,
+  linkRingColor,
   children,
   socialUrl,
 }: SocialPropTypes) {
   return (
-    <Card className="group">
+    <Card className={`group ${widgetBgColor}`}>
       <div className="flex h-full w-full items-center justify-center">
         <a href={socialUrl} target="_blank" rel="noreferrer">
           {children}
@@ -23,8 +25,8 @@ export default function SocialWidget({
         <CardLinkButton
           href={socialUrl}
           targetBlank
-          bgColorClass={socialBgColor}
-          hoverRingClass={socialRingColor}
+          bgColorClass={linkBgColor}
+          hoverRingClass={linkRingColor}
         />
       </div>
     </Card>
