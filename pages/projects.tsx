@@ -1,5 +1,5 @@
-import FreshReleasesWidget from "@components/widgets/fresh-releases";
-import VideWidget from "@components/widgets/vide";
+import FreshReleasesWidget from "@widgets/FreshReleasesWidget";
+import VideWidget from "@widgets/VideWidget";
 
 export default function Projects() {
   return (

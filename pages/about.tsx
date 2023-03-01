@@ -1,9 +1,9 @@
-import HiWidget from "@components/widgets/about-hi";
-import ExperienceWidget from "@components/widgets/experience";
-import IntroWidget from "@components/widgets/intro";
-import PhotoWidget from "@components/widgets/photo";
-import ResumeWidget from "@components/widgets/resume";
-import LinkedInWidget from "@components/widgets/social/linkedin";
+import ExperienceWidget from "@widgets/ExperienceWidget";
+import HiWidget from "@widgets/HiWidget";
+import IntroWidget from "@widgets/IntroWidget";
+import PhotoWidget from "@widgets/PhotoWidget";
+import ResumeWidget from "@widgets/ResumeWidget";
+import LinkedInWidget from "@widgets/social/LinkedInWidget";
 
 export default function About() {
   return (

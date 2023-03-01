@@ -1,5 +1,5 @@
 import Card from "@components/Card";
-import TimeWidget from "@widgets/time";
+import TimeWidget from "@widgets/TimeWidget";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState } from "react";
 import Map, { Marker } from "react-map-gl";
