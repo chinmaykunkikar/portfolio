@@ -1,6 +1,6 @@
 export type CardPropsType = {
   className?: String;
-  children?: JSX.Element | JSX.Element[] | String;
+  children?: JSX.Element | JSX.Element[] | String | React.ReactNode;
   [props: string]: any;
 };
 
