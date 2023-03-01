@@ -1,7 +1,7 @@
 import useSWR from "swr";
 
-import AnimatedBars from "@components/animated-bars";
-import Card from "@components/card";
+import AnimatedBars from "@components/AnimatedBars";
+import Card from "@components/Card";
 import SpotifyLogo from "@drawables/spotify";
 import fetcher from "@lib/fetcher";
 import { NowPlayingSong } from "@pages/api/now-playing";

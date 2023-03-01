@@ -1,5 +1,5 @@
-import Card from "@components/card";
-import CardLinkButton from "@components/card-link-btn";
+import Card from "@components/Card";
+import CardLinkButton from "@components/CardLinkButton";
 import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function FreshReleasesWidget() {

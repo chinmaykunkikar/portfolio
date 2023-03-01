@@ -1,4 +1,4 @@
-import Card from "@components/card";
+import Card from "@components/Card";
 import AwsIcon from "@components/drawables/aws";
 import DockerLogo from "@components/drawables/docker";
 import FigmaLogo from "@components/drawables/figma";

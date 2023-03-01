@@ -1,4 +1,4 @@
-import Card from "@components/card";
+import Card from "@components/Card";
 import TimeWidget from "@widgets/time";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import Button from "@components/button";
+import Button from "@components/Button";
 import fetcher from "@lib/fetcher";
 import Head from "next/head";
 import Link from "next/link";

@@ -1,5 +1,5 @@
-import Card from "@components/card";
-import CardLinkButton from "@components/card-link-btn";
+import Card from "@components/Card";
+import CardLinkButton from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Turtle from "@public/emoji/turtle.json";
