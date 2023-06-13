@@ -1,10 +1,11 @@
 import Card from "@components/Card";
 import TimeWidget from "@widgets/TimeWidget";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { useState } from "react";
 import Map, { Marker } from "react-map-gl";
+import { twMerge } from "tailwind-merge";
 
 export default function MapWidget() {
+  const mapStyle = "mapbox://styles/chinmaykunkikar/clc3j5l73005k14mpx2ghpj5x";
   const longitude = process.env.NEXT_PUBLIC_MAP_LONGITUDE;
   const latitude = process.env.NEXT_PUBLIC_MAP_LATITUDE;
   const defaultZoom = 13;
@@ -15,7 +16,7 @@ export default function MapWidget() {
     zoom: defaultZoom,
   };
 
-  const [settings, setSettings] = useState({
+  const settings = {
     keyboard: false,
     touchPitch: false,
     minZoom: 6,
@@ -23,20 +24,22 @@ export default function MapWidget() {
     pitch: 40,
     refreshExpiredTiles: false,
     reuseMaps: true,
-  });
+  };
 
   return (
-    <Card className="select-none overflow-clip p-0 [&_canvas]:outline-0">
+    <Card
+      className={twMerge("select-none overflow-clip p-0 [&_canvas]:outline-0")}
+    >
       <TimeWidget />
       <div
         id="static_map"
-        className="absolute top-0 left-0 z-10 h-full w-full bg-static-map bg-contain bg-center"
+        className="absolute left-0 top-0 z-10 h-full w-full bg-static-map bg-contain bg-center"
       ></div>
       <Map
         id="dynamic_map"
         style={{ visibility: "hidden" }}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
-        mapStyle="mapbox://styles/chinmaykunkikar/clc3j5l73005k14mpx2ghpj5x"
+        mapStyle={mapStyle}
         initialViewState={initialViewState}
         {...settings}
         onLoad={() => {

@@ -1,4 +1,5 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { twMerge } from "tailwind-merge";
 
 type CardLinkButtonProps = {
   href: string;
@@ -23,19 +24,23 @@ export default function CardLinkButton({
 }: CardLinkButtonProps) {
   return (
     <div
-      className={`absolute flex items-center justify-center ${
-        positionClass ? positionClass : "right-4 bottom-4"
-      }`}
+      className={twMerge(
+        `absolute flex items-center justify-center ${
+          positionClass ? positionClass : "bottom-4 right-4"
+        }`
+      )}
     >
       <Component
         href={href}
         target={targetBlank ? "_blank" : undefined}
         rel={targetBlank ? "noreferrer" : undefined}
-        className={`text-bold rounded-full ${
-          bgColorClass ?? "bg-neutral-600"
-        } p-1 transition-all hover:ring-8 ${
-          hoverRingClass ?? "hover:ring-neutral-400/[0.5]"
-        }`}
+        className={twMerge(
+          `text-bold rounded-full ${
+            bgColorClass ?? "bg-neutral-600"
+          } p-1 transition-all hover:ring-8 ${
+            hoverRingClass ?? "hover:ring-neutral-400/[0.5]"
+          }`
+        )}
         {...props}
       >
         <IconVariant
