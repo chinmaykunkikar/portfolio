@@ -1,3 +1,4 @@
+"use client";
 import Card from "@components/Card";
 import Balancer from "react-wrap-balancer";
 

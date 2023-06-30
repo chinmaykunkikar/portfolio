@@ -1,3 +1,4 @@
+"use client";
 import Card from "@components/Card";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Hi from "@public/emoji/hi.json";
