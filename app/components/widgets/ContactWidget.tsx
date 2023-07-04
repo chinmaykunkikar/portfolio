@@ -1,3 +1,4 @@
+"use client";
 import Card from "@components/Card";
 import CardLinkButton from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -17,7 +18,7 @@ export default function ContactWidget() {
           loop={true}
         />
       </div>
-      <CardLinkButton href="/contact" as={Link} variant={ArrowRightIcon} />
+      <CardLinkButton href="/contact" variant={ArrowRightIcon} />
     </Card>
   );
 }

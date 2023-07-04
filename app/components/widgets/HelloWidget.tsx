@@ -1,3 +1,4 @@
+"use client";
 import Card from "@components/Card";
 import CardLinkButton from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -35,7 +36,7 @@ export default function HelloWidget() {
           India, and bittersweet music enthusiast.
         </Balancer>
       </span>
-      <CardLinkButton href="/about" as={Link} variant={ArrowRightIcon} />
+      <CardLinkButton href="/about" variant={ArrowRightIcon} />
     </Card>
   );
 }
