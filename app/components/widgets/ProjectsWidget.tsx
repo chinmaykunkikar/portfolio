@@ -9,7 +9,7 @@ export default function ProjectsWidget() {
     <Card>
       <div className="flex h-full w-full select-none flex-col items-center justify-center">
         <span className="text-2xl font-bold">Projects and works</span>
-        <CardLinkButton href="/projects" as={Link} variant={ArrowRightIcon} />
+        <CardLinkButton href="/projects" variant={ArrowRightIcon} />
       </div>
     </Card>
   );

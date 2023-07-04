@@ -36,7 +36,7 @@ export default function HelloWidget() {
           India, and bittersweet music enthusiast.
         </Balancer>
       </span>
-      <CardLinkButton href="/about" as={Link} variant={ArrowRightIcon} />
+      <CardLinkButton href="/about" variant={ArrowRightIcon} />
     </Card>
   );
 }

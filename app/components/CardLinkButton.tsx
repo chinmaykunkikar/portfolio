@@ -1,11 +1,10 @@
-"use client"
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 type CardLinkButtonProps = {
   href: string;
   targetBlank?: boolean;
-  as?: React.ElementType | string;
   bgColorClass?: string;
   hoverRingClass?: string;
   positionClass?: string;
@@ -16,7 +15,6 @@ type CardLinkButtonProps = {
 export default function CardLinkButton({
   href,
   targetBlank = false,
-  as: Component = "a",
   bgColorClass,
   hoverRingClass,
   positionClass,
@@ -31,7 +29,8 @@ export default function CardLinkButton({
         }`
       )}
     >
-      <Component
+      <Link
+        passHref
         href={href}
         target={targetBlank ? "_blank" : undefined}
         rel={targetBlank ? "noreferrer" : undefined}
@@ -51,7 +50,7 @@ export default function CardLinkButton({
           height={24}
           color="white"
         />
-      </Component>
+      </Link>
     </div>
   );
 }

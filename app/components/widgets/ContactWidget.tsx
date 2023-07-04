@@ -18,7 +18,7 @@ export default function ContactWidget() {
           loop={true}
         />
       </div>
-      <CardLinkButton href="/contact" as={Link} variant={ArrowRightIcon} />
+      <CardLinkButton href="/contact" variant={ArrowRightIcon} />
     </Card>
   );
 }

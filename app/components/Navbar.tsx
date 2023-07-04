@@ -33,7 +33,7 @@ export default function Navbar() {
   }: LinkWrapperProps) {
     const activeLink = pathname === linkHref;
     return (
-      <Link href={linkHref} className={otherClasses}>
+      <Link href={linkHref} className={otherClasses} passHref>
         <span className={activeLink ? "text-neutral-500" : ""} {...props}>
           {children}
         </span>
