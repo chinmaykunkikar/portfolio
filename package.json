@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@lottiefiles/react-lottie-player": "^3.5.3",
+    "mapbox-gl": "^2.15.0",
     "motion": "^10.16.2",
     "next": "^13.4.8",
     "react": "^18.2.0",
