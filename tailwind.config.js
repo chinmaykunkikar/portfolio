@@ -3,11 +3,8 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
-    fontFamily: {
-      sans: ["'Noto Sans'", ...defaultTheme.fontFamily.sans],
-      mono: ["'Noto Sans Mono'", ...defaultTheme.fontFamily.mono],
-    },
     fontWeight: {
       light: 300,
       normal: 400,
