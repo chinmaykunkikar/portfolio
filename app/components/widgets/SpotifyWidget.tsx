@@ -12,11 +12,11 @@ import TimeAgo from "react-timeago";
 export default function SpotifyWidget() {
   const { data: nowPlaying } = useSWR<NowPlayingSong>(
     "/api/now-playing",
-    fetcher
+    fetcher,
   );
   const { data: recentlyPlayed } = useSWR<RecentlyPlayedSong>(
     "/api/recently-played",
-    fetcher
+    fetcher,
   );
 
   return (

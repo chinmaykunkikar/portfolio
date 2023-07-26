@@ -28,7 +28,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full rounded bg-neutral-100 py-1 px-3 text-base leading-8 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
+                className="w-full rounded bg-neutral-100 px-3 py-1 text-base leading-8 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
               />
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full rounded bg-neutral-100 py-1 px-3 text-base leading-8 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
+                className="w-full rounded bg-neutral-100 px-3 py-1 text-base leading-8 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
               />
             </div>
           </div>
@@ -59,14 +59,14 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
-                className="h-32 w-full resize-none bg-neutral-100 py-1 px-3 text-base leading-6 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
+                className="h-32 w-full resize-none bg-neutral-100 px-3 py-1 text-base leading-6 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
               ></textarea>
             </div>
           </div>
           <div className="w-full p-2">
             <button
               disabled
-              className="mx-auto flex rounded-2xl border-0 bg-yellow-500 py-2 px-16 text-lg font-bold text-white focus:outline-none disabled:cursor-not-allowed disabled:bg-neutral-300 hover:bg-yellow-600"
+              className="mx-auto flex rounded-2xl border-0 bg-yellow-500 px-16 py-2 text-lg font-bold text-white hover:bg-yellow-600 focus:outline-none disabled:cursor-not-allowed disabled:bg-neutral-300"
             >
               Send
             </button>

@@ -26,7 +26,7 @@ export default function CardLinkButton({
       className={twMerge(
         `absolute flex items-center justify-center ${
           positionClass ? positionClass : "bottom-4 right-4"
-        }`
+        }`,
       )}
     >
       <Link
@@ -39,7 +39,7 @@ export default function CardLinkButton({
             bgColorClass ?? "bg-neutral-600"
           } p-1 transition-all hover:ring-8 ${
             hoverRingClass ?? "hover:ring-neutral-400/[0.5]"
-          }`
+          }`,
         )}
         {...props}
       >

@@ -5,7 +5,6 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Hello from "@public/emoji/hello.json";
 import Namaskar from "@public/emoji/namaskar.json";
-import Link from "next/link";
 import { useState } from "react";
 import Balancer from "react-wrap-balancer";
 

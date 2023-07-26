@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Heart from "@public/emoji/heart.json";
 

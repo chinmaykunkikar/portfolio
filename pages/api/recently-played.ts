@@ -10,7 +10,7 @@ export type RecentlyPlayedSong = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   const response = await getRecentlyPlayed();
   const { items } = await response.json();
@@ -24,7 +24,7 @@ export default async function handler(
 
   res.setHeader(
     "Cache-Control",
-    "public, s-maxage=300, max-age=300, stale-while-revalidate=600"
+    "public, s-maxage=300, max-age=300, stale-while-revalidate=600",
   );
 
   return res.status(200).json({ artist, playedAt, songUrl, title });

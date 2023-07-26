@@ -21,7 +21,7 @@ export default function Navbar() {
 
   const { data } = useSWRImmutable<CommitSha>(
     "https://api.github.com/repos/chinmaykunkikar/portfolio/commits/next",
-    fetcher
+    fetcher,
   );
   const shortSha = data?.sha.slice(0, 7);
 

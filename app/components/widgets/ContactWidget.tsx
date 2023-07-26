@@ -4,7 +4,6 @@ import CardLinkButton from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Turtle from "@public/emoji/turtle.json";
-import Link from "next/link";
 
 export default function ContactWidget() {
   return (
