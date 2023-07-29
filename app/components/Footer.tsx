@@ -14,7 +14,10 @@ export default function Footer() {
           className="h-6 w-6 lg:h-8 lg:w-8"
         />
         <span>
-          &nbsp;by <span className="font-bold">Chinmay Kunkikar</span>
+          &nbsp;by{" "}
+          <span className="font-bold">
+            Chinmay Kunkikar. [Work in progress]
+          </span>
         </span>
       </span>
     </div>
