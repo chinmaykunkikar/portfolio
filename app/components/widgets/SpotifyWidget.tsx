@@ -9,21 +9,50 @@ import { NowPlayingSong } from "@pages/api/now-playing";
 import { RecentlyPlayedSong } from "@pages/api/recently-played";
 import TimeAgo from "react-timeago";
 
+// Type guard function
+function isNowPlaying(
+  song: RecentlyPlayedSong | NowPlayingSong,
+): song is NowPlayingSong {
+  return (song as NowPlayingSong).isPlaying !== undefined;
+}
+
 export default function SpotifyWidget() {
-  const { data: nowPlaying } = useSWR<NowPlayingSong>(
-    "/api/now-playing",
-    fetcher,
-  );
-  const { data: recentlyPlayed } = useSWR<RecentlyPlayedSong>(
-    "/api/recently-played",
-    fetcher,
-  );
+  const {
+    data: nowPlaying,
+    error: nowPlayingError,
+    isLoading: nowPlayingLoading,
+  } = useSWR<NowPlayingSong>("/api/now-playing", fetcher);
+  
+  const {
+    data: recentlyPlayed,
+    error: recentlyPlayedError,
+    isLoading: recentlyPlayedLoading,
+  } = useSWR<RecentlyPlayedSong>("/api/recently-played", fetcher);
+
+  if (nowPlayingError && recentlyPlayedError) {
+    return <div>Error fetching data</div>;
+  }
+
+  const isNowPlayingLoading = nowPlayingLoading || recentlyPlayedLoading;
+
+  if (isNowPlayingLoading) {
+    return <div>Loading...</div>;
+  }
+
+  const isPlaying = nowPlaying ? isNowPlaying(nowPlaying) : false;
+  const songData = isPlaying ? nowPlaying : recentlyPlayed;
+
+  if (!songData) {
+    return <div>No song data available</div>;
+  }
+
+  const { title, artist, songUrl, playedAt } = songData;
 
   return (
     <Card className="group flex flex-col justify-between p-8">
       <SpotifyLogo width={72} height={72} className="fill-spotify" />
       <div>
-        {nowPlaying?.isPlaying ? (
+        {isPlaying ? (
           <div className="flex items-center">
             <AnimatedBars />
             <span className="ml-2 select-none font-bold text-spotify">
@@ -35,7 +64,7 @@ export default function SpotifyWidget() {
             <div className="select-none  text-spotify">Last played</div>
             <TimeAgo
               className="select-none text-xs text-neutral-400 before:content-['('] after:content-[')']"
-              date={recentlyPlayed?.playedAt!}
+              date={new Date(playedAt!).getTime()}
               title={""}
             />
           </div>
@@ -43,22 +72,18 @@ export default function SpotifyWidget() {
         <div className="flex flex-col">
           <a
             className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
-            href={
-              nowPlaying?.songUrl ? nowPlaying.songUrl : recentlyPlayed?.songUrl
-            }
-            title={nowPlaying?.title ? nowPlaying.title : recentlyPlayed?.title}
+            href={songUrl}
+            title={title}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {nowPlaying?.title ? nowPlaying.title : recentlyPlayed?.title}
+            {title}
           </a>
           <p
-            title={
-              nowPlaying?.artist ? nowPlaying.artist : recentlyPlayed?.artist
-            }
+            title={artist}
             className="max-w-max cursor-default truncate text-sm text-neutral-700"
           >
-            {nowPlaying?.artist ? nowPlaying.artist : recentlyPlayed?.artist}
+            {artist}
           </p>
         </div>
       </div>
