@@ -8,7 +8,6 @@ export type NowPlayingSong = {
   isPlaying: boolean;
   songUrl: string;
   title: string;
-  playedAt: string;
 };
 
 export default async function handler(
