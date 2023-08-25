@@ -22,7 +22,7 @@ export default function MapWidget() {
     touchPitch: false,
     minZoom: 6,
     maxZoom: 13,
-    pitch: 40,
+    pitch: 0,
     refreshExpiredTiles: false,
     reuseMaps: true,
   };
