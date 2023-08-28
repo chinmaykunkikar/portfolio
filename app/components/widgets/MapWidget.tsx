@@ -29,7 +29,9 @@ export default function MapWidget() {
 
   return (
     <Card
-      className={twMerge("select-none overflow-clip p-0 [&_canvas]:outline-0")}
+      className={twMerge(
+        "flex h-full w-full select-none overflow-clip p-0 [&_canvas]:outline-0",
+      )}
     >
       <TimeWidget />
       <div
