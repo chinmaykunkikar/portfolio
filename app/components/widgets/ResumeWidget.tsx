@@ -1,7 +1,7 @@
 "use client";
 import Card from "@components/Card";
 import CardLinkButton from "@components/CardLinkButton";
-import ResumeIcon from "@components/drawables/resume";
+import ResumeIcon from "@drawables/resume";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 export default function ResumeWidget() {

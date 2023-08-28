@@ -1,6 +1,6 @@
 "use client";
 import Card from "@components/Card";
-import TimeWidget from "@components/widgets/TimeWidget";
+import TimeWidget from "@widgets/TimeWidget";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map, { Marker } from "react-map-gl";
 import { twMerge } from "tailwind-merge";

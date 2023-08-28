@@ -1,13 +1,13 @@
 "use client";
+import TimeAgo from "react-timeago";
 import useSWR from "swr";
 
+import { NowPlayingSong } from "@api/now-playing";
+import { RecentlyPlayedSong } from "@api/recently-played";
 import AnimatedBars from "@components/AnimatedBars";
 import Card from "@components/Card";
-import SpotifyLogo from "@components/drawables/spotify";
+import SpotifyLogo from "@drawables/spotify";
 import fetcher from "@lib/fetcher";
-import { NowPlayingSong } from "@pages/api/now-playing";
-import { RecentlyPlayedSong } from "@pages/api/recently-played";
-import TimeAgo from "react-timeago";
 
 export default function SpotifyWidget() {
   const { data: nowPlaying, isLoading: nowPlayingLoading } =

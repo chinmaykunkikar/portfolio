@@ -1,12 +1,12 @@
-import ContactWidget from "app/components/widgets/ContactWidget";
-import HelloWidget from "app/components/widgets/HelloWidget";
-import MapWidget from "app/components/widgets/MapWidget";
-import ProjectsWidget from "app/components/widgets/ProjectsWidget";
-import SkillsWidget from "app/components/widgets/SkillsWidget";
-import SpotifyWidget from "app/components/widgets/SpotifyWidget";
-import GitHubWidget from "app/components/widgets/social/GitHubWidget";
-import LinkedInWidget from "app/components/widgets/social/LinkedInWidget";
-import TwitterWidget from "app/components/widgets/social/TwitterWidget";
+import ContactWidget from "@widgets/ContactWidget";
+import HelloWidget from "@widgets/HelloWidget";
+import MapWidget from "@widgets/MapWidget";
+import ProjectsWidget from "@widgets/ProjectsWidget";
+import SkillsWidget from "@widgets/SkillsWidget";
+import SpotifyWidget from "@widgets/SpotifyWidget";
+import GitHubWidget from "@widgets/social/GitHubWidget";
+import LinkedInWidget from "@widgets/social/LinkedInWidget";
+import TwitterWidget from "@widgets/social/TwitterWidget";
 
 export default function Home() {
   return (
