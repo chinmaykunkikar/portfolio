@@ -21,7 +21,7 @@ export default function SpotifyWidget() {
   const recentSong = recentlyPlayed?.[0];
 
   return (
-    <Card className="group flex flex-col justify-between p-8">
+    <Card className="group flex h-full flex-col justify-between p-8">
       <SpotifyLogo width={72} height={72} className="fill-spotify" />
       <div>
         {loading ? (
