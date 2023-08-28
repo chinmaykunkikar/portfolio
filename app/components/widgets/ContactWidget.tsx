@@ -7,7 +7,7 @@ import Turtle from "@public/emoji/turtle.json";
 
 export default function ContactWidget() {
   return (
-    <Card className="flex select-none flex-col justify-center md:col-span-2">
+    <Card className="flex select-none flex-col justify-center">
       <div className="mx-auto flex items-center">
         <div className="mr-2 text-3xl font-bold">Let&apos;s get in touch</div>
         <Player
