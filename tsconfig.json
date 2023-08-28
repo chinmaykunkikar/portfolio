@@ -16,13 +16,13 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["app/components/*"],
       "@widgets/*": ["app/components/widgets/*"],
       "@drawables/*": ["app/components/drawables/*"],
-      "@lib/*": ["lib/*"],
+      "@components/*": ["app/components/*"],
+      "@api/*": ["pages/api/*"],
       "@pages/*": ["pages/*"],
       "@public/*": ["public/*"],
-      "@api/*": ["pages/api/*"],
+      "@lib/*": ["lib/*"],
       "@styles/*": ["styles/*"]
     },
     "plugins": [
