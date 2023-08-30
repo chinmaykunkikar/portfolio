@@ -10,7 +10,7 @@ import TwitterWidget from "@widgets/social/TwitterWidget";
 
 export default function Home() {
   return (
-    <main className="px-12 md:px-20 lg:px-32">
+    <main className="px-8 md:px-16 lg:px-28">
       <div className="grid grid-cols-1 gap-4 pb-8 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4">
         <div className="order-1 col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2">
           <HelloWidget />
