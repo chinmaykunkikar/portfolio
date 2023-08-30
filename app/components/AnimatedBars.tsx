@@ -55,18 +55,9 @@ export default function AnimatedBars() {
 
   return (
     <div className="flex w-auto items-end overflow-hidden">
-      <span
-        id="bar1"
-        className="mr-[3px] h-2 w-1 bg-neutral-300 opacity-75 dark:bg-neutral-500"
-      />
-      <span
-        id="bar2"
-        className="mr-[3px] h-1 w-1 bg-neutral-300 dark:bg-neutral-500"
-      />
-      <span
-        id="bar3"
-        className="h-3 w-1 bg-neutral-300 opacity-80 dark:bg-neutral-500"
-      />
+      <span id="bar1" className="mr-[3px] h-2 w-1 bg-spotify opacity-60" />
+      <span id="bar2" className="mr-[3px] h-1 w-1 bg-spotify" />
+      <span id="bar3" className="h-3 w-1 bg-spotify opacity-75 " />
     </div>
   );
 }
