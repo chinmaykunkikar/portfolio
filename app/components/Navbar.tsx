@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex w-screen flex-col items-center justify-between gap-4 px-12 py-8 text-neutral-700 md:px-20 lg:flex-row lg:gap-0 lg:px-32">
+      <nav className="flex w-screen flex-col items-center justify-between gap-4 px-12 py-8 text-neutral-700 md:px-20 lg:flex-row lg:gap-0 lg:px-32">
         <span className="text-xl">
           <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
@@ -73,7 +73,7 @@ export default function Navbar() {
             <Button>Contact</Button>
           </LinkWrapper>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

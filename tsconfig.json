@@ -19,6 +19,7 @@
       "@widgets/*": ["app/components/widgets/*"],
       "@drawables/*": ["app/components/drawables/*"],
       "@components/*": ["app/components/*"],
+      "@app/*": ["app/*"],
       "@api/*": ["pages/api/*"],
       "@pages/*": ["pages/*"],
       "@public/*": ["public/*"],
@@ -31,6 +32,12 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/page.tsx"
+  ],
   "exclude": ["node_modules"]
 }
