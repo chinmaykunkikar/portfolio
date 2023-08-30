@@ -6,7 +6,7 @@ import avatar from "@public/avatar-smile.png";
 import mapboxgl, { Map } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -18,12 +18,17 @@ const MapWidget = () => {
   const latitude = process.env.NEXT_PUBLIC_MAP_LATITUDE;
 
   const defaultZoom = 13;
-  const minZoom = 5;
+  const minZoom = 3.65;
   const maxZoom = 13;
-  const zoomStep = 4;
+
+  const zoomLevels = useMemo(() => [13, 9, 6.1, 3.65], []);
+  const maxZoomIndex = zoomLevels.length - 1;
+  const minZoomIndex = 0;
 
   const [map, setMap] = useState<Map | null>(null);
-  const [currentZoom, setCurrentZoom] = useState(defaultZoom);
+  const [currentZoomIndex, setCurrentZoomIndex] = useState(
+    zoomLevels.indexOf(defaultZoom),
+  );
   const [mapLoaded, setMapLoaded] = useState(false);
 
   const settings = {
@@ -61,19 +66,31 @@ const MapWidget = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [longitude, latitude]);
 
+  useEffect(() => {
+    if (map) {
+      map.on("zoom", () => {
+        const currentZoom = map.getZoom();
+        const zoomIndex = zoomLevels.indexOf(currentZoom);
+        if (zoomIndex !== -1) {
+          setCurrentZoomIndex(zoomIndex);
+        }
+      });
+    }
+  }, [map, zoomLevels]);
+
   const handleZoomIn = () => {
-    if (map && currentZoom < maxZoom) {
-      const newZoom = currentZoom + zoomStep;
-      setCurrentZoom(newZoom);
-      map.flyTo({ zoom: newZoom, duration: 1000 });
+    if (map) {
+      const newZoomIndex = Math.min(currentZoomIndex + 1, maxZoomIndex);
+      map.flyTo({ zoom: zoomLevels[newZoomIndex], duration: 1250 });
+      setCurrentZoomIndex(newZoomIndex);
     }
   };
 
   const handleZoomOut = () => {
-    if (map && currentZoom > minZoom) {
-      const newZoom = currentZoom - zoomStep;
-      setCurrentZoom(newZoom);
-      map.easeTo({ zoom: newZoom, duration: 1000 });
+    if (map) {
+      const newZoomIndex = Math.max(currentZoomIndex - 1, minZoomIndex);
+      map.flyTo({ zoom: zoomLevels[newZoomIndex], duration: 1250 });
+      setCurrentZoomIndex(newZoomIndex);
     }
   };
 
@@ -103,20 +120,24 @@ const MapWidget = () => {
       <div
         onClick={handleZoomOut}
         className={twMerge(
-          "absolute bottom-4 left-4 z-20 flex h-10 w-10 flex-col items-center justify-center rounded-full bg-neutral-100 p-2 text-xl shadow-xl transition-all hover:ring-4 hover:ring-neutral-100/[0.5]",
-          currentZoom <= minZoom ? "hidden" : "",
+          "absolute bottom-4 right-4 z-20 flex h-9 w-9 flex-col items-center justify-center rounded-full bg-neutral-100 p-2 text-xl opacity-80 shadow-xl transition-all hover:ring-4 hover:ring-neutral-100/[0.5]",
+          currentZoomIndex <= minZoomIndex
+            ? "pointer-events-none opacity-40 hover:ring-0"
+            : "",
         )}
       >
-        <MinusIcon width={16} height={16} strokeWidth={3} />
+        <PlusIcon width={16} height={16} strokeWidth={3} />
       </div>
       <div
         onClick={handleZoomIn}
         className={twMerge(
-          "absolute bottom-4 right-4 z-20 flex h-10 w-10 flex-col items-center justify-center rounded-full bg-neutral-100 p-2 text-xl shadow-xl transition-all hover:ring-4 hover:ring-neutral-100/[0.5]",
-          currentZoom >= maxZoom ? "hidden" : "",
+          "absolute bottom-4 right-16 z-20 flex h-9 w-9 flex-col items-center justify-center rounded-full bg-neutral-100 p-2 text-xl opacity-80 shadow-xl transition-all hover:ring-4 hover:ring-neutral-100/[0.5]",
+          currentZoomIndex >= maxZoomIndex
+            ? "pointer-events-none opacity-40 hover:ring-0"
+            : "",
         )}
       >
-        <PlusIcon width={16} height={16} strokeWidth={3} />
+        <MinusIcon width={16} height={16} strokeWidth={3} />
       </div>
       <div className="pointer-events-none absolute flex h-full w-full items-center justify-center">
         <div className="relative z-20 h-16 w-16 rotate-12 opacity-80 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100">
