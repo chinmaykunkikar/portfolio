@@ -11,6 +11,16 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.mapbox.com",
+        port: "",
+        pathname: '**',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
