@@ -91,6 +91,7 @@ const MapWidget = () => {
             objectFit: "cover",
             visibility: mapLoaded ? "hidden" : "visible",
           }}
+          sizes="(min-width: 320px) 100vw"
           quality={100}
           alt="Map preview"
         />
@@ -118,8 +119,13 @@ const MapWidget = () => {
         <PlusIcon width={16} height={16} strokeWidth={3} />
       </div>
       <div className="pointer-events-none absolute flex h-full w-full items-center justify-center">
-        <div className="z-20 h-16 w-16 rotate-12 opacity-80 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100">
-          <Image src={avatar} fill alt="Avatar" />
+        <div className="relative z-20 h-16 w-16 rotate-12 opacity-80 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100">
+          <Image
+            src={avatar}
+            fill
+            alt="Avatar"
+            sizes="(min-width: 320px) 100vw"
+          />
         </div>
       </div>
     </Card>
