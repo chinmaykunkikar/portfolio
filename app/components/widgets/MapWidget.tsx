@@ -17,9 +17,9 @@ const MapWidget = () => {
   const longitude = process.env.NEXT_PUBLIC_MAP_LONGITUDE;
   const latitude = process.env.NEXT_PUBLIC_MAP_LATITUDE;
 
-  const defaultZoom = 12;
-  const minZoom = 4;
-  const maxZoom = 12;
+  const defaultZoom = 13;
+  const minZoom = 5;
+  const maxZoom = 13;
   const zoomStep = 4;
 
   const [map, setMap] = useState<Map | null>(null);
