@@ -1,10 +1,10 @@
 "use client";
 
 import Button from "@components/Button";
-import { getLatestCommitSHA } from "@lib/github";
+import fetcher from "@lib/fetcher";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import useSWR from "swr";
 import { twMerge } from "tailwind-merge";
 
 type LinkWrapperProps = {
@@ -14,24 +14,24 @@ type LinkWrapperProps = {
   [props: string]: any;
 };
 
+type commitSHA = {
+  sha: string;
+};
+
 export default function Navbar() {
   const pathname = usePathname();
 
-  const FIRST_COMMIT_SHA = "5b77381";
+  const { data, isLoading } = useSWR<commitSHA>(
+    "/api/last-commit-sha",
+    fetcher,
+    {
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+    },
+  );
 
-  const [commitSHA, setCommitSHA] = useState<string>("");
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchCommitSHA() {
-      const sha = await getLatestCommitSHA();
-      if (sha) setCommitSHA(sha);
-      else setCommitSHA(FIRST_COMMIT_SHA);
-      setIsLoading(false);
-    }
-
-    fetchCommitSHA();
-  }, []);
+  const lastCommitSHA = data?.sha;
 
   function LinkWrapper({
     children,
@@ -64,7 +64,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
             >
-              {commitSHA}
+              {lastCommitSHA}
             </a>
             ]$&#8202;
             <span className="animate-pulse">&#9601;</span>
