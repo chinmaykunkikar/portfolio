@@ -19,9 +19,8 @@
       "@widgets/*": ["app/components/widgets/*"],
       "@drawables/*": ["app/components/drawables/*"],
       "@components/*": ["app/components/*"],
+      "@api/*": ["app/api/*"],
       "@app/*": ["app/*"],
-      "@api/*": ["pages/api/*"],
-      "@pages/*": ["pages/*"],
       "@public/*": ["public/*"],
       "@lib/*": ["lib/*"],
       "@styles/*": ["styles/*"]
