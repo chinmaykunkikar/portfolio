@@ -15,12 +15,16 @@ const inter = Inter({
   display: "swap",
 });
 
-export default function RootLayout() {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={`${inter.className} overflow-x-hidden bg-neutral-100`}>
         <Navbar />
-        <Home />
+        {children}
         <Footer />
       </body>
     </html>
