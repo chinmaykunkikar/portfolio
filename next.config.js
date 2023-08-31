@@ -17,9 +17,12 @@ const nextConfig = {
         protocol: "https",
         hostname: "api.mapbox.com",
         port: "",
-        pathname: '**',
+        pathname: "**",
       },
     ],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
   },
 };
 

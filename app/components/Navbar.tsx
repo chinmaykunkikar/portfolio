@@ -1,13 +1,11 @@
 "use client";
-import fetcher from "@lib/fetcher";
+
+import Button from "@components/Button";
+import { getLatestCommitSHA } from "@lib/github";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import useSWRImmutable from "swr/immutable";
-import Button from "./Button";
-
-type CommitSha = {
-  sha: string;
-};
+import { useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 type LinkWrapperProps = {
   children: string | JSX.Element | JSX.Element[];
@@ -19,11 +17,21 @@ type LinkWrapperProps = {
 export default function Navbar() {
   const pathname = usePathname();
 
-  const { data } = useSWRImmutable<CommitSha>(
-    "https://api.github.com/repos/chinmaykunkikar/portfolio/commits/next",
-    fetcher,
-  );
-  const shortSha = data?.sha.slice(0, 7);
+  const FIRST_COMMIT_SHA = "5b77381";
+
+  const [commitSHA, setCommitSHA] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchCommitSHA() {
+      const sha = await getLatestCommitSHA();
+      if (sha) setCommitSHA(sha);
+      else setCommitSHA(FIRST_COMMIT_SHA);
+      setIsLoading(false);
+    }
+
+    fetchCommitSHA();
+  }, []);
 
   function LinkWrapper({
     children,
@@ -48,12 +56,15 @@ export default function Navbar() {
           <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
             <a
-              className="font-bold"
+              className={twMerge(
+                "font-bold transition-opacity duration-700 hover:text-neutral-500",
+                isLoading ? "animate-fadeIn opacity-0" : "opacity-100",
+              )}
               href="https://github.com/chinmaykunkikar/portfolio"
               target="_blank"
               rel="noreferrer"
             >
-              {shortSha}
+              {commitSHA}
             </a>
             ]$&#8202;
             <span className="animate-pulse">&#9601;</span>
