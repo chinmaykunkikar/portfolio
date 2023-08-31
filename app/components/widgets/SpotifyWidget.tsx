@@ -11,10 +11,16 @@ import fetcher from "@lib/fetcher";
 
 export default function SpotifyWidget() {
   const { data: nowPlaying, isLoading: nowPlayingLoading } =
-    useSWR<NowPlayingSong>("/api/now-playing", fetcher);
+    useSWR<NowPlayingSong>("/api/now-playing", fetcher, {
+      revalidateOnFocus: false,
+      refreshInterval: 120,
+    });
   const { data: recentlyPlayed, isLoading: recentlyPlayedLoading } = useSWR<
     LastPlayedSong[]
-  >("/api/last-played", fetcher);
+  >("/api/last-played", fetcher, {
+    revalidateOnFocus: false,
+    refreshInterval: 600,
+  });
 
   const loading = nowPlayingLoading || recentlyPlayedLoading;
 
