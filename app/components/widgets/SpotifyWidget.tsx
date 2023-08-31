@@ -31,7 +31,7 @@ export default function SpotifyWidget() {
       <div>
         {loading ? (
           <div className="flex items-center">
-            <AnimatedBars />
+            <AnimatedBars shouldAnimate />
             <span className="ml-2 select-none font-bold text-spotify">
               Loading...
             </span>
@@ -40,14 +40,17 @@ export default function SpotifyWidget() {
           <div>
             {nowPlaying?.isPlaying ? (
               <div className="flex items-center">
-                <AnimatedBars />
+                <AnimatedBars shouldAnimate />
                 <span className="ml-2 select-none font-bold text-spotify">
-                  Currently listening to
+                  Listening
                 </span>
               </div>
             ) : (
-              <div className="flex flex-wrap items-center gap-x-1 font-bold">
-                <div className="select-none text-spotify">Last played</div>
+              <div className="flex items-center">
+                <AnimatedBars shouldAnimate={false} />
+                <div className="ml-2 select-none font-bold text-spotify">
+                  Listened
+                </div>
               </div>
             )}
             <div className="flex flex-col">
