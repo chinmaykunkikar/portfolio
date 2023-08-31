@@ -1,5 +1,4 @@
 import "@app/globals.css";
-import Home from "@app/home/page";
 import Footer from "@components/Footer";
 import Navbar from "@components/Navbar";
 import { Metadata } from "next";
@@ -22,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-x-hidden bg-neutral-100`}>
+      <body className={`${inter.className} bg-neutral-100`}>
         <Navbar />
         {children}
         <Footer />
