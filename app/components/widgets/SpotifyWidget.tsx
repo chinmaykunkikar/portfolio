@@ -1,5 +1,4 @@
 "use client";
-import TimeAgo from "react-timeago";
 import useSWR from "swr";
 
 import { LastPlayedSong } from "@api/last-played/route";
@@ -49,11 +48,6 @@ export default function SpotifyWidget() {
             ) : (
               <div className="flex flex-wrap items-center gap-x-1 font-bold">
                 <div className="select-none text-spotify">Last played</div>
-                <TimeAgo
-                  className="select-none text-xs text-neutral-400 before:content-['('] after:content-[')']"
-                  date={recentSong?.playedAt!}
-                  title=""
-                />
               </div>
             )}
             <div className="flex flex-col">
