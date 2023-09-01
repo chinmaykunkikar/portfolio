@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${inter.className} bg-neutral-100`}>
         <Navbar />
-        {children}
+        <main className="px-8 md:px-16 lg:px-28">{children}</main>
         <Footer />
       </body>
     </html>
