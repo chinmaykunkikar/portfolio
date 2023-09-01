@@ -3,8 +3,8 @@ import useSWR from "swr";
 
 import { NowPlayingSong } from "@api/now-playing";
 import { RecentlyPlayedSong } from "@api/recently-played";
-import AnimatedBars from "@components/AnimatedBars";
 import Card from "@components/Card";
+import MusicBars from "@components/MusicBars";
 import SpotifyLogo from "@drawables/spotify";
 import fetcher from "@lib/fetcher";
 
@@ -34,14 +34,14 @@ export default function SpotifyWidget() {
         <div>
           {nowPlaying?.isPlaying ? (
             <div className="flex items-center">
-              <AnimatedBars shouldAnimate />
+              <MusicBars />
               <span className="ml-2 select-none font-bold text-spotify">
                 {loading ? "Looking up…" : "Listening"}
               </span>
             </div>
           ) : (
             <div className="flex items-center">
-              <AnimatedBars shouldAnimate={false} />
+              <MusicBars />
               <div className="ml-2 select-none font-bold text-spotify">
                 {loading ? "Looking up…" : "Listened"}
               </div>
