@@ -1,8 +1,8 @@
 "use client";
 import useSWR from "swr";
 
-import { LastPlayedSong } from "@api/last-played/route";
-import { NowPlayingSong } from "@api/now-playing/route";
+import { NowPlayingSong } from "@api/now-playing";
+import { RecentlyPlayedSong } from "@api/recently-played";
 import AnimatedBars from "@components/AnimatedBars";
 import Card from "@components/Card";
 import SpotifyLogo from "@drawables/spotify";
@@ -12,8 +12,8 @@ export default function SpotifyWidget() {
   const { data: nowPlaying, isLoading: nowPlayingLoading } =
     useSWR<NowPlayingSong>("/api/now-playing", fetcher);
   const { data: recentlyPlayed, isLoading: recentlyPlayedLoading } = useSWR<
-    LastPlayedSong[]
-  >("/api/last-played", fetcher);
+    RecentlyPlayedSong[]
+  >("/api/recently-played", fetcher);
 
   const loading = nowPlayingLoading || recentlyPlayedLoading;
 

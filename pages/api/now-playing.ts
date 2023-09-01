@@ -1,5 +1,5 @@
-import { getAccessToken } from "@lib/spotify";
-import { NextResponse } from "next/server";
+import { getNowPlaying } from "@lib/spotify";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export type NowPlayingSong = {
   album: string;
@@ -10,25 +10,22 @@ export type NowPlayingSong = {
   title: string;
 };
 
-export async function GET() {
-  const { access_token } = await getAccessToken();
-  const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
-
-  const response = await fetch(NOW_PLAYING_ENDPOINT, {
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
-    next: { revalidate: 60 },
-  });
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {
-    return new NextResponse(JSON.stringify({ isPlaying: false }));
+    res.setHeader("Cache-Control", "public, max-age=60");
+    return res.status(200).json({ isPlaying: false });
   }
 
   const song = await response.json();
 
   if (song.item === null) {
-    return new NextResponse(JSON.stringify({ isPlaying: false }));
+    res.setHeader("Cache-Control", "public, max-age=60");
+    return res.status(200).json({ isPlaying: false });
   }
 
   const isPlaying = song.is_playing;
@@ -40,7 +37,12 @@ export async function GET() {
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
 
-  return NextResponse.json({
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=60, stale-while-revalidate=30",
+  );
+
+  return res.status(200).json({
     album,
     albumImageUrl,
     artist,
