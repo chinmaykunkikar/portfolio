@@ -5,8 +5,21 @@ import { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chinmaykunkikar.me"),
   title: { default: "Chinmay Kunkikar", template: "%s | Chinmay Kunkikar" },
-  description: "Portfolio of Chinmay Kunkikar",
+  description: "Developer, open source enthusiast",
+  openGraph: {
+    title: "Chinmay Kunkikar",
+    description: "Developer, open source enthusiast",
+    url: "https://chinmaykunkikar.me",
+    siteName: "Chinmay Kunkikar",
+    locale: "en",
+    type: "website",
+  },
+  twitter: {
+    title: "Chinmay Kunkikar",
+    card: "summary_large_image",
+  },
 };
 
 const inter = Inter({
@@ -21,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-neutral-100`}>
+      <body className={`antialiased ${inter.className} bg-neutral-100`}>
         <Navbar />
         {children}
         <Footer />
