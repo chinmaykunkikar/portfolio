@@ -1,5 +1,6 @@
 import Card from "@components/Card";
 import CardLinkButton from "@components/CardLinkButton";
+import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 export type SocialPropTypes = {
@@ -20,13 +21,13 @@ export default function SocialWidget({
   return (
     <Card
       className={twMerge(
-        "group flex h-full w-full items-center justify-center",
+        "group flex w-full items-center justify-center aspect-auto h-full",
         widgetBgColor,
       )}
     >
-      <a href={socialUrl} target="_blank" rel="noreferrer">
+      <Link href={socialUrl} target="_blank" rel="noreferrer" passHref>
         {children}
-      </a>
+      </Link>
       <CardLinkButton
         href={socialUrl}
         targetBlank

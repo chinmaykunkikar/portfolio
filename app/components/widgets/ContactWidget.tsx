@@ -2,20 +2,12 @@
 import Card from "@components/Card";
 import CardLinkButton from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { Player } from "@lottiefiles/react-lottie-player";
-import Turtle from "@public/emoji/turtle.json";
 
 export default function ContactWidget() {
   return (
-    <Card className="flex select-none flex-col justify-center">
+    <Card className="flex aspect-video select-none flex-col justify-center p-8">
       <div className="mx-auto flex items-center">
         <div className="mr-2 text-3xl font-bold">Let&apos;s get in touch</div>
-        <Player
-          className="h-16 w-16"
-          src={Turtle}
-          autoplay={true}
-          loop={true}
-        />
       </div>
       <CardLinkButton href="/contact" variant={ArrowRightIcon} />
     </Card>

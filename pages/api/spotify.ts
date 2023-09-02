@@ -29,7 +29,6 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse) {
     }
 
     const recentlyPlayedSong = items[0];
-    console.log(recentlyPlayedSong);
 
     const recentlyPlayedData: SpotifyResponse = {
       isPlaying: false,

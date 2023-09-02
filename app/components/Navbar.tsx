@@ -38,7 +38,7 @@ export default function Navbar() {
         <span className="md:text-lg">
           <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
-            <a
+            <Link
               className={twMerge(
                 "font-bold transition-opacity duration-700 hover:text-neutral-500",
                 isLoading ? "animate-fadeIn opacity-0" : "opacity-100",
@@ -48,12 +48,12 @@ export default function Navbar() {
               rel="noreferrer"
             >
               {lastCommitSHA}
-            </a>
+            </Link>
             ]$&#8202;
             <span className="animate-pulse">&#9601;</span>
           </h3>
         </span>
-        <div className="flex h-fit items-center gap-1 md:gap-8">
+        <div className="flex h-fit items-center gap-1 md:gap-8 lowercase">
           <div className="flex space-x-1">
             {tabs.map((tab) => (
               <Link
@@ -61,8 +61,8 @@ export default function Navbar() {
                 href={tab.link}
                 passHref
                 className={twMerge(
-                  pathname === tab.link ? "" : "hover:text-neutral-800/70",
-                  "relative rounded-xl px-4 py-2 text-sm text-neutral-500 transition focus-visible:outline-2",
+                  pathname === tab.link ? "" : "hover:text-neutral-800/50",
+                  "relative rounded-xl px-4 py-2 text-neutral-500 transition focus-visible:outline-2",
                 )}
                 style={{
                   WebkitTapHighlightColor: "transparent",
@@ -74,7 +74,7 @@ export default function Navbar() {
                     className="absolute inset-0 z-10 rounded-xl bg-neutral-900 mix-blend-difference"
                     transition={{
                       type: "spring",
-                      bounce: 0.2,
+                      bounce: 0.3,
                       duration: 0.4,
                     }}
                   />

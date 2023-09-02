@@ -1,23 +1,19 @@
-"use client";
-import { Player } from "@lottiefiles/react-lottie-player";
-import Heart from "@public/emoji/heart.json";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="flex justify-center p-4 text-xs lg:px-16 lg:py-4 lg:text-base">
       <span className="flex items-end text-neutral-500">
         <span>Built with</span>
-        <Player
-          src={Heart}
-          autoplay={true}
-          loop={true}
-          className="h-6 w-6 lg:h-8 lg:w-8"
+        <Image
+          src="/emoji/heart.png"
+          alt="love"
+          width={32}
+          height={32}
+          className="px-1"
         />
         <span>
-          &nbsp;by{" "}
-          <span className="font-bold">
-            Chinmay Kunkikar. [Work in progress]
-          </span>
+          by <span className="font-bold">Chinmay Kunkikar</span>
         </span>
       </span>
     </footer>
