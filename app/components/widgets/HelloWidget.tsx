@@ -11,7 +11,7 @@ export default function HelloWidget() {
 
   return (
     <Card
-      className="flex w-full cursor-default select-none flex-col items-start justify-center p-4 md:px-10"
+      className="flex aspect-video w-full cursor-default select-none flex-col items-start justify-center p-4 md:px-10"
       onPointerEnter={() => setShowHello(true)}
       onPointerLeave={() => setShowHello(false)}
     >

@@ -95,7 +95,7 @@ const MapWidget = () => {
   };
 
   return (
-    <Card className="group relative flex  w-full select-none overflow-clip p-0 [&_canvas]:outline-0">
+    <Card className="group relative flex h-full w-full select-none overflow-clip p-0 [&_canvas]:outline-0">
       <div
         id="map-placeholder"
         className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center"
