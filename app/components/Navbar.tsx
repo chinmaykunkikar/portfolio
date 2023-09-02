@@ -38,7 +38,7 @@ export default function Navbar() {
         <span className="md:text-lg">
           <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
-            <a
+            <Link
               className={twMerge(
                 "font-bold transition-opacity duration-700 hover:text-neutral-500",
                 isLoading ? "animate-fadeIn opacity-0" : "opacity-100",
@@ -48,7 +48,7 @@ export default function Navbar() {
               rel="noreferrer"
             >
               {lastCommitSHA}
-            </a>
+            </Link>
             ]$&#8202;
             <span className="animate-pulse">&#9601;</span>
           </h3>

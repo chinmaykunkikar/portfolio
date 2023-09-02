@@ -6,6 +6,7 @@ import Card from "@components/Card";
 import MusicBars from "@components/MusicBars";
 import SpotifyLogo from "@drawables/spotify";
 import fetcher from "@lib/fetcher";
+import Link from "next/link";
 
 export default function SpotifyWidget() {
   const { data: songData, isLoading } = useSWR<SpotifyResponse>(
@@ -18,9 +19,9 @@ export default function SpotifyWidget() {
   );
 
   return (
-    <Card className="group flex h-full flex-col justify-between p-8">
+    <Card className="group flex flex-col justify-between p-8">
       <SpotifyLogo width={72} height={72} className="fill-spotify" />
-      <div>
+      <div className="keep">
         <div>
           {songData?.isPlaying ? (
             <div className="flex items-center">
@@ -38,7 +39,7 @@ export default function SpotifyWidget() {
             </div>
           )}
           <div className="flex flex-col">
-            <a
+            <Link
               className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
               href={songData?.songUrl || "#"}
               title={songData?.title || "No Song"}
@@ -46,7 +47,7 @@ export default function SpotifyWidget() {
               rel="noopener noreferrer"
             >
               {songData?.title || "No Song"}
-            </a>
+            </Link>
             <p
               title={songData?.artist || "No Artist"}
               className="max-w-max cursor-default truncate text-sm text-neutral-700"
