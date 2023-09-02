@@ -1,4 +1,3 @@
-"use client";
 import Card from "@components/Card";
 import AwsIcon from "@drawables/aws";
 import DockerLogo from "@drawables/docker";

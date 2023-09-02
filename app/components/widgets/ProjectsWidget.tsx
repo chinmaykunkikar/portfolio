@@ -1,4 +1,3 @@
-"use client";
 import Card from "@components/Card";
 import CardLinkButton from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";

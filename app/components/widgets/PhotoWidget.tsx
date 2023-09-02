@@ -1,4 +1,3 @@
-"use client";
 import Card from "@components/Card";
 import Me from "@public/me/me.jpeg";
 import Image from "next/image";
