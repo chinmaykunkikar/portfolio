@@ -23,7 +23,7 @@ export default function SkillsWidget() {
   }
 
   return (
-    <Card className="flex flex-col aspect-video">
+    <Card className="flex flex-col md:aspect-video">
       <div className="mx-auto mb-2 select-none text-lg font-bold uppercase">
         Skills
       </div>

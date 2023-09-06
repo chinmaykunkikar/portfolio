@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex flex-col items-center justify-between gap-4 px-12 py-8 text-neutral-700 md:px-20 lg:flex-row lg:gap-0 lg:px-32">
+      <nav className="flex flex-col items-center justify-between gap-4 p-8 text-neutral-700 md:px-20 lg:flex-row lg:gap-0 lg:px-32">
         <span className="md:text-lg">
           <h3 className="cursor-default	select-none	font-mono">
             [chinmay@web{" "}
@@ -62,7 +62,7 @@ export default function Navbar() {
                 passHref
                 className={twMerge(
                   pathname === tab.link ? "" : "hover:text-neutral-800/50",
-                  "relative rounded-xl px-4 py-2 text-neutral-500 transition focus-visible:outline-2",
+                  "relative rounded-xl px-3 py-2 text-neutral-500 transition focus-visible:outline-2",
                 )}
                 style={{
                   WebkitTapHighlightColor: "transparent",

@@ -22,14 +22,14 @@ export default function HelloWidget() {
           width={64}
           height={64}
         />
-        <div className="ml-2 pt-4 text-3xl font-bold">
+        <div className="ml-2 text-2xl lg:text-3xl font-bold">
           {showHello ? "Hello!" : "नमस्कार!"}
         </div>
       </div>
-      <span className="pt-6 text-lg">
+      <span className="pt-6 text-base lg:text-lg">
         <Balancer>
           I&apos;m{" "}
-          <span className="text-2xl font-extrabold">Chinmay Kunkikar</span>, a
+          <span className="lg:text-2xl font-extrabold">Chinmay Kunkikar</span>, a
           passenger through space and time, frontend web developer based in
           India, and bittersweet music enthusiast.
         </Balancer>
