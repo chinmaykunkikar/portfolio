@@ -16,14 +16,14 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@widgets/*": ["app/components/widgets/*"],
-      "@drawables/*": ["app/components/drawables/*"],
-      "@components/*": ["app/components/*"],
-      "@app/*": ["app/*"],
-      "@api/*": ["pages/api/*"],
-      "@pages/*": ["pages/*"],
+      "@widgets/*": ["src/app/components/widgets/*"],
+      "@drawables/*": ["src/app/components/drawables/*"],
+      "@components/*": ["src/app/components/*"],
+      "@app/*": ["src/app/*"],
+      "@api/*": ["src/pages/api/*"],
+      "@pages/*": ["src/pages/*"],
       "@public/*": ["public/*"],
-      "@lib/*": ["lib/*"],
+      "@lib/*": ["src/lib/*"],
       "@styles/*": ["styles/*"]
     },
     "plugins": [
@@ -37,7 +37,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/page.tsx"
+    "src/app/page.tsx"
   ],
   "exclude": ["node_modules"]
 }
