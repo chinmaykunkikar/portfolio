@@ -21,7 +21,7 @@ export default function SocialWidget({
   return (
     <Card
       className={twMerge(
-        "group flex w-full items-center justify-center aspect-auto h-full",
+        "group flex w-full items-center justify-center",
         widgetBgColor,
       )}
     >

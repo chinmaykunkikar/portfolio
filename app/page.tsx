@@ -10,32 +10,32 @@ import TwitterWidget from "@widgets/social/TwitterWidget";
 
 export default function Home() {
   return (
-    <div className="mx-auto grid max-w-[80rem] grid-cols-1 gap-4 p-3 md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6">
-      <div className="lg:row order-1 sm:col-span-2 lg:col-span-2">
+    <div className="[grid-auto-columns: 18rem] [grid-auto-rows: 18rem] lg:grid-rows-[18rem 18rem 18rem] mx-auto grid w-full max-w-[320px] grid-cols-1 gap-4 sm:max-w-screen-sm sm:grid-cols-2 lg:max-w-[1200px] lg:grid-cols-4">
+      <div className="order-1 sm:col-span-2">
         <HelloWidget />
       </div>
-      <div className="order-2 sm:col-span-2 md:col-span-1">
+      <div className="order-2">
         <GitHubWidget />
       </div>
-      <div className="order-3 sm:col-span-2 md:col-span-1">
+      <div className="order-3">
         <MapWidget />
       </div>
-      <div className="order-4 sm:col-span-2 md:col-span-1">
+      <div className="order-4">
         <ProjectsWidget />
       </div>
-      <div className="order-5 sm:col-span-2 md:col-span-1">
+      <div className="order-5">
         <LinkedInWidget />
       </div>
       <div className="order-6 sm:col-span-2">
         <SkillsWidget />
       </div>
-      <div className="order-7 sm:col-span-2 md:col-span-1">
+      <div className="order-7">
         <SpotifyWidget />
       </div>
-      <div className="order-8 sm:col-span-2 md:col-span-1">
+      <div className="order-8">
         <TwitterWidget />
       </div>
-      <div className="order-9 sm:col-span-2 md:col-span-2">
+      <div className="order-9 sm:col-span-2">
         <ContactWidget />
       </div>
     </div>

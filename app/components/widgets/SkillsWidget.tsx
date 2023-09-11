@@ -23,12 +23,12 @@ export default function SkillsWidget() {
   }
 
   return (
-    <Card className="flex flex-col md:aspect-video">
+    <Card className="flex flex-col">
       <div className="mx-auto mb-2 select-none text-lg font-bold uppercase">
         Skills
       </div>
       <div className="overflow-y-auto scroll-smooth scrollbar-thin scrollbar-track-transparent scrollbar-thumb-neutral-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full">
-        <div className="grid-rows-auto grid grid-cols-2 p-1 md:grid-cols-3">
+        <div className="grid-rows-auto grid grid-cols-2 p-1 sm:grid-cols-3 lg:grid-cols-4">
           <SkillWrapper icon={JavaScriptLogo} label="JavaScript" />
           <SkillWrapper icon={ReactLogo} label="ReactJS" />
           <SkillWrapper icon={TypeScriptLogo} label="TypeScript" />

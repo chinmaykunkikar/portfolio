@@ -11,7 +11,7 @@ export default function HelloWidget() {
 
   return (
     <Card
-      className="flex aspect-video w-full cursor-default select-none flex-col items-start justify-center p-4 md:px-10"
+      className="flex cursor-default select-none flex-col items-start justify-center p-4 md:px-10"
       onPointerEnter={() => setShowHello(true)}
       onPointerLeave={() => setShowHello(false)}
     >
@@ -22,16 +22,16 @@ export default function HelloWidget() {
           width={64}
           height={64}
         />
-        <div className="ml-2 text-2xl lg:text-3xl font-bold">
+        <div className="ml-2 text-2xl font-bold lg:text-3xl">
           {showHello ? "Hello!" : "नमस्कार!"}
         </div>
       </div>
-      <span className="pt-6 text-base lg:text-lg">
+      <span className="mt-2 text-base lg:text-lg">
         <Balancer>
           I&apos;m{" "}
-          <span className="lg:text-2xl font-extrabold">Chinmay Kunkikar</span>, a
-          passenger through space and time, frontend web developer based in
-          India, and bittersweet music enthusiast.
+          <span className="font-extrabold lg:text-2xl">Chinmay Kunkikar</span>,
+          a frontend web developer based in India, an open source software
+          enthusiast, and a passenger through space and time.
         </Balancer>
       </span>
       <CardLinkButton href="/about" variant={ArrowRightIcon} />

@@ -19,7 +19,7 @@ export default function SpotifyWidget() {
   );
 
   return (
-    <Card className="group flex aspect-auto h-full flex-col justify-between p-8">
+    <Card className="group flex aspect-auto flex-col justify-between p-8">
       <SpotifyLogo width={72} height={72} className="fill-spotify" />
       <div className="keep">
         <div>

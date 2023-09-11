@@ -10,8 +10,8 @@ export default function Card({ children, className, ...props }: CardPropsType) {
   return (
     <div
       className={twMerge(
-        `font-semibold relative  aspect-square min-h-[16rem] rounded-2xl bg-white p-4 text-neutral-600
-      transition-all duration-300 ease-in hover:drop-shadow-xl`,
+        `font-semibold relative h-72 rounded-xl bg-white p-4 text-neutral-600
+      transition-all duration-300 ease-in`,
         className ?? "card",
       )}
       {...props}
