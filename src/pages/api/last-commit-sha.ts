@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export async function GET() {
+export default async function handler(_: NextApiRequest, res: NextApiResponse) {
   const REPO_COMMIT_INFO_URL =
     "https://api.github.com/repos/chinmaykunkikar/portfolio/commits/next";
   const FIRST_COMMIT_SHA = "5b77381";
@@ -10,7 +10,7 @@ export async function GET() {
   if (response.status === 200) {
     const data = await response.json();
     const latestCommitSHA = data.sha.slice(0, 7);
-    return NextResponse.json({ sha: latestCommitSHA });
+    return res.status(200).json({ sha: latestCommitSHA });
   } else if (response.status === 403) {
     const ratelimitReset = parseInt(
       response.headers.get("x-ratelimit-reset") || "0",
@@ -20,13 +20,13 @@ export async function GET() {
     if (ratelimitReset > currentTime) {
       const waitTime = ratelimitReset - currentTime;
       console.warn(`Rate limit exceeded. Please wait for ${waitTime} seconds.`);
-      return new NextResponse(JSON.stringify({ sha: FIRST_COMMIT_SHA }));
+      return res.status(429).json({ sha: FIRST_COMMIT_SHA });
     } else {
       console.error("Rate limit exceeded, but reset time has already passed.");
-      return new NextResponse(JSON.stringify({ sha: FIRST_COMMIT_SHA }));
+      return res.status(429).json({ sha: FIRST_COMMIT_SHA });
     }
   } else {
     console.error("Unexpected response:", response.status, response.statusText);
-    return new NextResponse(FIRST_COMMIT_SHA);
+    return res.status(500).json({ sha: FIRST_COMMIT_SHA });
   }
 }
