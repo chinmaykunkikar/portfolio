@@ -10,6 +10,10 @@ module.exports = {
       bold: 600,
       extrabold: 700,
     },
+    fontFamily: {
+      sans: ["var(--font-inter)"],
+      mono: ["var(--font-roboto-mono)"],
+    },
     extend: {
       keyframes: {
         pulse: {

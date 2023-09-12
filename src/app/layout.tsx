@@ -1,8 +1,9 @@
 import "@app/globals.css";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import Footer from "src/app/components/Footer";
 import Navbar from "src/app/components/Navbar";
+import { twJoin } from "tailwind-merge";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chinmaykunkikar.me"),
@@ -22,9 +23,17 @@ export const metadata: Metadata = {
   },
 };
 
-const inter = Inter({
+export const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
+});
+
+export const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-roboto-mono",
 });
 
 export default function RootLayout({
@@ -34,7 +43,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`antialiased ${inter.className} bg-neutral-100`}>
+      <body
+        className={twJoin(
+          "bg-neutral-100 antialiased",
+          inter.className,
+          roboto_mono.variable,
+        )}
+      >
         <Navbar />
         <main className="px-8 md:px-16 lg:px-28">{children}</main>
         <Footer />
