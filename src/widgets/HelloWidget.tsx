@@ -5,6 +5,7 @@ import { useState } from "react";
 import Balancer from "react-wrap-balancer";
 import Card from "src/components/Card";
 import CardLinkButton from "src/components/CardLinkButton";
+import { twMerge } from "tailwind-merge";
 
 export default function HelloWidget() {
   const [showHello, setShowHello] = useState<boolean>(false);
@@ -24,14 +25,18 @@ export default function HelloWidget() {
           quality={100}
           priority
         />
-        <div className="ml-2 text-2xl font-bold lg:text-3xl">
+        <div
+          className={twMerge(
+            "ml-2 text-2xl font-bold lg:text-3xl",
+            showHello ? "tracking-tighter" : "",
+          )}
+        >
           {showHello ? "Hello!" : "नमस्कार!"}
         </div>
       </div>
-      <span className="mt-2 text-base lg:text-lg">
+      <span className="mt-6 text-base lg:text-lg">
         <Balancer>
-          I&apos;m{" "}
-          <span className="font-extrabold lg:text-2xl">Chinmay Kunkikar</span>,
+          I&apos;m&nbsp;<span className="font-newsreader text-xl lg:text-3xl">Chinmay</span>,
           a frontend web developer based in India, an open source software
           enthusiast, and a passenger through space and time.
         </Balancer>
