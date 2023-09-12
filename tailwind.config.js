@@ -11,8 +11,9 @@ module.exports = {
       extrabold: 700,
     },
     fontFamily: {
-      sans: ["var(--font-inter)"],
+      sans: ["var(--font-manrope)"],
       mono: ["var(--font-roboto-mono)"],
+      newsreader: ["var(--font-newsreader)"],
     },
     extend: {
       keyframes: {

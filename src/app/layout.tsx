@@ -1,6 +1,6 @@
 import "@app/globals.css";
 import { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Manrope, Newsreader, Roboto_Mono } from "next/font/google";
 import Footer from "src/components/Footer";
 import Navbar from "src/components/Navbar";
 import { twJoin } from "tailwind-merge";
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   },
 };
 
-export const inter = Inter({
+export const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-manrope",
 });
 
 export const roboto_mono = Roboto_Mono({
@@ -34,6 +34,13 @@ export const roboto_mono = Roboto_Mono({
   weight: ["400", "700"],
   display: "swap",
   variable: "--font-roboto-mono",
+});
+
+export const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ["800"],
+  display: "swap",
+  variable: "--font-newsreader",
 });
 
 export default function RootLayout({
@@ -46,8 +53,9 @@ export default function RootLayout({
       <body
         className={twJoin(
           "bg-neutral-100 antialiased",
-          inter.className,
+          manrope.className,
           roboto_mono.variable,
+          newsreader.variable,
         )}
       >
         <Navbar />
