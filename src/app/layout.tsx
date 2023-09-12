@@ -8,17 +8,20 @@ import { twJoin } from "tailwind-merge";
 export const metadata: Metadata = {
   metadataBase: new URL("https://chinmaykunkikar.me"),
   title: { default: "Chinmay Kunkikar", template: "%s | Chinmay Kunkikar" },
-  description: "Developer, open source enthusiast",
+  description: "Web Developer, Designer, Open source enthusiast",
   openGraph: {
     title: "Chinmay Kunkikar",
-    description: "Developer, open source enthusiast",
+    description: "Web Developer, Designer, Open source enthusiast",
     url: "https://chinmaykunkikar.me",
+    images: ["/opengraph-image.png"],
     siteName: "Chinmay Kunkikar",
     locale: "en",
     type: "website",
   },
   twitter: {
     title: "Chinmay Kunkikar",
+    description: "Web Developer, Designer, Open source enthusiast",
+    images: ["/twitter-image.png"],
     card: "summary_large_image",
   },
 };
