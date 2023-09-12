@@ -7,7 +7,7 @@ import Card from "src/app/components/Card";
 import CardLinkButton from "src/app/components/CardLinkButton";
 
 export default function HelloWidget() {
-  const [showHello, setShowHello] = useState<boolean | undefined>(false);
+  const [showHello, setShowHello] = useState<boolean>(false);
 
   return (
     <Card
@@ -15,12 +15,14 @@ export default function HelloWidget() {
       onPointerEnter={() => setShowHello(true)}
       onPointerLeave={() => setShowHello(false)}
     >
-      <div className="flex items-center">
+      <div className="flex items-center pointer-events-none">
         <Image
-          alt="Greetings"
+          alt={showHello ? "Hello!" : "नमस्कार!"}
           src={showHello ? "/emoji/hello.png" : "/emoji/namaskar.png"}
-          width={64}
-          height={64}
+          width={48}
+          height={48}
+          quality={100}
+          priority
         />
         <div className="ml-2 text-2xl font-bold lg:text-3xl">
           {showHello ? "Hello!" : "नमस्कार!"}
