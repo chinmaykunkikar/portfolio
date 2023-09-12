@@ -1,4 +1,4 @@
-import Card from "src/app/components/Card";
+import Card from "src/components/Card";
 
 export default function HiWidget() {
   return (

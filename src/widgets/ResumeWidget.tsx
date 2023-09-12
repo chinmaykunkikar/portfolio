@@ -1,7 +1,7 @@
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
-import Card from "src/app/components/Card";
-import CardLinkButton from "src/app/components/CardLinkButton";
-import ResumeIcon from "src/app/components/drawables/resume";
+import Card from "src/components/Card";
+import CardLinkButton from "src/components/CardLinkButton";
+import ResumeIcon from "src/components/drawables/resume";
 
 export default function ResumeWidget() {
   return (

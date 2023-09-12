@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import Card from "src/app/components/Card";
-import CardLinkButton from "src/app/components/CardLinkButton";
+import Card from "src/components/Card";
+import CardLinkButton from "src/components/CardLinkButton";
 
 export default function ProjectsWidget() {
   return (

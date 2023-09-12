@@ -6,7 +6,7 @@ import mapboxgl, { Map } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import Card from "src/app/components/Card";
+import Card from "src/components/Card";
 import { twMerge } from "tailwind-merge";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;

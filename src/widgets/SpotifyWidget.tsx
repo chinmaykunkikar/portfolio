@@ -2,9 +2,9 @@
 import useSWR from "swr";
 
 import Link from "next/link";
-import Card from "src/app/components/Card";
-import MusicBars from "src/app/components/MusicBars";
-import SpotifyLogo from "src/app/components/drawables/spotify";
+import Card from "src/components/Card";
+import MusicBars from "src/components/MusicBars";
+import SpotifyLogo from "src/components/drawables/spotify";
 import fetcher from "src/lib/fetcher";
 import { SpotifyResponse } from "src/pages/api/spotify";
 

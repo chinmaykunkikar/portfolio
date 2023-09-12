@@ -1,6 +1,6 @@
 import Me from "@public/me/me.jpeg";
 import Image from "next/image";
-import Card from "src/app/components/Card";
+import Card from "src/components/Card";
 
 export default function PhotoWidget() {
   return (

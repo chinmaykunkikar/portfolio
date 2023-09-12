@@ -1,5 +1,5 @@
-import LinkedInLogo from "src/app/components/drawables/linkedin";
-import SocialWidget from "src/app/components/widgets/social";
+import LinkedInLogo from "src/components/drawables/linkedin";
+import SocialWidget from "src/widgets/social";
 
 export default function LinkedInWidget() {
   return (

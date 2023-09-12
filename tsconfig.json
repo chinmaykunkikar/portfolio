@@ -16,9 +16,9 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@widgets/*": ["src/app/components/widgets/*"],
-      "@drawables/*": ["src/app/components/drawables/*"],
-      "@components/*": ["src/app/components/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@drawables/*": ["src/components/drawables/*"],
+      "@components/*": ["src/components/*"],
       "@app/*": ["src/app/*"],
       "@api/*": ["src/pages/api/*"],
       "@pages/*": ["src/pages/*"],
