@@ -1,3 +1,4 @@
+import { PageWrapper } from "@components/PageWrapper";
 import ContactWidget from "@widgets/ContactWidget";
 import HelloWidget from "@widgets/HelloWidget";
 import MapWidget from "@widgets/MapWidget";
@@ -10,7 +11,7 @@ import TwitterWidget from "@widgets/social/TwitterWidget";
 
 export default function Home() {
   return (
-    <div className="[grid-auto-columns: 18rem] [grid-auto-rows: 18rem] lg:grid-rows-[18rem 18rem 18rem] mx-auto grid w-full max-w-[320px] grid-cols-1 gap-4 sm:max-w-screen-sm sm:grid-cols-2 lg:max-w-[1200px] lg:grid-cols-4">
+    <PageWrapper className="[grid-auto-columns: 18rem] [grid-auto-rows: 18rem] lg:grid-rows-[18rem 18rem 18rem] mx-auto grid w-full max-w-[320px] grid-cols-1 gap-4 sm:max-w-screen-sm sm:grid-cols-2 lg:max-w-[1200px] lg:grid-cols-4">
       <div className="order-1 sm:col-span-2">
         <HelloWidget />
       </div>
@@ -38,6 +39,6 @@ export default function Home() {
       <div className="order-9 sm:col-span-2">
         <ContactWidget />
       </div>
-    </div>
+    </PageWrapper>
   );
 }

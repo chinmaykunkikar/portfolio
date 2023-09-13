@@ -90,9 +90,9 @@ export default function Navbar() {
                   layoutId="bubble"
                   className="absolute inset-0 z-10 rounded-xl bg-neutral-900 mix-blend-difference"
                   transition={{
-                    type: "spring",
-                    bounce: 0.3,
-                    duration: 0.4,
+                    type: "tween",
+                    ease: "anticipate",
+                    duration: 0.5,
                   }}
                 />
               )}

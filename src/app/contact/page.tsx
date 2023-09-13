@@ -1,8 +1,9 @@
 import Card from "@components/Card";
+import { PageWrapper } from "@components/PageWrapper";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen">
+    <PageWrapper className="min-h-screen">
       <div className="flex w-full flex-col items-center justify-start gap-12 lg:flex-row lg:items-start lg:justify-between">
         <div className="flex flex-col">
           <div className="text-3xl font-bold text-neutral-500">
@@ -73,6 +74,6 @@ export default function Contact() {
           </div>
         </Card>
       </div>
-    </div>
+    </PageWrapper>
   );
 }
