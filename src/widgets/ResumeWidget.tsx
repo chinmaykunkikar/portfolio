@@ -12,6 +12,7 @@ export default function ResumeWidget() {
       </div>
       <CardLinkButton
         href="/me/Resume - Chinmay Kunkikar.pdf"
+        label="Download resume in PDF"
         targetBlank
         variant={ArrowDownTrayIcon}
       />

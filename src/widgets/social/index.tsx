@@ -9,6 +9,7 @@ export type SocialPropTypes = {
   linkRingColor?: string;
   children?: JSX.Element | JSX.Element[] | String;
   socialUrl: string;
+  label: string;
 };
 
 export default function SocialWidget({
@@ -17,6 +18,7 @@ export default function SocialWidget({
   linkRingColor,
   children,
   socialUrl,
+  label,
 }: SocialPropTypes) {
   return (
     <Card
@@ -25,11 +27,18 @@ export default function SocialWidget({
         widgetBgColor,
       )}
     >
-      <Link href={socialUrl} target="_blank" rel="noreferrer" passHref>
+      <Link
+        href={socialUrl}
+        target="_blank"
+        aria-label={label}
+        rel="noreferrer"
+        passHref
+      >
         {children}
       </Link>
       <CardLinkButton
         href={socialUrl}
+        label={label}
         targetBlank
         bgColorClass={linkBgColor}
         hoverRingClass={linkRingColor}

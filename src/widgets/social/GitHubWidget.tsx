@@ -4,6 +4,7 @@ import SocialWidget from "src/widgets/social";
 export default function GitHubWidget() {
   return (
     <SocialWidget
+      label="GitHub"
       linkBgColor="bg-social-github"
       linkRingColor="hover:ring-social-github/[0.25]"
       socialUrl="https://github.com/chinmaykunkikar/"

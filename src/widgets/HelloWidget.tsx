@@ -36,12 +36,17 @@ export default function HelloWidget() {
       </div>
       <span className="mt-6 text-base lg:text-lg">
         <Balancer>
-          I&apos;m&nbsp;<span className="font-newsreader text-xl lg:text-3xl">Chinmay</span>,
+          I&apos;m&nbsp;
+          <span className="font-newsreader text-xl lg:text-3xl">Chinmay</span>,
           a frontend web developer based in India, an open source software
           enthusiast, and a passenger through space and time.
         </Balancer>
       </span>
-      <CardLinkButton href="/about" variant={ArrowRightIcon} />
+      <CardLinkButton
+        href="/about"
+        label="Read more"
+        variant={ArrowRightIcon}
+      />
     </Card>
   );
 }

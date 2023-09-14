@@ -6,7 +6,11 @@ export default function ProjectsWidget() {
   return (
     <Card className="flex aspect-auto select-none flex-col items-center justify-center">
       <span className="text-2xl font-bold">Projects and works</span>
-      <CardLinkButton href="/projects" variant={ArrowRightIcon} />
+      <CardLinkButton
+        href="/projects"
+        label="Projects page"
+        variant={ArrowRightIcon}
+      />
     </Card>
   );
 }

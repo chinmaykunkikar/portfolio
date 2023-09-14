@@ -13,10 +13,11 @@ export default function FreshReleasesWidget() {
       </div>
       <CardLinkButton
         href="https://github.com/metabrainz/listenbrainz-server/tree/master/frontend/js/src/fresh-releases"
+        label="View on GitHub"
         variant={ArrowUpRightIcon}
         positionClass="bottom-4 left-4"
       />
-      <CardLinkButton href="#" variant={ArrowRightIcon} />
+      <CardLinkButton href="#" label="Live demo" variant={ArrowRightIcon} />
     </Card>
   );
 }

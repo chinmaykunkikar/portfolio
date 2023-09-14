@@ -12,10 +12,11 @@ export default function VideWidget() {
 
       <CardLinkButton
         href="https://github.com/chinmaykunkikar/vide-amplify"
+        label="View on GitHub"
         variant={ArrowUpRightIcon}
         positionClass="bottom-4 left-4"
       />
-      <CardLinkButton href="#" variant={ArrowRightIcon} />
+      <CardLinkButton href="#" label="Live demo" variant={ArrowRightIcon} />
     </Card>
   );
 }

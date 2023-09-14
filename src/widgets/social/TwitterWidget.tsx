@@ -4,6 +4,7 @@ import SocialWidget from "src/widgets/social";
 export default function TwitterWidget() {
   return (
     <SocialWidget
+      label="Twitter"
       linkBgColor="bg-social-twitter"
       linkRingColor="hover:ring-social-twitter/[0.25]"
       socialUrl="https://twitter.com/ChinmayKunkikar"
