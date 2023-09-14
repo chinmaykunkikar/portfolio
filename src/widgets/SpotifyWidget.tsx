@@ -39,21 +39,40 @@ export default function SpotifyWidget() {
             </div>
           )}
           <div className="flex flex-col">
-            <Link
-              className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
-              href={songData?.songUrl || "#"}
-              title={songData?.title || "No Song"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {songData?.title || "No Song"}
-            </Link>
-            <p
-              title={songData?.artist || "No Artist"}
-              className="max-w-max cursor-default truncate text-sm text-neutral-700"
-            >
-              {songData?.artist || "No Artist"}
-            </p>
+            {songData ? (
+              <>
+                <Link
+                  className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
+                  href={songData.songUrl}
+                  title={songData.title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {songData.title}
+                </Link>
+                <p
+                  title={songData.artist}
+                  className="max-w-max cursor-default truncate text-sm text-neutral-700"
+                >
+                  {songData.artist}
+                </p>
+              </>
+            ) : (
+              <>
+                <p
+                  className="pointer-events-none max-w-max cursor-default text-xl font-extrabold text-neutral-700 blur-sm"
+                  title="No Song"
+                >
+                  No Song
+                </p>
+                <p
+                  title="No Artist"
+                  className="pointer-events-none max-w-max cursor-default text-sm text-neutral-700 blur-sm"
+                >
+                  No Artist
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>
