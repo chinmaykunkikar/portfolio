@@ -26,6 +26,7 @@ export default function Contact() {
                 Name
               </label>
               <input
+                disabled
                 type="text"
                 id="name"
                 name="name"
@@ -42,6 +43,7 @@ export default function Contact() {
                 Email
               </label>
               <input
+                disabled
                 type="email"
                 id="email"
                 name="email"
@@ -58,6 +60,7 @@ export default function Contact() {
                 Message
               </label>
               <textarea
+                disabled
                 id="message"
                 name="message"
                 className="h-32 w-full resize-none bg-neutral-100 px-3 py-1 text-base leading-6 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"

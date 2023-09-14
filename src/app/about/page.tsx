@@ -8,15 +8,13 @@ import LinkedInWidget from "@widgets/social/LinkedInWidget";
 
 export default function About() {
   return (
-    <PageWrapper className="text-neutral-500">
-      <div className="grid-rows-auto grid min-h-screen grid-cols-1 gap-6 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <HiWidget />
-        <IntroWidget />
-        <PhotoWidget />
-        <ExperienceWidget />
-        <LinkedInWidget />
-        <ResumeWidget />
-      </div>
+    <PageWrapper className="[grid-auto-columns: 18rem] [grid-auto-rows: 18rem] lg:grid-rows-[18rem 18rem 18rem] mx-auto grid w-full max-w-[320px] grid-cols-1 gap-4 text-neutral-500 sm:max-w-screen-sm sm:grid-cols-2 lg:max-w-[1200px] lg:grid-cols-4">
+      <HiWidget />
+      <IntroWidget />
+      <PhotoWidget />
+      <ExperienceWidget />
+      <LinkedInWidget />
+      <ResumeWidget />
     </PageWrapper>
   );
 }

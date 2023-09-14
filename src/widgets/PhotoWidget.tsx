@@ -1,15 +1,15 @@
-import Me from "@public/me/me.jpeg";
 import Image from "next/image";
 import Card from "src/components/Card";
 
 export default function PhotoWidget() {
   return (
-    <Card className="overflow-clip p-0">
+    <Card className="overflow-clip rounded-full p-0">
       <Image
-        className="pointer-events-none min-h-full min-w-full object-cover"
-        src={Me}
+        className="pointer-events-none"
+        src="/me/me.jpg"
         alt="Chinmay Kunkikar"
         quality={50}
+        fill
       />
     </Card>
   );
