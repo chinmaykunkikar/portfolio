@@ -18,8 +18,8 @@ export default function HelloWidget() {
     >
       {isHovered ? (
         <motion.div
-          animate={{ scale: 1.2 }}
-          className="pointer-events-none flex items-center"
+          animate={{ scale: 1.1 }}
+          className="pointer-events-none flex items-center "
         >
           <motion.div
             key="greeting"
@@ -30,6 +30,7 @@ export default function HelloWidget() {
                 repeat: 3,
                 repeatType: "reverse",
                 ease: "easeInOut",
+                delay: 0.2,
               },
             }}
           >
@@ -56,6 +57,7 @@ export default function HelloWidget() {
             height={48}
             quality={100}
             priority
+            className="rounded-md"
           />
           <div className="ml-2 text-2xl font-bold lg:text-3xl">नमस्कार!</div>
         </motion.div>
