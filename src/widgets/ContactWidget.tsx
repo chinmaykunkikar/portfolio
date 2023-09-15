@@ -6,7 +6,7 @@ export default function ContactWidget() {
   return (
     <Card className="flex select-none flex-col justify-center p-8">
       <div className="mx-auto flex items-center">
-        <div className="mr-2 text-3xl font-bold">Let&apos;s get in touch</div>
+        <div className="mr-2 text-xl lg:text-3xl font-bold">Let&apos;s get in touch</div>
       </div>
       <CardLinkButton
         href="/contact"

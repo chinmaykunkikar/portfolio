@@ -15,7 +15,7 @@ export const PageWrapper = ({
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
-    className={twMerge("", className)}
+    className={twMerge("tracking-tight", className)}
   >
     {children}
   </motion.div>

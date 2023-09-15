@@ -19,7 +19,7 @@ export default function HelloWidget() {
       {isHovered ? (
         <motion.div
           animate={{ scale: 1.1 }}
-          className="pointer-events-none flex items-center "
+          className="pointer-events-none flex items-center"
         >
           <motion.div
             key="greeting"
@@ -59,14 +59,18 @@ export default function HelloWidget() {
             priority
             className="rounded-md"
           />
-          <div className="ml-2 text-2xl font-bold lg:text-3xl">नमस्कार!</div>
+          <div className="ml-2 text-2xl font-bold tracking-normal lg:text-3xl">
+            नमस्कार!
+          </div>
         </motion.div>
       )}
       <span className="mt-6 text-base lg:text-lg">
         <Balancer>
           I&apos;m&nbsp;
-          <span className="font-newsreader text-xl lg:text-3xl">Chinmay</span>,
-          a frontend web developer based in India, an open source software
+          <span className="font-newsreader text-xl tracking-normal lg:text-3xl">
+            Chinmay
+          </span>
+          , a frontend web developer based in India, an open source software
           enthusiast, and a passenger through space and time.
         </Balancer>
       </span>

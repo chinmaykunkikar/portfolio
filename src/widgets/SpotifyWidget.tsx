@@ -52,7 +52,7 @@ export default function SpotifyWidget() {
                 </Link>
                 <p
                   title={songData.artist}
-                  className="max-w-max cursor-default truncate text-sm text-neutral-700"
+                  className="max-w-max cursor-default truncate tracking-normal text-sm text-neutral-700"
                 >
                   {songData.artist}
                 </p>
