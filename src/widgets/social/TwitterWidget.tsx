@@ -9,7 +9,7 @@ export default function TwitterWidget() {
       linkRingColor="hover:ring-brand-twitter/[0.25]"
       socialUrl="https://twitter.com/ChinmayKunkikar"
     >
-      <TwitterLogo width={96} height={96} className="fill-brand-twitter" />
+      <TwitterLogo width={72} height={72} className="fill-brand-twitter" />
     </SocialWidget>
   );
 }

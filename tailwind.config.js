@@ -26,7 +26,7 @@ module.exports = {
           github: "#211f1f",
           linkedin: "#0a66c2",
           spotify: "#1db954",
-          twitter: "#1da1f2",
+          twitter: "#000000",
         },
       },
     },
