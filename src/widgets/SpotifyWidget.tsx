@@ -20,20 +20,20 @@ export default function SpotifyWidget() {
 
   return (
     <Card className="group flex aspect-auto flex-col justify-between p-8">
-      <SpotifyLogo width={72} height={72} className="fill-spotify" />
+      <SpotifyLogo width={72} height={72} className="fill-brand-spotify" />
       <div className="keep">
         <div>
           {songData?.isPlaying ? (
             <div className="flex items-center">
               <MusicBars />
-              <span className="ml-2 select-none font-bold text-spotify">
+              <span className="text-brand-spotify ml-2 select-none font-bold">
                 {isLoading ? "Looking up…" : "Listening"}
               </span>
             </div>
           ) : (
             <div className="flex items-center">
               <MusicBars />
-              <div className="ml-2 select-none font-bold text-spotify">
+              <div className="text-brand-spotify ml-2 select-none font-bold">
                 {isLoading ? "Looking up…" : "Last played"}
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function SpotifyWidget() {
             {songData ? (
               <>
                 <Link
-                  className="max-w-max truncate text-xl font-extrabold text-neutral-700 hover:text-neutral-500"
+                  className="text-type hover:text-type-hover max-w-max truncate text-xl font-extrabold"
                   href={songData.songUrl}
                   title={songData.title}
                   target="_blank"
@@ -52,7 +52,7 @@ export default function SpotifyWidget() {
                 </Link>
                 <p
                   title={songData.artist}
-                  className="max-w-max cursor-default truncate tracking-normal text-sm text-neutral-700"
+                  className="text-type max-w-max cursor-default truncate text-sm tracking-normal"
                 >
                   {songData.artist}
                 </p>
@@ -60,14 +60,14 @@ export default function SpotifyWidget() {
             ) : (
               <>
                 <p
-                  className="pointer-events-none max-w-max cursor-default text-xl font-extrabold text-neutral-700 blur-sm"
+                  className="text-type pointer-events-none max-w-max cursor-default text-xl font-extrabold blur-sm"
                   title="No Song"
                 >
                   No Song
                 </p>
                 <p
                   title="No Artist"
-                  className="pointer-events-none max-w-max cursor-default text-sm text-neutral-700 blur-sm"
+                  className="text-type pointer-events-none max-w-max cursor-default text-sm blur-sm"
                 >
                   No Artist
                 </p>

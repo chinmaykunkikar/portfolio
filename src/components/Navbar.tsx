@@ -39,13 +39,13 @@ export default function Navbar() {
   const lastCommitSHA = data?.sha || FIRST_COMMIT_SHA;
 
   return (
-    <nav className="flex flex-col items-center justify-between gap-4 px-8 py-6 text-neutral-700 md:px-20 lg:flex-row lg:gap-0 lg:px-40">
+    <nav className="text-type flex flex-col items-center justify-between gap-4 px-8 py-6 md:px-20 lg:flex-row lg:gap-0 lg:px-40">
       <span className="md:text-lg">
         <h3 className="cursor-default	select-none font-mono">
           <span>[chinmay@web </span>
           <Link
             className={twMerge(
-              "font-bold transition-opacity duration-1000 hover:text-neutral-500",
+              "hover:text-type-hover font-bold transition-opacity duration-1000",
               isLoading ? "blur-sm" : "",
             )}
             href="https://github.com/chinmaykunkikar/portfolio"
@@ -78,8 +78,8 @@ export default function Navbar() {
               href={tab.link}
               passHref
               className={twMerge(
-                pathname === tab.link ? "" : "hover:text-neutral-800/50",
-                "relative rounded-xl px-3 py-2 text-neutral-500 transition focus-visible:outline-2",
+                pathname === tab.link ? "" : "hover:text-type-hover",
+                "text-type relative rounded-xl px-3 py-2 transition focus-visible:outline-2",
               )}
               style={{
                 WebkitTapHighlightColor: "transparent",

@@ -5,11 +5,11 @@ export default function TwitterWidget() {
   return (
     <SocialWidget
       label="Twitter"
-      linkBgColor="bg-social-twitter"
-      linkRingColor="hover:ring-social-twitter/[0.25]"
+      linkBgColor="bg-brand-twitter"
+      linkRingColor="hover:ring-brand-twitter/[0.25]"
       socialUrl="https://twitter.com/ChinmayKunkikar"
     >
-      <TwitterLogo width={96} height={96} className="fill-social-twitter" />
+      <TwitterLogo width={96} height={96} className="fill-brand-twitter" />
     </SocialWidget>
   );
 }

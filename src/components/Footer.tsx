@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="mx-2 my-8 flex justify-center text-xs lg:px-16 lg:text-lg">
-      <span className="text-neutral-500">
+      <span className="text-type">
         <span>Made with&nbsp;</span>
         <Image
           src="/emoji/heart.png"
@@ -17,7 +17,7 @@ export default function Footer() {
         <span>&nbsp;and&nbsp;</span>
         <Image
           src="/emoji/coffee.png"
-          alt="love"
+          alt="coffee"
           width={28}
           height={28}
           className="inline"

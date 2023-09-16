@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class",
   theme: {
     fontWeight: {
       light: 300,
@@ -16,17 +16,18 @@ module.exports = {
       newsreader: ["var(--font-newsreader)"],
     },
     extend: {
-      keyframes: {
-        pulse: {
-          "0%, 100%": { opacity: 1 },
-          "50%": { opacity: 0 },
-        },
-      },
       colors: {
-        "social-github": "#211f1f",
-        "social-linkedin": "#0a66c2",
-        "social-twitter": "#1da1f2",
-        spotify: "#00da5a",
+        type: {
+          DEFAULT: colors.neutral[600],
+          hover: colors.neutral[500],
+          light: colors.neutral[400],
+        },
+        brand: {
+          github: "#211f1f",
+          linkedin: "#0a66c2",
+          spotify: "#1db954",
+          twitter: "#1da1f2",
+        },
       },
     },
   },

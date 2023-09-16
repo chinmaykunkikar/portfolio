@@ -4,15 +4,15 @@ import { PageWrapper } from "@components/PageWrapper";
 export default function Contact() {
   return (
     <PageWrapper className="min-h-screen">
-      <div className="flex w-full flex-col items-center justify-start gap-12 lg:flex-row lg:items-start lg:justify-between">
+      <div className="flex text-type w-full flex-col items-center justify-start gap-12 lg:flex-row lg:items-start lg:justify-between">
         <div className="flex flex-col">
-          <div className="text-3xl font-bold text-neutral-500">
+          <div className="text-3xl font-bold ">
             Let&apos;s work on a project together!&nbsp;✨
           </div>
-          <div className="mt-8 font-bold text-neutral-400 lg:mt-16">
+          <div className="mt-8 font-bold text-type-light lg:mt-16">
             Email me on
           </div>
-          <div className="cursor-pointer select-all font-mono text-lg text-neutral-600">
+          <div className="cursor-pointer select-all font-mono text-lg">
             chinmay.kunkikar@gmail.com
           </div>
         </div>
@@ -21,7 +21,7 @@ export default function Contact() {
             <div className="relative">
               <label
                 htmlFor="name"
-                className="text-sm leading-7 text-neutral-600"
+                className="text-sm leading-7"
               >
                 Name
               </label>
@@ -30,7 +30,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full rounded bg-neutral-100 px-3 py-1 text-base leading-8 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
+                className="w-full rounded bg-neutral-100 px-3 py-1 text-base leading-8outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
               />
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function Contact() {
             <div className="relative">
               <label
                 htmlFor="email"
-                className="text-sm leading-7 text-neutral-600"
+                className="text-sm leading-7"
               >
                 Email
               </label>
@@ -47,7 +47,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full rounded bg-neutral-100 px-3 py-1 text-base leading-8 text-neutral-700 outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
+                className="w-full rounded bg-neutral-100 px-3 py-1 text-base leading-8  outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
               />
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function Contact() {
             <div className="relative">
               <label
                 htmlFor="message"
-                className="text-sm leading-7 text-neutral-600"
+                className="text-sm leading-7 "
               >
                 Message
               </label>
