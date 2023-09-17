@@ -1,5 +1,5 @@
-import TwitterLogo from "src/components/drawables/twitter";
-import SocialWidget from "src/widgets/social";
+import TwitterLogo from "@drawables/twitter";
+import SocialWidget from "@widgets/social";
 
 export default function TwitterWidget() {
   return (

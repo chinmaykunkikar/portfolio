@@ -1,8 +1,8 @@
 import "@app/globals.css";
+import Footer from "@components/Footer";
+import Navbar from "@components/Navbar";
 import { Metadata } from "next";
 import { Manrope, Newsreader, Roboto_Mono } from "next/font/google";
-import Footer from "src/components/Footer";
-import Navbar from "src/components/Navbar";
 import { twJoin } from "tailwind-merge";
 
 export const metadata: Metadata = {

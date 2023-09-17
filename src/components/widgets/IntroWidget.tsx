@@ -1,5 +1,5 @@
+import Card from "@components/Card";
 import Balancer from "react-wrap-balancer";
-import Card from "src/components/Card";
 
 export default function IntroWidget() {
   return (

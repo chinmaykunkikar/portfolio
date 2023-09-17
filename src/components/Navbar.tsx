@@ -1,8 +1,8 @@
 "use client";
+import fetcher from "@lib/fetcher";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import fetcher from "src/lib/fetcher";
 import useSWR from "swr";
 import { twMerge } from "tailwind-merge";
 

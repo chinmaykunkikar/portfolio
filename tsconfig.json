@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@widgets/*": ["src/widgets/*"],
+      "@widgets/*": ["src/components/widgets/*"],
       "@drawables/*": ["src/components/drawables/*"],
       "@components/*": ["src/components/*"],
       "@app/*": ["src/app/*"],

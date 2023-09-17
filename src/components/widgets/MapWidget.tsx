@@ -1,12 +1,12 @@
 "use client";
 
+import Card from "@components/Card";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import avatar from "@public/avatar-smile.png";
 import mapboxgl, { Map } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import Card from "src/components/Card";
 import { twMerge } from "tailwind-merge";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;

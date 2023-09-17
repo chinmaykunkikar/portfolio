@@ -1,5 +1,5 @@
+import { getNowPlaying, getRecentlyPlayed } from "@lib/spotify";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getNowPlaying, getRecentlyPlayed } from "src/lib/spotify";
 
 export type SpotifyResponse = {
   isPlaying: boolean;

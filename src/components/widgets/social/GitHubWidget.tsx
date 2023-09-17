@@ -1,5 +1,5 @@
-import GitHubLogo from "src/components/drawables/github";
-import SocialWidget from "src/widgets/social";
+import GitHubLogo from "@drawables/github";
+import SocialWidget from "@widgets/social";
 
 export default function GitHubWidget() {
   return (

@@ -1,6 +1,6 @@
+import Card from "@components/Card";
+import CardLinkButton from "@components/CardLinkButton";
 import Link from "next/link";
-import Card from "src/components/Card";
-import CardLinkButton from "src/components/CardLinkButton";
 import { twMerge } from "tailwind-merge";
 
 export type SocialPropTypes = {

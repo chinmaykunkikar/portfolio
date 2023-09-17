@@ -1,16 +1,16 @@
-import Card from "src/components/Card";
-import AwsIcon from "src/components/drawables/aws";
-import DockerLogo from "src/components/drawables/docker";
-import FigmaLogo from "src/components/drawables/figma";
-import JavaScriptLogo from "src/components/drawables/js";
-import MongoDbIcon from "src/components/drawables/mongodb";
-import NextJsLogo from "src/components/drawables/nextjs";
-import NodeIcon from "src/components/drawables/node";
-import ReactLogo from "src/components/drawables/react";
-import TailwindLogo from "src/components/drawables/tailwind";
-import TerminalLogo from "src/components/drawables/terminal";
-import TypeScriptLogo from "src/components/drawables/typescript";
-import WebpackLogo from "src/components/drawables/webpack";
+import Card from "@components/Card";
+import AwsIcon from "@drawables/aws";
+import DockerLogo from "@drawables/docker";
+import FigmaLogo from "@drawables/figma";
+import JavaScriptLogo from "@drawables/js";
+import MongoDbIcon from "@drawables/mongodb";
+import NextJsLogo from "@drawables/nextjs";
+import NodeIcon from "@drawables/node";
+import ReactLogo from "@drawables/react";
+import TailwindLogo from "@drawables/tailwind";
+import TerminalLogo from "@drawables/terminal";
+import TypeScriptLogo from "@drawables/typescript";
+import WebpackLogo from "@drawables/webpack";
 
 export default function SkillsWidget() {
   function SkillWrapper({ icon: SkillIcon, label }: any) {
