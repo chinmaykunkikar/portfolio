@@ -4,14 +4,12 @@ import { PageWrapper } from "@components/PageWrapper";
 export default function Contact() {
   return (
     <PageWrapper className="min-h-screen">
-      <div className="flex text-type w-full flex-col items-center justify-start gap-12 lg:flex-row lg:items-start lg:justify-between">
+      <div className="flex w-full flex-col items-center justify-start gap-12 text-type lg:flex-row lg:items-start lg:justify-between">
         <div className="flex flex-col">
           <div className="text-3xl font-bold ">
             Let&apos;s work on a project together!&nbsp;✨
           </div>
-          <div className="mt-8 font-bold text-type-light lg:mt-16">
-            Email me on
-          </div>
+          <div className="mt-8 font-bold text-type lg:mt-16">Email me on</div>
           <div className="cursor-pointer select-all font-mono text-lg">
             chinmay.kunkikar@gmail.com
           </div>
@@ -19,10 +17,7 @@ export default function Contact() {
         <Card className="h-auto w-full rounded-xl hover:filter-none lg:w-1/2">
           <div className="p-2">
             <div className="relative">
-              <label
-                htmlFor="name"
-                className="text-sm leading-7"
-              >
+              <label htmlFor="name" className="text-sm leading-7">
                 Name
               </label>
               <input
@@ -30,16 +25,13 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full rounded bg-neutral-100 px-3 py-1 text-base leading-8outline-none transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
+                className="leading-8outline-none w-full rounded bg-neutral-100 px-3 py-1 text-base transition-colors duration-200 ease-in-out focus:border-2 focus:border-yellow-500"
               />
             </div>
           </div>
           <div className="p-2">
             <div className="relative">
-              <label
-                htmlFor="email"
-                className="text-sm leading-7"
-              >
+              <label htmlFor="email" className="text-sm leading-7">
                 Email
               </label>
               <input
@@ -53,10 +45,7 @@ export default function Contact() {
           </div>
           <div className="p-2">
             <div className="relative">
-              <label
-                htmlFor="message"
-                className="text-sm leading-7 "
-              >
+              <label htmlFor="message" className="text-sm leading-7 ">
                 Message
               </label>
               <textarea

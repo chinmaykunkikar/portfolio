@@ -20,12 +20,11 @@ module.exports = {
         type: {
           DEFAULT: colors.neutral[600],
           hover: colors.neutral[500],
-          light: colors.neutral[400],
         },
         brand: {
           github: "#211f1f",
           linkedin: "#0a66c2",
-          spotify: "#1db954",
+          spotify: { DEFAULT: "#1db954", dark: "#15873d" },
           twitter: "#000000",
         },
       },

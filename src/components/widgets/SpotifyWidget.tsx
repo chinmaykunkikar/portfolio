@@ -26,14 +26,14 @@ export default function SpotifyWidget() {
           {songData?.isPlaying ? (
             <div className="flex items-center">
               <MusicBars />
-              <span className="text-brand-spotify ml-2 select-none font-bold">
+              <span className="ml-2 select-none font-bold text-brand-spotify-dark">
                 {isLoading ? "Looking up…" : "Listening"}
               </span>
             </div>
           ) : (
             <div className="flex items-center">
               <MusicBars />
-              <div className="text-brand-spotify ml-2 select-none font-bold">
+              <div className="ml-2 select-none font-bold text-brand-spotify-dark">
                 {isLoading ? "Looking up…" : "Last played"}
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function SpotifyWidget() {
             {songData ? (
               <>
                 <Link
-                  className="text-type hover:text-type-hover max-w-max truncate text-xl font-extrabold"
+                  className="max-w-max truncate text-xl font-extrabold text-type hover:text-type-hover"
                   href={songData.songUrl}
                   title={songData.title}
                   target="_blank"
@@ -52,7 +52,7 @@ export default function SpotifyWidget() {
                 </Link>
                 <p
                   title={songData.artist}
-                  className="text-type max-w-max cursor-default truncate text-sm tracking-normal"
+                  className="max-w-max cursor-default truncate text-sm tracking-normal text-type"
                 >
                   {songData.artist}
                 </p>
@@ -60,14 +60,14 @@ export default function SpotifyWidget() {
             ) : (
               <>
                 <p
-                  className="text-type pointer-events-none max-w-max cursor-default text-xl font-extrabold blur-sm"
+                  className="pointer-events-none max-w-max cursor-default text-xl font-extrabold text-type blur-sm"
                   title="No Song"
                 >
                   No Song
                 </p>
                 <p
                   title="No Artist"
-                  className="text-type pointer-events-none max-w-max cursor-default text-sm blur-sm"
+                  className="pointer-events-none max-w-max cursor-default text-sm text-type blur-sm"
                 >
                   No Artist
                 </p>

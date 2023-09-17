@@ -4,7 +4,7 @@ export default function MusicBars() {
   return (
     <div className="flex items-center justify-center space-x-1">
       <motion.div
-        className="bg-brand-spotify h-2 w-1"
+        className="bg-brand-spotify-dark h-2 w-1"
         initial={{ scaleY: 0.5, opacity: 1 }}
         animate={{
           scaleY: 0.5,
