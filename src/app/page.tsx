@@ -10,7 +10,7 @@ import TwitterWidget from "@widgets/social/TwitterWidget";
 
 export default function Home() {
   return (
-    <div className="[grid-auto-columns: 9rem] [grid-auto-rows: 9rem] lg:grid-rows-[9rem 9rem 9rem 9rem 9rem 9rem] mx-auto grid w-full max-w-[320px] grid-cols-2 gap-4 sm:max-w-screen-sm sm:grid-cols-4 lg:max-w-[1200px] lg:grid-cols-8">
+    <div className="[grid-auto-columns: 9rem] [grid-auto-rows: 9rem] lg:grid-rows-[repeat(6, 9rem)] mx-auto grid w-full max-w-[320px] grid-cols-2 gap-4 sm:max-w-screen-sm sm:grid-cols-4 lg:max-w-[1200px] lg:grid-cols-8">
       <div className="order-1 col-span-2 row-span-2 sm:col-span-4">
         <HelloWidget />
       </div>
