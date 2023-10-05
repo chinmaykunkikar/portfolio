@@ -1,10 +1,10 @@
 import ContactWidget from "@widgets/ContactWidget";
+import GitHubWidget from "@widgets/GitHubWidget";
 import HelloWidget from "@widgets/HelloWidget";
 import MapWidget from "@widgets/MapWidget";
 import ProjectsWidget from "@widgets/ProjectsWidget";
 import SkillsWidget from "@widgets/SkillsWidget";
 import SpotifyWidget from "@widgets/SpotifyWidget";
-import GitHubWidget from "@widgets/social/GitHubWidget";
 import LinkedInWidget from "@widgets/social/LinkedInWidget";
 import TwitterWidget from "@widgets/social/TwitterWidget";
 
