@@ -32,7 +32,11 @@ export const fetchGithubData = async (lastNWeeks: number) => {
   const today = new Date().toISOString().split("T")[0] + "T00:00:00";
 
   const startDate = new Date();
-  startDate.setDate(startDate.getDate() - lastNWeeks);
+  const currentDayOfWeek = startDate.getUTCDay();
+  const daysToPreviousSunday = currentDayOfWeek === 0 ? 7 : currentDayOfWeek;
+  startDate.setDate(
+    startDate.getDate() - daysToPreviousSunday - lastNWeeks * 7,
+  );
   const startDateISO = startDate.toISOString().split("T")[0] + "T00:00:00";
 
   const requestBody = {

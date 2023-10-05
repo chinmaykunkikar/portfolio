@@ -2,7 +2,7 @@ import { fetchGithubData } from "@lib/github";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse) {
-  const response = await fetchGithubData(62);
+  const response = await fetchGithubData(7);
 
   res.setHeader(
     "Cache-Control",
