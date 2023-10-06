@@ -1,5 +1,6 @@
 import Card from "@components/Card";
 import AwsIcon from "@drawables/aws";
+import BashLogo from "@drawables/bash";
 import DockerLogo from "@drawables/docker";
 import FigmaLogo from "@drawables/figma";
 import JavaScriptLogo from "@drawables/js";
@@ -8,7 +9,6 @@ import NextJsLogo from "@drawables/nextjs";
 import NodeIcon from "@drawables/node";
 import ReactLogo from "@drawables/react";
 import TailwindLogo from "@drawables/tailwind";
-import TerminalLogo from "@drawables/terminal";
 import TypeScriptLogo from "@drawables/typescript";
 import WebpackLogo from "@drawables/webpack";
 
@@ -38,7 +38,7 @@ export default function SkillsWidget() {
           <SkillWrapper icon={AwsIcon} label="AWS" />
           <SkillWrapper icon={TailwindLogo} label="TailwindCSS" />
           <SkillWrapper icon={WebpackLogo} label="Webpack" />
-          <SkillWrapper icon={TerminalLogo} label="Shell Scripting" />
+          <SkillWrapper icon={BashLogo} label="Bash Scripting" />
           <SkillWrapper icon={DockerLogo} label="Docker" />
           <SkillWrapper icon={FigmaLogo} label="Figma" />
         </div>
