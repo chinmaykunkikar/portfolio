@@ -1,4 +1,5 @@
 "use client";
+
 import fetcher from "@lib/fetcher";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -39,13 +40,13 @@ export default function Navbar() {
   const lastCommitSHA = data?.sha || FIRST_COMMIT_SHA;
 
   return (
-    <nav className="text-type flex flex-col items-center justify-between gap-4 px-8 py-6 md:px-20 lg:flex-row lg:gap-0 lg:px-40">
+    <nav className="flex flex-col items-center justify-between gap-4 px-8 py-6 text-type md:px-20 lg:flex-row lg:gap-0 lg:px-40">
       <span className="md:text-lg">
         <h3 className="cursor-default	select-none font-mono">
           <span>[chinmay@web </span>
           <Link
             className={twMerge(
-              "hover:text-type-hover font-bold transition-opacity duration-1000",
+              "font-bold transition-opacity duration-1000 hover:text-type-hover",
               isLoading ? "blur-sm" : "",
             )}
             href="https://github.com/chinmaykunkikar/portfolio"
@@ -79,7 +80,7 @@ export default function Navbar() {
               passHref
               className={twMerge(
                 pathname === tab.link ? "" : "hover:text-type-hover",
-                "text-type relative rounded-xl px-3 py-2 transition focus-visible:outline-2",
+                "relative rounded-xl px-3 py-2 text-type transition focus-visible:outline-2",
               )}
               style={{
                 WebkitTapHighlightColor: "transparent",
