@@ -17,7 +17,7 @@ export default function Home() {
       <div className="order-2 col-span-2 row-span-2">
         <GitHubWidget />
       </div>
-      <div className="order-3 col-span-2 row-span-2">
+      <div className="order-3 col-span-2 row-span-1 md:col-span-2 md:row-span-2">
         <MapWidget />
       </div>
       <div className="order-4 col-span-2 row-span-2">
