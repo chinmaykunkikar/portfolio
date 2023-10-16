@@ -9,7 +9,7 @@ import Link from "next/link";
 import useSWRImmutable from "swr";
 
 export default function Contributions() {
-  const { data }: any = useSWRImmutable("/api/github", fetcher);
+  const { data }: any = useSWRImmutable("/api/github-contributions", fetcher);
 
   const contributionCalendar =
     data?.contributionsCollection?.contributionCalendar;

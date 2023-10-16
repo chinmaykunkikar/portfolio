@@ -33,10 +33,8 @@ export const fetchGithubData = async (lastNWeeks: number) => {
 
   const startDate = new Date();
   const currentDayOfWeek = startDate.getUTCDay();
-  const daysToPreviousSunday = currentDayOfWeek === 0 ? 7 : currentDayOfWeek;
-  startDate.setDate(
-    startDate.getDate() - daysToPreviousSunday - lastNWeeks * 7,
-  );
+  const daysToNextSunday = currentDayOfWeek === 0 ? 7 : 7 - currentDayOfWeek;
+  startDate.setDate(startDate.getDate() + daysToNextSunday - lastNWeeks * 7);
   const startDateISO = startDate.toISOString().split("T")[0] + "T00:00:00";
 
   const requestBody = {

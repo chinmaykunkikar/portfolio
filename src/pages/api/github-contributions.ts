@@ -1,4 +1,4 @@
-import { fetchGithubData } from "@lib/github";
+import { fetchGithubData } from "@lib/github-contributions";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse) {
