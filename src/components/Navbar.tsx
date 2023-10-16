@@ -46,10 +46,10 @@ export default function Navbar() {
         <h3 className="inline-flex cursor-default select-none items-center font-mono">
           <span className="mr-2">[chinmay@web </span>
           {isLoading ? (
-            <Skeleton className="h-4 w-20 bg-current" />
+            <Skeleton className="h-4 w-20" />
           ) : (
             <Link
-              className="font-bold transition-opacity duration-1000 hover:text-type-hover"
+              className="font-bold hover:text-type-hover"
               href="https://github.com/chinmaykunkikar/portfolio"
               target="_blank"
               rel="noreferrer"
