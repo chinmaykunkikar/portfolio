@@ -12,7 +12,7 @@ import { twMerge } from "tailwind-merge";
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
 interface ZoomButtonProps {
-  action: 'zoomIn' | 'zoomOut';
+  action: "zoomIn" | "zoomOut";
   disabled: boolean;
   position: string;
   children: JSX.Element | JSX.Element[] | String | React.ReactNode;
@@ -85,7 +85,7 @@ export default function MapWidget() {
     }
   }, [map, zoomLevels]);
 
-  function onClickHandler(action: 'zoomIn' | 'zoomOut') {
+  function onClickHandler(action: "zoomIn" | "zoomOut") {
     if (map) {
       let newZoomIndex;
 
@@ -100,25 +100,30 @@ export default function MapWidget() {
         setCurrentZoomIndex(newZoomIndex);
       }
     }
-  };
+  }
 
-
-  function ZoomButton({ action, disabled, position, children }: ZoomButtonProps) {
+  function ZoomButton({
+    action,
+    disabled,
+    position,
+    children,
+  }: ZoomButtonProps) {
     return (
       <div
         onClick={() => onClickHandler(action)}
         className={twMerge(
-          "absolute bottom-4 z-20 flex h-8 w-8 md:h-9 md:w-9 flex-col items-center justify-center rounded-full bg-neutral-100 p-2 text-xl opacity-80 shadow-xl transition-all md:hover:ring-4 md:hover:ring-neutral-100/[0.5]",
-          disabled ? "pointer-events-none opacity-40 hover:ring-0" : "", position
+          "absolute bottom-4 z-20 flex h-8 w-8 flex-col items-center justify-center rounded-full bg-neutral-100 p-2 text-xl opacity-80 shadow-xl transition-all md:h-9 md:w-9 md:hover:ring-4 md:hover:ring-neutral-100/[0.5]",
+          disabled ? "pointer-events-none opacity-40 hover:ring-0" : "",
+          position,
         )}
       >
         {children}
       </div>
-    )
-  };
+    );
+  }
 
   return (
-    <Card className="group relative flex w-full select-none overflow-clip p-0 [&_canvas]:outline-0 h-36 md:h-72">
+    <Card className="group relative flex h-36 w-full select-none overflow-clip p-0 md:h-72 [&_canvas]:outline-0">
       <div
         id="map-placeholder"
         className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center"
@@ -140,14 +145,22 @@ export default function MapWidget() {
         id="map"
         className="pointer-events-none absolute left-0 top-0 h-full w-full bg-gray-50"
       ></div>
-      <ZoomButton action="zoomOut" disabled={currentZoomIndex <= minZoomIndex} position="right-4">
+      <ZoomButton
+        action="zoomOut"
+        disabled={currentZoomIndex <= minZoomIndex}
+        position="right-4"
+      >
         <PlusIcon width={16} height={16} strokeWidth={3} />
       </ZoomButton>
-      <ZoomButton action="zoomIn" disabled={currentZoomIndex >= maxZoomIndex} position="right-16">
+      <ZoomButton
+        action="zoomIn"
+        disabled={currentZoomIndex >= maxZoomIndex}
+        position="right-16"
+      >
         <MinusIcon width={16} height={16} strokeWidth={3} />
       </ZoomButton>
       <div className="pointer-events-none absolute flex h-full w-full items-center justify-center">
-        <div className="relative z-20 h-12 w-12 md:h-16 md:w-16 rotate-12 opacity-80 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100">
+        <div className="relative z-20 h-12 w-12 rotate-12 opacity-80 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100 md:h-16 md:w-16">
           <Image
             src={avatar}
             fill
@@ -158,5 +171,4 @@ export default function MapWidget() {
       </div>
     </Card>
   );
-};
-
+}
