@@ -3,6 +3,7 @@
 import { SpotifyResponse } from "@api/spotify";
 import Card from "@components/Card";
 import MusicBars from "@components/MusicBars";
+import { Skeleton } from "@components/Skeleton";
 import SpotifyLogo from "@drawables/spotify";
 import fetcher from "@lib/fetcher";
 import Link from "next/link";
@@ -59,18 +60,8 @@ export default function SpotifyWidget() {
               </>
             ) : (
               <>
-                <p
-                  className="pointer-events-none max-w-max cursor-default text-xl font-extrabold text-type blur-sm"
-                  title="No Song"
-                >
-                  No Song
-                </p>
-                <p
-                  title="No Artist"
-                  className="pointer-events-none max-w-max cursor-default text-sm text-type blur-sm"
-                >
-                  No Artist
-                </p>
+                <Skeleton className="my-2 h-5 w-36 rounded-full bg-neutral-400" />
+                <Skeleton className="h-3 w-20 rounded-full" />
               </>
             )}
           </div>
