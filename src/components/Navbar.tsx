@@ -1,5 +1,6 @@
 "use client";
 
+import { Skeleton } from "@components/Skeleton";
 import fetcher from "@lib/fetcher";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -42,33 +43,36 @@ export default function Navbar() {
   return (
     <nav className="flex flex-col items-center justify-between gap-4 px-8 py-6 text-type md:px-20 lg:flex-row lg:gap-0 lg:px-40">
       <span className="md:text-lg">
-        <h3 className="cursor-default	select-none font-mono">
-          <span>[chinmay@web </span>
-          <Link
-            className={twMerge(
-              "font-bold transition-opacity duration-1000 hover:text-type-hover",
-              isLoading ? "blur-sm" : "",
-            )}
-            href="https://github.com/chinmaykunkikar/portfolio"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {lastCommitSHA}
-          </Link>
-          <span>]$&#8202;</span>
-          <motion.span
-            className="pointer-events-none"
-            variants={cursorVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{
-              repeat: Infinity,
-              duration: 0.8,
-              repeatType: "reverse",
-            }}
-          >
-            &#9601;
-          </motion.span>
+        <h3 className="inline-flex cursor-default select-none items-center font-mono">
+          <span className="mr-2">[chinmay@web </span>
+          {isLoading ? (
+            <Skeleton className="h-4 w-20 bg-current" />
+          ) : (
+            <Link
+              className="font-bold transition-opacity duration-1000 hover:text-type-hover"
+              href="https://github.com/chinmaykunkikar/portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {lastCommitSHA}
+            </Link>
+          )}
+          <span>
+            <span>]$&#8202;</span>
+            <motion.span
+              className="pointer-events-none"
+              variants={cursorVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{
+                repeat: Infinity,
+                duration: 0.8,
+                repeatType: "reverse",
+              }}
+            >
+              &#9601;
+            </motion.span>
+          </span>
         </h3>
       </span>
       <div className="flex h-fit items-center gap-1 lowercase md:gap-8">
