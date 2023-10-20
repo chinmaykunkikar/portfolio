@@ -1,4 +1,4 @@
-import LinkedInLogo from "@drawables/linkedin";
+import { LinkedInLogo } from "@components/logos";
 import SocialWidget from "@widgets/social";
 
 export default function LinkedInWidget() {

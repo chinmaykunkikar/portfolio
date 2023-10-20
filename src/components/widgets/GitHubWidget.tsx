@@ -3,7 +3,7 @@
 import Calendar from "@components/Calendar";
 import Card from "@components/Card";
 import { Skeleton } from "@components/Skeleton";
-import GitHubLogo from "@drawables/github";
+import { GitHubLogo } from "@components/logos";
 import fetcher from "@lib/fetcher";
 import Link from "next/link";
 import useSWRImmutable from "swr";
@@ -31,7 +31,11 @@ export default function Contributions() {
       <div>
         <p className="ml-1 select-none font-bold">Chinmay Kunkikar</p>
       </div>
-      {data ? <Calendar data={contributionCalendar} /> : <Skeleton className="inline-block w-full h-full bg-neutral-200" />}
+      {data ? (
+        <Calendar data={contributionCalendar} />
+      ) : (
+        <Skeleton className="inline-block h-full w-full bg-neutral-200" />
+      )}
     </Card>
   );
 }

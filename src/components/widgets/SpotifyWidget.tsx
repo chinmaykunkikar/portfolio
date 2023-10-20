@@ -4,7 +4,7 @@ import { SpotifyResponse } from "@api/spotify";
 import Card from "@components/Card";
 import MusicBars from "@components/MusicBars";
 import { Skeleton } from "@components/Skeleton";
-import SpotifyLogo from "@drawables/spotify";
+import { SpotifyLogo } from "@components/logos";
 import fetcher from "@lib/fetcher";
 import Link from "next/link";
 import useSWR from "swr";

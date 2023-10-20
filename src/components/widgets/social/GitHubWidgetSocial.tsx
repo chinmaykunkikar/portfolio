@@ -1,4 +1,4 @@
-import GitHubLogo from "@drawables/github";
+import { GitHubLogo } from "@components/logos";
 import SocialWidget from "@widgets/social";
 
 export default function GitHubWidget() {

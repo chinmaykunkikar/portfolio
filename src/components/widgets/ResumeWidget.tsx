@@ -1,6 +1,6 @@
 import Card from "@components/Card";
 import CardLinkButton from "@components/CardLinkButton";
-import ResumeIcon from "@drawables/resume";
+import { ResumeIcon } from "@components/logos";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 export default function ResumeWidget() {
