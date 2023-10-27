@@ -62,7 +62,9 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        <main className="px-8 md:px-16 lg:px-28">{children}</main>
+        <main aria-label="Main" className="px-8 md:px-16 lg:px-28">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -8,6 +8,7 @@ export default function LinkedInWidget() {
       linkBgColor="bg-brand-linkedin"
       linkRingColor="hover:ring-brand-linkedin/[0.25]"
       socialUrl="https://www.linkedin.com/in/chinmaykunkikar/"
+      ariaLabel="LinkedIn Widget"
     >
       <LinkedInLogo width={96} height={96} className="fill-brand-linkedin" />
     </SocialWidget>

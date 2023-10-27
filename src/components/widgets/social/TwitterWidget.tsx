@@ -8,6 +8,7 @@ export default function TwitterWidget() {
       linkBgColor="bg-brand-twitter"
       linkRingColor="hover:ring-brand-twitter/[0.25]"
       socialUrl="https://twitter.com/ChinmayKunkikar"
+      ariaLabel="Twitter Widget"
     >
       <TwitterLogo width={72} height={72} className="fill-brand-twitter" />
     </SocialWidget>

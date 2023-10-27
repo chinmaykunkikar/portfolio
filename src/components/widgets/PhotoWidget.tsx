@@ -4,7 +4,10 @@ import me from "public/me/me.jpg";
 
 export default function PhotoWidget() {
   return (
-    <Card className="relative overflow-hidden rounded-full p-0">
+    <Card
+      className="relative overflow-hidden rounded-full p-0"
+      aria-label="Photo Widget"
+    >
       <Image
         className="pointer-events-none object-cover"
         src={me}

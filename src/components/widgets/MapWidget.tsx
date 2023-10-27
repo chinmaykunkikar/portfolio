@@ -123,7 +123,10 @@ export default function MapWidget() {
   }
 
   return (
-    <Card className="group relative flex h-36 w-full select-none overflow-clip p-0 md:h-72 [&_canvas]:outline-0">
+    <Card
+      className="group relative flex h-36 w-full select-none overflow-clip p-0 md:h-72 [&_canvas]:outline-0"
+      aria-label="Map Widget"
+    >
       <div
         id="map-placeholder"
         className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center"

@@ -16,6 +16,7 @@ export default function HelloWidget() {
       className="flex cursor-default select-none flex-col items-start justify-center p-4 md:px-10"
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
+      aria-label="Hello Widget"
     >
       {isHovered ? (
         <motion.div
@@ -59,6 +60,7 @@ export default function HelloWidget() {
             quality={100}
             priority
             className="rounded-md"
+            aria-hidden="true"
           />
           <div className="ml-2 text-2xl font-bold tracking-normal lg:text-3xl">
             नमस्कार!

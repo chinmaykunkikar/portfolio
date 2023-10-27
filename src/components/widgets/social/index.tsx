@@ -10,6 +10,7 @@ type SocialPropTypes = {
   children?: React.ReactNode;
   socialUrl: string;
   label: string;
+  ariaLabel: string;
 };
 
 export default function SocialWidget({
@@ -19,6 +20,7 @@ export default function SocialWidget({
   children,
   socialUrl,
   label,
+  ariaLabel,
 }: SocialPropTypes) {
   return (
     <Card
@@ -26,6 +28,7 @@ export default function SocialWidget({
         "group flex w-full items-center justify-center",
         widgetBgColor,
       )}
+      aria-label={ariaLabel}
     >
       <Link
         href={socialUrl}

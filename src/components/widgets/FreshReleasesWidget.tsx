@@ -4,7 +4,10 @@ import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function FreshReleasesWidget() {
   return (
-    <Card className="flex max-h-80 cursor-default flex-col justify-center p-8">
+    <Card
+      className="flex max-h-80 cursor-default flex-col justify-center p-8"
+      aria-label="Fresh Releases Project"
+    >
       <div className="mb-4 text-2xl font-bold">Fresh Releases</div>
       <div className="mb-8 flex-1 text-lg">
         Keep a track of your upcoming music releases with a beautiful timeline

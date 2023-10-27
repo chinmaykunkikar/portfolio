@@ -7,6 +7,7 @@ export function Skeleton({
   return (
     <span
       className={cn("animate-pulse rounded-md bg-neutral-300", className)}
+      aria-hidden="true"
       {...props}
     />
   );

@@ -15,20 +15,31 @@ import {
 } from "@components/logos";
 
 export default function SkillsWidget() {
-  function SkillWrapper({ icon: SkillIcon, label }: any) {
+  function SkillWrapper({
+    icon: SkillIcon,
+    label,
+  }: {
+    icon: any;
+    label: string;
+  }) {
     return (
       <div className="m-2 flex flex-col items-center justify-start">
-        <SkillIcon width={48} height={48} />
-        <span className="mt-1 select-none text-xs font-bold">{label}</span>
+        <SkillIcon width={48} height={48} aria-hidden="true" />
+        <p title={label} className="mt-1 select-none text-xs font-bold">
+          {label}
+        </p>
       </div>
     );
   }
 
   return (
-    <Card className="flex flex-col">
-      <div className="mx-auto mb-2 select-none text-lg font-bold uppercase">
+    <Card className="flex flex-col" aria-label="Skills Widget">
+      <p
+        title="Skills section"
+        className="mx-auto mb-2 select-none text-lg font-bold uppercase"
+      >
         Skills
-      </div>
+      </p>
       <div className="overflow-y-auto scroll-smooth scrollbar-thin scrollbar-track-transparent scrollbar-thumb-neutral-500 scrollbar-track-rounded-full scrollbar-thumb-rounded-full">
         <div className="grid-rows-auto grid grid-cols-2 p-1 sm:grid-cols-3 lg:grid-cols-4">
           <SkillWrapper icon={JavaScriptLogo} label="JavaScript" />

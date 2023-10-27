@@ -13,7 +13,10 @@ export default function Contact() {
             chinmay.kunkikar@gmail.com
           </div>
         </div>
-        <Card className="h-auto w-full rounded-xl hover:filter-none lg:w-1/2">
+        <Card
+          className="h-auto w-full rounded-xl hover:filter-none lg:w-1/2"
+          aria-label="Contact Form"
+        >
           <div className="p-2">
             <div className="relative">
               <label htmlFor="name" className="text-sm leading-7">

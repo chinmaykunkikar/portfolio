@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="mx-2 my-8 flex justify-center text-xs lg:px-16 lg:text-lg">
+    <footer
+      className="mx-2 my-8 flex justify-center text-xs lg:px-16 lg:text-lg"
+      aria-label="Footer"
+    >
       <span className="text-type">
         <span>Made with&nbsp;</span>
         <Image

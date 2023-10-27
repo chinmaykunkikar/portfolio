@@ -20,8 +20,16 @@ export default function SpotifyWidget() {
   );
 
   return (
-    <Card className="group flex aspect-auto flex-col justify-between p-8">
-      <SpotifyLogo width={72} height={72} className="fill-brand-spotify" />
+    <Card
+      className="group flex aspect-auto flex-col justify-between p-8"
+      aria-label="Spotify Widget"
+    >
+      <SpotifyLogo
+        width={72}
+        height={72}
+        className="fill-brand-spotify"
+        aria-hidden="true"
+      />
       <div className="keep">
         <div>
           {songData?.isPlaying ? (

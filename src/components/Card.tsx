@@ -6,15 +6,14 @@ type CardPropsType = React.HTMLAttributes<HTMLDivElement> & {
 
 export default function Card({ children, className, ...props }: CardPropsType) {
   return (
-    <div
+    <section
       className={twMerge(
-        `font-semibold relative h-72 rounded-xl bg-white p-4 text-type
-      transition-all duration-300 ease-in`,
-        className ?? "card",
+        "font-semibold relative h-72 rounded-xl bg-white p-4 text-type transition-all duration-300 ease-in",
+        className,
       )}
       {...props}
     >
       {children}
-    </div>
+    </section>
   );
 }

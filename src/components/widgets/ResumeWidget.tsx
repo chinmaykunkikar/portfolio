@@ -5,7 +5,7 @@ import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 export default function ResumeWidget() {
   return (
-    <Card>
+    <Card aria-label="Resume Widget">
       <div className="mb-16 flex h-full w-full select-none flex-col items-center justify-center p-4 text-xl font-bold lg:text-2xl">
         <ResumeIcon width={72} height={72} fill="#777" className="mb-4" />
         <p>Here&apos;s my resume</p>

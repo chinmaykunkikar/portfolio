@@ -14,9 +14,14 @@ export default function Contributions() {
   const contributionCalendar =
     data?.contributionsCollection?.contributionCalendar;
   return (
-    <Card className="flex flex-col justify-between">
+    <Card className="flex flex-col justify-between" aria-label="GitHub Widget">
       <div className="flex items-center justify-between">
-        <GitHubLogo width={72} height={72} className=" fill-brand-github" />
+        <GitHubLogo
+          width={72}
+          height={72}
+          className=" fill-brand-github"
+          aria-hidden="true"
+        />
         <Link
           passHref
           href="https://github.com/chinmaykunkikar"
@@ -29,7 +34,9 @@ export default function Contributions() {
         </Link>
       </div>
       <div>
-        <p className="ml-1 select-none font-bold">Chinmay Kunkikar</p>
+        <p title="Chinmay Kunkikar" className="ml-1 select-none font-bold">
+          Chinmay Kunkikar
+        </p>
       </div>
       {data ? (
         <Calendar data={contributionCalendar} />

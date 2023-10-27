@@ -4,7 +4,10 @@ import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function VideWidget() {
   return (
-    <Card className="flex max-h-80 cursor-default flex-col justify-center p-8">
+    <Card
+      className="flex max-h-80 cursor-default flex-col justify-center p-8"
+      aria-label="Vide Project Widget"
+    >
       <div className="mb-4 text-2xl font-bold">Vide</div>
       <div className="flex-1 text-lg">
         A Video on Demand platform built using ReactJS and managed on AWS.

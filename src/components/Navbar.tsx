@@ -41,10 +41,18 @@ export default function Navbar() {
   const lastCommitSHA = data?.sha || FIRST_COMMIT_SHA;
 
   return (
-    <nav className="flex flex-col items-center justify-between gap-4 px-8 py-6 text-type md:px-20 lg:flex-row lg:gap-0 lg:px-40">
+    <nav
+      className="flex flex-col items-center justify-between gap-4 px-8 py-6 text-type md:px-20 lg:flex-row lg:gap-0 lg:px-40"
+      aria-label="Navbar"
+    >
       <span className="md:text-lg">
-        <h3 className="inline-flex cursor-default select-none items-center font-mono">
-          <span className="mr-2">[chinmay@web </span>
+        <h3
+          className="inline-flex cursor-default select-none items-center font-mono"
+          aria-label="Chinmay Kunkikar"
+        >
+          <span className="mr-2" aria-hidden="true">
+            [chinmay@web{" "}
+          </span>
           {isLoading ? (
             <Skeleton className="h-4 w-20" />
           ) : (
@@ -53,12 +61,13 @@ export default function Navbar() {
               href="https://github.com/chinmaykunkikar/portfolio"
               target="_blank"
               rel="noreferrer"
+              aria-label="Last commit SHA of this portfolio's repository"
             >
               {lastCommitSHA}
             </Link>
           )}
           <span>
-            <span>]$&#8202;</span>
+            <span aria-hidden="true">]$&#8202;</span>
             <motion.span
               className="pointer-events-none"
               variants={cursorVariants}
@@ -69,6 +78,7 @@ export default function Navbar() {
                 duration: 0.8,
                 repeatType: "reverse",
               }}
+              aria-hidden="true"
             >
               &#9601;
             </motion.span>

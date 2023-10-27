@@ -2,7 +2,7 @@ import Card from "@components/Card";
 
 export default function ExperienceWidget() {
   return (
-    <Card className="md:col-span-2">
+    <Card className="md:col-span-2" aria-label="Experience Widget">
       <div className="w-full-h-full flex flex-col justify-center px-4 pt-4">
         <div className="select-none font-newsreader text-4xl">Career</div>
         <div className="mt-4 flex cursor-default flex-col text-type">
