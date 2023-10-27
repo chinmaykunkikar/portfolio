@@ -24,7 +24,7 @@ export default function CardLinkButton({
   ...props
 }: CardLinkButtonProps) {
   return (
-    <div
+    <button
       className={twMerge(
         "absolute flex items-center justify-center",
         positionClass ? positionClass : "bottom-4 right-4",
@@ -51,6 +51,6 @@ export default function CardLinkButton({
           color="white"
         />
       </Link>
-    </div>
+    </button>
   );
 }

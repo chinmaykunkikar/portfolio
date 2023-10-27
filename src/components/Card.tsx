@@ -1,9 +1,7 @@
-import { ClassNameValue, twMerge } from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 
-export type CardPropsType = {
-  className?: ClassNameValue;
-  children?: JSX.Element | JSX.Element[] | String | React.ReactNode;
-  [props: string]: any;
+type CardPropsType = React.HTMLAttributes<HTMLDivElement> & {
+  children?: React.ReactNode;
 };
 
 export default function Card({ children, className, ...props }: CardPropsType) {

@@ -3,11 +3,11 @@ import CardLinkButton from "@components/CardLinkButton";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-export type SocialPropTypes = {
+type SocialPropTypes = {
   widgetBgColor?: string;
   linkBgColor?: string;
   linkRingColor?: string;
-  children?: JSX.Element | JSX.Element[] | String;
+  children?: React.ReactNode;
   socialUrl: string;
   label: string;
 };
