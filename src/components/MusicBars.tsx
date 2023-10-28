@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function MusicBars() {
+export function MusicBars() {
   return (
     <div className="flex items-center justify-center space-x-1">
       <motion.div

@@ -22,7 +22,7 @@ interface CalendarProps {
   };
 }
 
-export default function Calendar({ data }: CalendarProps) {
+export function Calendar({ data }: CalendarProps) {
   const weeks = data?.weeks ?? [];
 
   return (

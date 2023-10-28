@@ -1,9 +1,11 @@
-import ExperienceWidget from "@widgets/ExperienceWidget";
-import HiWidget from "@widgets/HiWidget";
-import IntroWidget from "@widgets/IntroWidget";
-import PhotoWidget from "@widgets/PhotoWidget";
-import ResumeWidget from "@widgets/ResumeWidget";
-import LinkedInWidget from "@widgets/social/LinkedInWidget";
+import {
+  ExperienceWidget,
+  HiWidget,
+  IntroWidget,
+  LinkedInWidget,
+  PhotoWidget,
+  ResumeWidget,
+} from "@widgets/index";
 
 export default function About() {
   return (

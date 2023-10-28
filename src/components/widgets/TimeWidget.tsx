@@ -3,7 +3,7 @@
 import { ClockIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 
-export default function TimeWidget() {
+export function TimeWidget() {
   const [date, setDate] = useState(new Date());
 
   const dateOptions: Intl.DateTimeFormatOptions = {

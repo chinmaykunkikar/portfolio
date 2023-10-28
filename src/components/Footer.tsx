@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer
       className="mx-2 my-8 flex justify-center text-xs lg:px-16 lg:text-lg"

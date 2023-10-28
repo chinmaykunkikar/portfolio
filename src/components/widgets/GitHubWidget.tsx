@@ -1,14 +1,14 @@
 "use client";
 
-import Calendar from "@components/Calendar";
-import Card from "@components/Card";
+import { Calendar } from "@components/Calendar";
+import { Card } from "@components/Card";
 import { Skeleton } from "@components/Skeleton";
 import { GitHubLogo } from "@components/logos";
-import fetcher from "@lib/fetcher";
+import { fetcher } from "@lib/fetcher";
 import Link from "next/link";
 import useSWRImmutable from "swr";
 
-export default function Contributions() {
+export function GitHubWidget() {
   const { data }: any = useSWRImmutable("/api/github-contributions", fetcher);
 
   const contributionCalendar =

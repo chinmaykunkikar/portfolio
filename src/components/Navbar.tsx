@@ -1,7 +1,7 @@
 "use client";
 
 import { Skeleton } from "@components/Skeleton";
-import fetcher from "@lib/fetcher";
+import { fetcher } from "@lib/fetcher";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,7 +12,7 @@ type commitSHA = {
   sha: string;
 };
 
-export default function Navbar() {
+export function Navbar() {
   const pathname = usePathname();
   const FIRST_COMMIT_SHA = "5b77381";
 

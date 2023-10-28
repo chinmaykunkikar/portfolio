@@ -1,8 +1,8 @@
-import Card from "@components/Card";
+import { Card } from "@components/Card";
 import Image from "next/image";
 import me from "public/me/me.jpg";
 
-export default function PhotoWidget() {
+export function PhotoWidget() {
   return (
     <Card
       className="relative overflow-hidden rounded-full p-0"

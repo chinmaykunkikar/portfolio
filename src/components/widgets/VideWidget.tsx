@@ -1,8 +1,8 @@
-import Card from "@components/Card";
-import CardLinkButton from "@components/CardLinkButton";
+import { Card } from "@components/Card";
+import { CardLinkButton } from "@components/CardLinkButton";
 import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-export default function VideWidget() {
+export function VideWidget() {
   return (
     <Card
       className="flex max-h-80 cursor-default flex-col justify-center p-8"

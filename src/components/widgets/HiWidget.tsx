@@ -1,6 +1,6 @@
-import Card from "@components/Card";
+import { Card } from "@components/Card";
 
-export default function HiWidget() {
+export function HiWidget() {
   return (
     <Card
       className="flex flex-col items-center justify-center"

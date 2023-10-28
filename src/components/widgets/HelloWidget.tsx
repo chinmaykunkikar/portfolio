@@ -1,14 +1,14 @@
 "use client";
 
-import Card from "@components/Card";
-import CardLinkButton from "@components/CardLinkButton";
+import { Card } from "@components/Card";
+import { CardLinkButton } from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import Balancer from "react-wrap-balancer";
 
-export default function HelloWidget() {
+export function HelloWidget() {
   const [isHovered, setHovered] = useState<boolean>(false);
 
   return (

@@ -1,6 +1,6 @@
-import Card from "@components/Card";
+import { Card } from "@components/Card";
 
-export default function ExperienceWidget() {
+export function ExperienceWidget() {
   return (
     <Card className="md:col-span-2" aria-label="Experience Widget">
       <div className="w-full-h-full flex flex-col justify-center px-4 pt-4">

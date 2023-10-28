@@ -4,7 +4,7 @@ type CardPropsType = React.HTMLAttributes<HTMLDivElement> & {
   children?: React.ReactNode;
 };
 
-export default function Card({ children, className, ...props }: CardPropsType) {
+export function Card({ children, className, ...props }: CardPropsType) {
   return (
     <section
       className={twMerge(

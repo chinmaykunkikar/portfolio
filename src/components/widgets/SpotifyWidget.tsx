@@ -1,15 +1,15 @@
 "use client";
 
 import { SpotifyResponse } from "@api/spotify";
-import Card from "@components/Card";
-import MusicBars from "@components/MusicBars";
+import { Card } from "@components/Card";
+import { MusicBars } from "@components/MusicBars";
 import { Skeleton } from "@components/Skeleton";
 import { SpotifyLogo } from "@components/logos";
-import fetcher from "@lib/fetcher";
+import { fetcher } from "@lib/fetcher";
 import Link from "next/link";
 import useSWR from "swr";
 
-export default function SpotifyWidget() {
+export function SpotifyWidget() {
   const { data: songData, isLoading } = useSWR<SpotifyResponse>(
     "/api/spotify",
     fetcher,

@@ -13,7 +13,7 @@ type CardLinkButtonProps = {
   [props: string]: any;
 };
 
-export default function CardLinkButton({
+export function CardLinkButton({
   href,
   label,
   targetBlank = false,

@@ -1,5 +1,5 @@
-import Card from "@components/Card";
-import CardLinkButton from "@components/CardLinkButton";
+import { Card } from "@components/Card";
+import { CardLinkButton } from "@components/CardLinkButton";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
@@ -13,7 +13,7 @@ type SocialPropTypes = {
   ariaLabel: string;
 };
 
-export default function SocialWidget({
+export function SocialWidget({
   widgetBgColor,
   linkBgColor,
   linkRingColor,

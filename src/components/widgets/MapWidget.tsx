@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@components/Card";
+import { Card } from "@components/Card";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import avatar from "@public/avatar-smile.png";
 import mapboxgl, { Map } from "mapbox-gl";
@@ -18,7 +18,7 @@ interface ZoomButtonProps {
   children: JSX.Element | JSX.Element[] | String | React.ReactNode;
 }
 
-export default function MapWidget() {
+export function MapWidget() {
   const mapStyle = "chinmaykunkikar/clc3j5l73005k14mpx2ghpj5x";
   const mapStyleUri = `mapbox://styles/${mapStyle}`;
   const longitude = process.env.NEXT_PUBLIC_MAP_LONGITUDE;

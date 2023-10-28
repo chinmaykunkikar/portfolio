@@ -1,4 +1,4 @@
-import Card from "@components/Card";
+import { Card } from "@components/Card";
 import {
   AwsLogo,
   BashLogo,
@@ -14,7 +14,7 @@ import {
   WebpackLogo,
 } from "@components/logos";
 
-export default function SkillsWidget() {
+export function SkillsWidget() {
   function SkillWrapper({
     icon: SkillIcon,
     label,

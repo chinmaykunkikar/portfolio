@@ -1,8 +1,8 @@
-import Card from "@components/Card";
-import CardLinkButton from "@components/CardLinkButton";
+import { Card } from "@components/Card";
+import { CardLinkButton } from "@components/CardLinkButton";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-export default function ProjectsWidget() {
+export function ProjectsWidget() {
   return (
     <Card
       className="flex aspect-auto select-none flex-col items-center justify-center"

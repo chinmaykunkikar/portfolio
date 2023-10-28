@@ -1,7 +1,7 @@
-import Card from "@components/Card";
+import { Card } from "@components/Card";
 import Balancer from "react-wrap-balancer";
 
-export default function IntroWidget() {
+export function IntroWidget() {
   return (
     <Card
       className="flex w-full flex-col items-center justify-center p-8 text-sm text-type md:col-span-2 md:p-4 lg:text-lg"

@@ -1,7 +1,7 @@
 import { TwitterLogo } from "@components/logos";
-import SocialWidget from "@widgets/social";
+import { SocialWidget } from "@widgets/social";
 
-export default function TwitterWidget() {
+export function TwitterWidget() {
   return (
     <SocialWidget
       label="Twitter"
