@@ -26,20 +26,20 @@ export const metadata: Metadata = {
   },
 };
 
-export const manrope = Manrope({
+const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-manrope",
 });
 
-export const roboto_mono = Roboto_Mono({
+const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
   variable: "--font-roboto-mono",
 });
 
-export const newsreader = Newsreader({
+const newsreader = Newsreader({
   subsets: ["latin"],
   weight: ["800"],
   display: "swap",
