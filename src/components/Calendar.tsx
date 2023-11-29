@@ -36,7 +36,7 @@ export function Calendar({ data }: CalendarProps) {
               return (
                 <span
                   key={contribution.date}
-                  className="m-[8px] block h-[14px] w-[14px] rounded bg-neutral-200"
+                  className="m-2 block h-[14px] w-[14px] rounded bg-neutral-200"
                   style={backgroundColor ? { backgroundColor } : undefined}
                 />
               );

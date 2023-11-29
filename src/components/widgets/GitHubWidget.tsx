@@ -2,7 +2,7 @@
 
 import { Calendar } from "@components/Calendar";
 import { Card } from "@components/Card";
-import { Skeleton } from "@components/Skeleton";
+import { ContributionsSkeleton } from "@components/ContributionsSkeleton";
 import { GitHubLogo } from "@components/logos";
 import { fetcher } from "@lib/fetcher";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export function GitHubWidget() {
           target="_blank"
           rel="noreferrer"
         >
-          <button className="rounded-full bg-brand-github px-4 py-2 text-sm text-neutral-100 transition-colors hover:bg-neutral-700">
+          <button className="rounded-full bg-brand-github px-4 py-2 text-sm font-bold text-neutral-100 transition-colors hover:bg-neutral-700">
             Follow
           </button>
         </Link>
@@ -41,7 +41,7 @@ export function GitHubWidget() {
       {data ? (
         <Calendar data={contributionCalendar} />
       ) : (
-        <Skeleton className="inline-block h-full w-full bg-neutral-200" />
+        <ContributionsSkeleton />
       )}
     </Card>
   );
