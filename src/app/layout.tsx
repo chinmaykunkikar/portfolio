@@ -1,6 +1,7 @@
 import "@app/globals.css";
 import { Footer } from "@components/Footer";
 import { Navbar } from "@components/Navbar";
+import { Analytics } from "@statsy/react";
 import { Metadata } from "next";
 import { Manrope, Newsreader, Roboto_Mono } from "next/font/google";
 import { twJoin } from "tailwind-merge";
@@ -66,6 +67,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics siteId={process.env.NEXT_PUBLIC_STATSY_SITE_ID} />
       </body>
     </html>
   );

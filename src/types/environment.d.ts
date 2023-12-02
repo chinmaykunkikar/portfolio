@@ -10,6 +10,8 @@ declare global {
       NEXT_PUBLIC_MAP_LONGITUDE: float;
       NEXT_PUBLIC_MAP_LATITUDE: float;
       GITHUB_READ_USER_TOKEN_PERSONAL: string;
+      NEXT_PUBLIC_STATSY_SITE_ID: string;
+      NEXT_PUBLIC_STATSY_ENDPOINT: string;
     }
   }
 }
