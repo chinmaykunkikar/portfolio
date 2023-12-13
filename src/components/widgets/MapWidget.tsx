@@ -163,7 +163,7 @@ export function MapWidget() {
         <MinusIcon width={16} height={16} strokeWidth={3} />
       </ZoomButton>
       <div className="pointer-events-none absolute flex h-full w-full items-center justify-center">
-        <div className="relative z-20 h-12 w-12 rotate-12 opacity-80 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100 md:h-16 md:w-16">
+        <div className="relative z-20 h-12 w-12 rotate-12 opacity-90 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100 md:h-16 md:w-16">
           <Image
             src={avatar}
             fill
