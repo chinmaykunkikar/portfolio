@@ -2,6 +2,7 @@ import "@app/globals.css";
 import { Footer } from "@components/Footer";
 import { Navbar } from "@components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import { Manrope, Newsreader, Roboto_Mono } from "next/font/google";
 import { twJoin } from "tailwind-merge";
@@ -68,6 +69,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
