@@ -21,8 +21,8 @@ interface ZoomButtonProps {
 export function MapWidget() {
   const mapStyle = "chinmaykunkikar/clc3j5l73005k14mpx2ghpj5x";
   const mapStyleUri = `mapbox://styles/${mapStyle}`;
-  const longitude = process.env.NEXT_PUBLIC_MAP_LONGITUDE;
-  const latitude = process.env.NEXT_PUBLIC_MAP_LATITUDE;
+  const longitude = parseFloat(process.env.NEXT_PUBLIC_MAP_LONGITUDE ?? "0");
+  const latitude = parseFloat(process.env.NEXT_PUBLIC_MAP_LATITUDE ?? "0");
 
   const defaultZoom = 13;
   const minZoom = 3.65;
@@ -153,14 +153,14 @@ export function MapWidget() {
         disabled={currentZoomIndex <= minZoomIndex}
         position="right-4"
       >
-        <PlusIcon width={16} height={16} strokeWidth={3} />
+        <MinusIcon width={16} height={16} strokeWidth={3} />
       </ZoomButton>
       <ZoomButton
         action="zoomIn"
         disabled={currentZoomIndex >= maxZoomIndex}
         position="right-16"
       >
-        <MinusIcon width={16} height={16} strokeWidth={3} />
+        <PlusIcon width={16} height={16} strokeWidth={3} />
       </ZoomButton>
       <div className="pointer-events-none absolute flex h-full w-full items-center justify-center">
         <div className="relative z-20 h-12 w-12 rotate-12 opacity-90 transition-transform group-hover:rotate-0 group-hover:scale-125 group-hover:opacity-100 md:h-16 md:w-16">
