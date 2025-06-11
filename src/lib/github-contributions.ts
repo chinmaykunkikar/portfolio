@@ -29,6 +29,19 @@ export const fetchGithubData = async (lastNWeeks: number) => {
     Authorization: `bearer ${process.env.GITHUB_READ_USER_TOKEN_PERSONAL}`,
   };
 
+  // Debug logging
+  const token = process.env.GITHUB_READ_USER_TOKEN_PERSONAL || "";
+  console.log("GitHub API Debug:", {
+    hasToken: !!token,
+    tokenLength: token.length,
+    tokenStartsWith: token.substring(0, 10) + "...",
+    hasWhitespace: /\s/.test(token),
+    headers: {
+      ...headers,
+      Authorization: headers.Authorization ? "bearer [REDACTED]" : undefined,
+    },
+  });
+
   const today = new Date().toISOString().split("T")[0] + "T00:00:00";
 
   const startDate = new Date();
@@ -61,12 +74,17 @@ export const fetchGithubData = async (lastNWeeks: number) => {
     const responseJson = await response.json();
 
     if (status > 400) {
+      console.error("GitHub API Error:", {
+        status,
+        message: responseJson.message,
+        documentation_url: responseJson.documentation_url,
+      });
       return { status, data: {} };
     }
 
     return { status, data: responseJson.data.user };
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error fetching GitHub data:", error);
     return { status: 500, data: {} };
   }
 };
