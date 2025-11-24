@@ -1,8 +1,27 @@
-@config "../../tailwind.config.js";
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@plugin "tailwind-scrollbar" {
+  nocompatible: true;
+}
+
+@theme {
+  --font-sans:
+    var(--font-manrope), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-mono:
+    var(--font-roboto-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-newsreader: var(--font-newsreader), "Newsreader", serif;
+
+  --color-type: oklch(43.9% 0 0);
+  --color-type-hover: oklch(55.6% 0 0);
+  --color-brand-github: #211f1f;
+  --color-brand-linkedin: #0a66c2;
+  --color-brand-spotify: #1db954;
+  --color-brand-spotify-dark: #15873d;
+  --color-brand-twitter: #000000;
+}
 
 a.mapboxgl-ctrl-logo {
   display: none !important;
