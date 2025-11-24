@@ -1,8 +1,17 @@
 const GITHUB_USER_ENDPOINT = "https://api.github.com/graphql";
 const GITHUB_USERNAME = "chinmaykunkikar";
-const GITHUB_USER_QUERY = `query ($username: String!, $startDate: DateTime!, $today: DateTime!) {
+const GITHUB_USER_QUERY = `query (
+  $username: String!
+  $startDate: DateTime!
+  $today: DateTime!
+  $includePrivate: Boolean!
+) {
   user(login: $username) {
-    contributionsCollection(from: $startDate, to: $today) {
+    contributionsCollection(
+      from: $startDate
+      to: $today
+      includePrivateContributions: $includePrivate
+    ) {
       contributionCalendar {
         colors
         totalContributions
@@ -25,6 +34,9 @@ const GITHUB_USER_QUERY = `query ($username: String!, $startDate: DateTime!, $to
 }`;
 
 export const fetchGithubData = async (lastNWeeks: number) => {
+  const includePrivate =
+    process.env.GITHUB_INCLUDE_PRIVATE_CONTRIBUTIONS !== "false";
+
   const headers = {
     Authorization: `bearer ${process.env.GITHUB_READ_USER_TOKEN_PERSONAL}`,
   };
@@ -56,6 +68,7 @@ export const fetchGithubData = async (lastNWeeks: number) => {
       username: GITHUB_USERNAME,
       startDate: startDateISO,
       today: today,
+      includePrivate,
     },
   };
 
