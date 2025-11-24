@@ -86,13 +86,19 @@ export const fetchGithubData = async (lastNWeeks: number) => {
     const status = response.status;
     const responseJson = await response.json();
 
-    if (status > 400) {
+    if (status > 400 || responseJson.errors?.length) {
       console.error("GitHub API Error:", {
         status,
+        errors: responseJson.errors,
         message: responseJson.message,
         documentation_url: responseJson.documentation_url,
       });
-      return { status, data: {} };
+      return { status, data: null };
+    }
+
+    if (!responseJson.data?.user) {
+      console.error("GitHub API unexpected payload:", responseJson);
+      return { status: 500, data: null };
     }
 
     return { status, data: responseJson.data.user };
