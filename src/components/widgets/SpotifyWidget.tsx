@@ -1,6 +1,6 @@
 "use client";
 
-import { SpotifyResponse } from "@types/spotify";
+import { SpotifyResponse } from "@shared-types/spotify";
 import { Card } from "@components/Card";
 import { MusicBars } from "@components/MusicBars";
 import { Skeleton } from "@components/Skeleton";

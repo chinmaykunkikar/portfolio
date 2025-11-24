@@ -1,5 +1,5 @@
 import { getNowPlaying, getRecentlyPlayed } from "@lib/spotify";
-import { SpotifyResponse } from "@types/spotify";
+import { SpotifyResponse } from "@shared-types/spotify";
 import { NextResponse } from "next/server";
 
 export async function GET() {

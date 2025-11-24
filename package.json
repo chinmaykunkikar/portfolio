@@ -24,7 +24,7 @@
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4.1.17",
     "@types/mapbox-gl": "^3.4.1",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.6",

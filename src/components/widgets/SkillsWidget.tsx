@@ -27,7 +27,7 @@ type SkillWrapperProps = {
 function SkillWrapper({ icon: SkillIcon, label }: SkillWrapperProps) {
   return (
     <div className="m-2 flex flex-col items-center justify-start">
-      <SkillIcon width={48} height={48} aria-hidden="true" />
+      <SkillIcon width={48} height={48} aria-hidden />
       <p title={label} className="mt-1 select-none text-xs font-bold">
         {label}
       </p>

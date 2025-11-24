@@ -6,7 +6,7 @@ import avatar from "@public/avatar-smile.png";
 import mapboxgl, { Map } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -15,7 +15,7 @@ interface ZoomButtonProps {
   action: "zoomIn" | "zoomOut";
   disabled: boolean;
   position: string;
-  children: JSX.Element | JSX.Element[] | String | React.ReactNode;
+  children: ReactNode;
 }
 
 export function MapWidget() {
