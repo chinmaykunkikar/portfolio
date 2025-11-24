@@ -1,16 +1,45 @@
 const GITHUB_USER_ENDPOINT = "https://api.github.com/graphql";
 const GITHUB_USERNAME = "chinmaykunkikar";
-const GITHUB_USER_QUERY = `query (
+const VIEWER_CONTRIBUTIONS_QUERY = `query (
+  $startDate: DateTime!
+  $today: DateTime!
+) {
+  viewer {
+    contributionsCollection(
+      from: $startDate
+      to: $today
+      includePrivateContributions: true
+    ) {
+      contributionCalendar {
+        colors
+        totalContributions
+        months {
+          firstDay
+          name
+          totalWeeks
+        }
+        weeks {
+          contributionDays {
+            color
+            contributionCount
+            date
+          }
+          firstDay
+        }
+      }
+    }
+  }
+}`;
+
+const USER_CONTRIBUTIONS_QUERY = `query (
   $username: String!
   $startDate: DateTime!
   $today: DateTime!
-  $includePrivate: Boolean!
 ) {
   user(login: $username) {
     contributionsCollection(
       from: $startDate
       to: $today
-      includePrivateContributions: $includePrivate
     ) {
       contributionCalendar {
         colors
@@ -62,14 +91,24 @@ export const fetchGithubData = async (lastNWeeks: number) => {
   startDate.setDate(startDate.getDate() + daysToNextSunday - lastNWeeks * 7);
   const startDateISO = startDate.toISOString().split("T")[0] + "T00:00:00";
 
+  const query = includePrivate
+    ? VIEWER_CONTRIBUTIONS_QUERY
+    : USER_CONTRIBUTIONS_QUERY;
+
+  const variables = includePrivate
+    ? {
+        startDate: startDateISO,
+        today,
+      }
+    : {
+        username: GITHUB_USERNAME,
+        startDate: startDateISO,
+        today,
+      };
+
   const requestBody = {
-    query: GITHUB_USER_QUERY,
-    variables: {
-      username: GITHUB_USERNAME,
-      startDate: startDateISO,
-      today: today,
-      includePrivate,
-    },
+    query,
+    variables,
   };
 
   const requestOptions: RequestInit = {
@@ -96,12 +135,16 @@ export const fetchGithubData = async (lastNWeeks: number) => {
       return { status, data: null };
     }
 
-    if (!responseJson.data?.user) {
+    const payload = includePrivate
+      ? responseJson.data?.viewer
+      : responseJson.data?.user;
+
+    if (!payload) {
       console.error("GitHub API unexpected payload:", responseJson);
       return { status: 500, data: null };
     }
 
-    return { status, data: responseJson.data.user };
+    return { status, data: payload };
   } catch (error) {
     console.error("Error fetching GitHub data:", error);
     return { status: 500, data: {} };
