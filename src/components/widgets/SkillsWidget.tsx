@@ -13,25 +13,29 @@ import {
   TypeScriptLogo,
   WebpackLogo,
 } from "@components/logos";
+import type { ComponentType } from "react";
+
+type SkillWrapperProps = {
+  icon: ComponentType<{
+    width?: number;
+    height?: number;
+    "aria-hidden"?: boolean;
+  }>;
+  label: string;
+};
+
+function SkillWrapper({ icon: SkillIcon, label }: SkillWrapperProps) {
+  return (
+    <div className="m-2 flex flex-col items-center justify-start">
+      <SkillIcon width={48} height={48} aria-hidden="true" />
+      <p title={label} className="mt-1 select-none text-xs font-bold">
+        {label}
+      </p>
+    </div>
+  );
+}
 
 export function SkillsWidget() {
-  function SkillWrapper({
-    icon: SkillIcon,
-    label,
-  }: {
-    icon: any;
-    label: string;
-  }) {
-    return (
-      <div className="m-2 flex flex-col items-center justify-start">
-        <SkillIcon width={48} height={48} aria-hidden="true" />
-        <p title={label} className="mt-1 select-none text-xs font-bold">
-          {label}
-        </p>
-      </div>
-    );
-  }
-
   return (
     <Card className="flex flex-col" aria-label="Skills Widget">
       <p
