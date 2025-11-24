@@ -20,10 +20,9 @@
       "@drawables/*": ["src/components/drawables/*"],
       "@components/*": ["src/components/*"],
       "@app/*": ["src/app/*"],
-      "@api/*": ["src/pages/api/*"],
-      "@pages/*": ["src/pages/*"],
       "@public/*": ["public/*"],
       "@lib/*": ["src/lib/*"],
+      "@types/*": ["src/types/*"],
       "@styles/*": ["styles/*"]
     },
     "plugins": [

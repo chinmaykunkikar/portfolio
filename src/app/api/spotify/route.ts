@@ -1,31 +1,26 @@
 import { getNowPlaying, getRecentlyPlayed } from "@lib/spotify";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { SpotifyResponse } from "@types/spotify";
+import { NextResponse } from "next/server";
 
-export type SpotifyResponse = {
-  isPlaying: boolean;
-  album: string;
-  albumImageUrl: string;
-  artist: string;
-  songUrl: string;
-  title: string;
-};
-
-export default async function handler(_: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
   const nowPlayingResponse = await getNowPlaying();
 
   if (nowPlayingResponse.status === 204 || nowPlayingResponse.status > 400) {
     const recentlyPlayedResponse = await getRecentlyPlayed();
 
     if (recentlyPlayedResponse.status !== 200) {
-      return res.status(500).json({ error: "Error fetching data" });
+      return NextResponse.json({ error: "Error fetching data" }, { status: 500 });
     }
 
     const { items } = await recentlyPlayedResponse.json();
 
     if (items.length === 0) {
-      return res.status(200).json({
-        isPlaying: false,
-      });
+      return NextResponse.json(
+        {
+          isPlaying: false,
+        },
+        { status: 200 },
+      );
     }
 
     const recentlyPlayedSong = items[0];
@@ -41,7 +36,7 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse) {
       title: recentlyPlayedSong.track.name,
     };
 
-    return res.status(200).json(recentlyPlayedData);
+    return NextResponse.json(recentlyPlayedData, { status: 200 });
   }
 
   const nowPlayingData = await nowPlayingResponse.json();
@@ -64,5 +59,5 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse) {
     title,
   };
 
-  return res.status(200).json(nowPlayingDataResponse);
+  return NextResponse.json(nowPlayingDataResponse, { status: 200 });
 }
