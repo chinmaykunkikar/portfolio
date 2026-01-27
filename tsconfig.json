@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -12,19 +16,31 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@widgets/*": ["src/components/widgets/*"],
-      "@drawables/*": ["src/components/drawables/*"],
-      "@components/*": ["src/components/*"],
-      "@app/*": ["src/app/*"],
-      "@api/*": ["src/pages/api/*"],
-      "@pages/*": ["src/pages/*"],
-      "@public/*": ["public/*"],
-      "@lib/*": ["src/lib/*"],
-      "@styles/*": ["styles/*"]
+      "@widgets/*": [
+        "src/components/widgets/*"
+      ],
+      "@drawables/*": [
+        "src/components/drawables/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ]
     },
     "plugins": [
       {
@@ -37,7 +53,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/page.tsx"
+    "src/app/page.tsx",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

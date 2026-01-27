@@ -1,8 +1,27 @@
+/**
+ * GitHub Contributions Fetcher
+ *
+ * Fetches GitHub contribution data including private contributions using GitHub GraphQL API.
+ *
+ * Requirements:
+ * - Personal Access Token with 'read:user' scope
+ * - Token should be set as GITHUB_READ_USER_TOKEN_PERSONAL environment variable
+ *
+ * To generate a token:
+ * 1. Go to https://github.com/settings/tokens
+ * 2. Click "Generate new token" (classic)
+ * 3. Select the 'read:user' scope
+ * 4. Generate and copy the token
+ * 5. Add it to your .env.local file
+ *
+ * @see https://docs.github.com/en/graphql/reference/objects#contributionscollection
+ */
+
 const GITHUB_USER_ENDPOINT = "https://api.github.com/graphql";
 const GITHUB_USERNAME = "chinmaykunkikar";
 const GITHUB_USER_QUERY = `query ($username: String!, $startDate: DateTime!, $today: DateTime!) {
   user(login: $username) {
-    contributionsCollection(from: $startDate, to: $today) {
+    contributionsCollection(from: $startDate, to: $today, includePrivateContributions: true) {
       contributionCalendar {
         colors
         totalContributions

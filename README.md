@@ -9,13 +9,21 @@
 ### Local setup
 
 1. Clone this repository.
-2. Install dependencies using `npm` or [`bun`](https://bun.sh/):
+2. Copy `.env.example` to `.env.local` and fill in your API keys:
+
+```bash
+cp .env.example .env.local
+```
+
+**Important:** For the GitHub contributions graph to show private contributions, you need a GitHub Personal Access Token with `read:user` scope. Generate one at [GitHub Settings > Tokens](https://github.com/settings/tokens).
+
+3. Install dependencies using `npm` or [`bun`](https://bun.sh/):
 
 ```bash
 bun install
 ```
 
-3. Start the development server:
+4. Start the development server:
 
 ```bash
 bun dev
